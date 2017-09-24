@@ -15,12 +15,12 @@ p{
   width: 1260px;
   padding: 0px; }
 .no-padding-col {
-  padding: 0px !important; 
+  padding: 0px !important;
 }
 .proto-row {
   margin: 0px !important;
   border-bottom: 1px solid #efefef;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
 }
 .proto-card {
   padding-left: 10px;
@@ -30,31 +30,31 @@ p{
   width: 100%;
   display: inline-block;
   border-bottom: 1px solid #efefef;
-  position: relative; 
+  position: relative;
 }
 .proto-card .card-title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: #333;
-  line-height: 38px;
-  font-size: 32px; 
+  line-height: 34px;
+  font-size: 28px;
 }
 .proto-card .by-time-line {
-  padding: 7px 0px; 
+  padding: 7px 0px;
 }
 .proto-card .by-time-line .by-line {
   color: #F02E2E;
   font-size: 12px;
   font-weight: 700;
-  line-height: 17px; 
+  line-height: 17px;
 }
 .proto-card .by-time-line .time-ago {
   color: #787878;
   font-size: 12px;
-  line-height: 17px; 
+  line-height: 17px;
 }
 .proto-card .card-img {
-  padding-left: 0px; 
+  padding-left: 0px;
 }
 .proto-card .card-text {
   line-height: 21px;
@@ -62,33 +62,33 @@ p{
   font-size: 14px;
   font-weight: 400;
   font-family: "Noto Serif", serif;
-  padding: 0px; 
+  padding: 0px;
 }
 .proto-card .hint-text {
   font-size: 10px;
   color: #787878;
-  line-height: 14px; 
+  line-height: 14px;
 }
 .proto-card .title-small-img-text-layout .card-text {
   overflow: hidden;
   text-overflow: ellipsis;
-    display: -webkit-box; 
+    display: -webkit-box;
 }
 .proto-card .title-text-layout .card-text {
   -webkit-column-count: 2;
   -moz-column-count: 2;
-  column-count: 2; 
+  column-count: 2;
 }
 .proto-card .title-big-img-text-layout .card-text {
   -webkit-column-count: 2;
   -moz-column-count: 2;
-  column-count: 2; 
+  column-count: 2;
 }
 .proto-card .title-big-img-text-layout .card-title {
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 .proto-card .title-thumbnail-layout .card-title {
-  padding-right: 30px; 
+  padding-right: 30px;
 }
 .proto-card .feature-story-layout .gradient-layer {
   position: absolute;
@@ -98,7 +98,7 @@ p{
   padding-right: 160px;
   padding-bottom: 240px;
   width: 100%;
-  background: linear-gradient(rgba(85, 168, 253, 0.8), rgba(0, 0, 0, 0.7)); 
+  background: linear-gradient(rgba(85, 168, 253, 0.8), rgba(0, 0, 0, 0.7));
 }
 .proto-card .feature-story-layout .feature-title {
   padding-left: 10px;
@@ -109,22 +109,22 @@ p{
   color: white;
   font-weight: 700;
   font-size: 32px;
-  line-height: 38px; 
+  line-height: 38px;
 }
 .proto-card .feature-story-layout .feature-area {
-  overflow: hidden; 
+  overflow: hidden;
 }
 .digest-card {
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 .digest-card .digest-layout .hint-text {
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 .briefs-column {
   background: #fcfcfc;
 }
 .briefs-column .tolink-card {
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 .briefs-column .column-name {
   padding-left: 10px;
@@ -142,14 +142,14 @@ p{
   font-size: 12px;
   line-height: 17px;
   color: #333;
-  font-family: "Roboto", sans-serif; 
+  font-family: "Roboto", sans-serif;
 }
 .briefs-column .briefs-layout .hint-text {
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 .filter-column {
   height: 100vh;
-  position: fixed; 
+  position: fixed;
 }
 .filter-column .single-option {
   padding-left: 10px;
@@ -157,15 +157,15 @@ p{
   padding-right: 20px;
   padding-bottom: 30px;
   padding-bottom: 5px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 .filter-column .single-option .category-dash {
   height: 2px;
   width: 10px;
-  transition: width 0.2s ease-in; 
+  transition: width 0.2s ease-in;
 }
 .filter-column .single-option .news-dash {
-  background: #F02E2E; 
+  background: #F02E2E;
 }
 .filter-column .single-option .category-name {
   font-size: 14px;
@@ -175,14 +175,14 @@ p{
   padding-left: 2px;
   padding-top: 3px;
   padding-right: 4px;
-  padding-bottom: 6px; 
+  padding-bottom: 6px;
 }
 .filter-column .single-option:hover .category-dash {
-  width: 120px; 
+  width: 120px;
 }
 .filter-column .drill-down-filters {
   margin-top: 20px;
-  border-top: 1px solid #efefef; 
+  border-top: 1px solid #efefef;
 }
 .filter-column .drill-down-filters .advanced-filter {
   padding: 12px;
@@ -190,7 +190,7 @@ p{
   font-weight: 700;
   line-height: 21px;
   color: #333;
-  border-bottom: 1px solid #efefef; 
+  border-bottom: 1px solid #efefef;
 }
 
 .hero-cover {
@@ -199,7 +199,7 @@ p{
   padding-right: 20px;
   padding-bottom: 30px;
   border-bottom: 1px solid #efefef;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .hero-cover-title {
@@ -207,22 +207,22 @@ p{
   font-weight: 700;
   color: #333;
   line-height: 38px;
-  font-size: 32px; 
+  font-size: 32px;
 }
 
 .by-time-line {
-  padding: 7px 0px; 
+  padding: 7px 0px;
 }
 .by-time-line .by-line {
   color: #55a8fd;
   font-size: 12px;
   font-weight: 700;
-  line-height: 17px; 
+  line-height: 17px;
 }
 .by-time-line .time-ago {
   color: #787878;
   font-size: 12px;
-  line-height: 17px; 
+  line-height: 17px;
 }
 
 /*# sourceMappingURL=style.css.map */
