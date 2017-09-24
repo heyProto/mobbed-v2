@@ -116,6 +116,7 @@
   width: 100%;
   position: absolute;
   top: 0px;
+  padding: 30px;
 }
 
 .display-counter{
@@ -132,6 +133,7 @@
   margin-top: 0px;
   font-family: "Roboto", sans-serif;
   margin-bottom: 30px;
+  color: white;
 }
 
 .counter-area{
@@ -173,11 +175,19 @@
 
 .project-title{
   font-family: "Noto Serif", serif;
-  font-size: 64px;
+  font-size: 52px;
   font-weight: bold;
   margin-top:0px;
   margin-bottom:0px;
+  color: white;
 }
+
+.project-tag-line{
+  color: white;
+  font-weight: 100;
+  margin-top: 5px;
+}
+
 @media only screen and (max-width: 450px){
   .modal-dialog{
     width: 400px;
