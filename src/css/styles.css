@@ -101,11 +101,11 @@
 }
 .morelink {
   display: inline-block;
-  color: #55a8fd;
+  color: #F02E2E;
 }
 .morelink:hover {
   text-decoration: none;
-  color: #55a8fd;
+  color: #F02E2E;
 }
 .less {
   display: none;

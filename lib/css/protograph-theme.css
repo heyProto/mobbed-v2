@@ -34,40 +34,41 @@ p{
   width: 100%;
   display: inline-block;
   border-bottom: 1px solid #efefef;
-  position: relative; }
-  .proto-card .card-title {
-    font-family: "Roboto", sans-serif;
+  position: relative; 
+}
+.proto-card .card-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #333;
+  line-height: 38px;
+  font-size: 32px; }
+.proto-card .by-time-line {
+  padding: 7px 0px; }
+  .proto-card .by-time-line .by-line {
+    color: #F02E2E;
+    font-size: 12px;
     font-weight: 700;
-    color: #333;
-    line-height: 38px;
-    font-size: 32px; }
-  .proto-card .by-time-line {
-    padding: 7px 0px; }
-    .proto-card .by-time-line .by-line {
-      color: #55a8fd;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 17px; }
-    .proto-card .by-time-line .time-ago {
-      color: #787878;
-      font-size: 12px;
-      line-height: 17px; }
-  .proto-card .card-img {
-    padding-left: 0px; }
-  .proto-card .card-text {
-    line-height: 21px;
-    color: #4a4a4a;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Noto Serif", serif;
-    padding: 0px; }
-  .proto-card .hint-text {
-    font-size: 10px;
+    line-height: 17px; }
+  .proto-card .by-time-line .time-ago {
     color: #787878;
-    line-height: 14px; }
-  .proto-card .title-small-img-text-layout .card-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 12px;
+    line-height: 17px; }
+.proto-card .card-img {
+  padding-left: 0px; }
+.proto-card .card-text {
+  line-height: 21px;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Noto Serif", serif;
+  padding: 0px; }
+.proto-card .hint-text {
+  font-size: 10px;
+  color: #787878;
+  line-height: 14px; }
+.proto-card .title-small-img-text-layout .card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
     display: -webkit-box; }
   .proto-card .title-text-layout .card-text {
     -webkit-column-count: 2;
@@ -120,7 +121,7 @@ p{
     padding-bottom: 30px;
     font-size: 14px;
     color: white;
-    background-color: #55a8fd;
+    background-color: #F02E2E;
     padding-bottom: 15px;
     text-transform: uppercase;
     /*font-family: 'Courgette', cursive;*/
@@ -148,19 +149,7 @@ p{
       width: 10px;
       transition: width 0.2s ease-in; }
     .filter-column .single-option .news-dash {
-      background: #EE364C; }
-    .filter-column .single-option .politics-dash {
-      background: #417505; }
-    .filter-column .single-option .sports-dash {
-      background: #9013FE; }
-    .filter-column .single-option .business-dash {
-      background: #55A8FD; }
-    .filter-column .single-option .entertainment-dash {
-      background: #99C566; }
-    .filter-column .single-option .technology-dash {
-      background: #972836; }
-    .filter-column .single-option .life-dash {
-      background: #FAB005; }
+      background: #F02E2E; }
     .filter-column .single-option .category-name {
       font-size: 14px;
       font-weight: 700;
