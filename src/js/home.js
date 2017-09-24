@@ -51,16 +51,15 @@ getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', 
           let element = document.querySelector("#proto-embed-card iframe");
           element.parentNode.removeChild(element);
         })
-        // .on('shown.bs.modal', function(){
-        //   $("#proto-modal").css({"transition":"1s all fade-in","height":"100%","opacity":1});
-        //   $(".modal-dialog").css({"height":"100%","width":"53%"});
-        // })
         if (mode === 'laptop') {
           let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'laptop')
         } else {
           let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'mobile', true)
         } 
-      })
+      });
+      $('.modal-close').click(function(){
+        $("#proto-modal").modal('hide');
+      });
     }
   }
 })
