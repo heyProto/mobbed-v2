@@ -190,7 +190,8 @@
 
 @media only screen and (max-width: 450px){
   .modal-dialog{
-    width: 400px;
-    height:100%;
+    width: 300px;
+    height:92%;
     margin-top: 200px;
   }
+}
