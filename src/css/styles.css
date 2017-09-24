@@ -29,7 +29,7 @@
   font-size: 20px;
 }
 .modal-backdrop {
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
   background-color:black !important;
   height:100% !important;
 }
