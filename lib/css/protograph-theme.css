@@ -97,7 +97,8 @@ body {
     margin-top: 30px; }
 
 .briefs-column {
-  background: #fcfcfc; }
+  background: #fcfcfc; 
+}
   .briefs-column .tolink-card {
     padding-bottom: 10px; }
   .briefs-column .column-name {

@@ -53,3 +53,8 @@
   font-size: 10px;
   color: #999;
 }
+
+#display-tweets {
+  height: 700px;
+  overflow-y: scroll;
+}
