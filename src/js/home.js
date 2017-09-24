@@ -63,6 +63,7 @@ $(document).ready(function() {
 });
 
 $('.briefs-column').sticky({topSpacing:20});
+$('.filter-column').sticky({topSpacing:20});
 //counter
 getJSON('https://cdn.protograph.pykih.com/49a045aea2b71456f5d04f4a/index.json', function (err, data){
   if (err != null) {

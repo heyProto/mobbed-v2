@@ -132,10 +132,10 @@ p{
   padding-right: 20px;
   padding-bottom: 30px;
   font-size: 14px;
-  color: white;
-  background-color: #F02E2E;
+  color: #F02E2E;
   padding-bottom: 15px;
   text-transform: uppercase;
+  font-weight: bold;
   /*font-family: 'Courgette', cursive;*/
 }
 .briefs-column .briefs-layout .card-text {
@@ -149,7 +149,6 @@ p{
 }
 .filter-column {
   height: 100vh;
-  position: fixed;
 }
 .filter-column .single-option {
   padding-left: 10px;
