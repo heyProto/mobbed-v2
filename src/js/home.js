@@ -47,28 +47,19 @@ getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', 
         document.getElementById('ProtoCard-'+i).setAttribute("data-target", "#proto-modal")
       document.getElementById('ProtoCard-'+i).addEventListener('click', function (d) {
         $('#proto-modal').modal('show');
-        // $('#proto-modal').on('hidden.bs.modal', function(){
-        //   let element = document.querySelector("#proto-embed-card iframe");
-        //   element.parentNode.removeChild(element);
+        $('#proto-modal').on('hidden.bs.modal', function(){
+          let element = document.querySelector("#proto-embed-card iframe");
+          element.parentNode.removeChild(element);
+        })
+        // .on('shown.bs.modal', function(){
+        //   $("#proto-modal").css({"transition":"1s all fade-in","height":"100%","opacity":1});
+        //   $(".modal-dialog").css({"height":"100%","width":"53%"});
         // })
-        // modal({
-        //   onShow: function() {
-        //     $("#proto-modal").css("height", 0)
-        //   },
-        //   onHide: function(){
-        //     if (mode === 'laptop'){
-        //       $("#proto-modal").css("height", "100%")
-        //     }
-        //   },
-        //   onHidden: function(e) {
-            
-        //   }
-        // }).modal('attach events', '.close').modal('show')
-        // if (mode === 'laptop') {
-        //   let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'laptop')
-        // } else {
-        //   let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'mobile', true)
-        // } 
+        if (mode === 'laptop') {
+          let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'laptop')
+        } else {
+          let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'mobile', true)
+        } 
       })
     }
   }

@@ -11,7 +11,19 @@
   /*border: 1px solid rgb(241, 241, 241);*/
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
-
+.modal-dialog{
+  width:53%;
+  margin-top:22%;
+}
+.modal-backdrop {
+  opacity: 0.4 !important;
+  background-color:black !important;
+  height:100% !important;
+}
+.show {
+  display:block;
+  opacity: 1;
+}
 .protograph-gradient{
   width: 100%;
   height: 220px;
