@@ -13,7 +13,7 @@
 .modal-dialog{
   width: 675px;
   height:100%;
-  margin-top: 17%;
+  margin-top: 200px;
 }
 .modal-close{
   position: absolute;
@@ -111,6 +111,7 @@
   display: none;
 }
 
+<<<<<<< HEAD
 .banner-div{
   height: 211px;
   width: 100%;
@@ -178,3 +179,9 @@
   margin-top:0px;
   margin-bottom:0px;
 }
+@media only screen and (max-width: 450px){
+  .modal-dialog{
+    width: 400px;
+    height:100%;
+    margin-top: 200px;
+  }
