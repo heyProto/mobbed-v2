@@ -13,6 +13,8 @@ function getJSON(url, callback) {
   xhr.send();
 };
 
+$('.briefs-column').sticky({topSpacing:0});
+
 //Middle column
 getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', function (err, data){
   if (err != null) {
