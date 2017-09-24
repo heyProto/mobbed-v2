@@ -14,7 +14,7 @@
 .modal-dialog{
   width: 675px;
   height:100%;
-  margin-top: 17%;
+  margin-top: 200px;
 }
 .modal-close{
   position: absolute;
@@ -85,4 +85,12 @@
 #display-tweets {
   height: 700px;
   overflow-y: scroll;
+}
+
+@media only screen and (max-width: 450px){
+  .modal-dialog{
+    width: 400px;
+    height:100%;
+    margin-top: 200px;
+  }
 }
