@@ -83,6 +83,6 @@
 }
 
 #display-tweets {
-  height: 700px;
+  height: 640px;
   overflow-y: scroll;
 }
