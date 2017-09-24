@@ -26,7 +26,7 @@ p{
   padding-left: 10px;
   padding-top: 15px;
   padding-right: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   width: 100%;
   display: inline-block;
   border-bottom: 1px solid #efefef;
@@ -45,7 +45,7 @@ p{
 .proto-card .by-time-line .by-line {
   color: #F02E2E;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 17px;
 }
 .proto-card .by-time-line .time-ago {
@@ -55,6 +55,10 @@ p{
 }
 .proto-card .card-img {
   padding-left: 0px;
+}
+
+.title-small-img-text-layout .card-text{
+  padding: 0px;
 }
 .proto-card .card-text {
   line-height: 21px;
@@ -73,6 +77,7 @@ p{
   overflow: hidden;
   text-overflow: ellipsis;
     display: -webkit-box;
+    padding-left: 5px;
 }
 .proto-card .title-text-layout .card-text {
   -webkit-column-count: 2;
@@ -121,7 +126,7 @@ p{
   margin-top: 30px;
 }
 .briefs-column {
-  background: #fcfcfc;
+  background: #fafafa;
 }
 .briefs-column .tolink-card {
   padding-bottom: 10px;
