@@ -110,3 +110,71 @@
 .less {
   display: none;
 }
+
+.banner-div{
+  height: 211px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.display-counter{
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 19px;
+  position: absolute;
+  left: 9px;
+  top: -6px;
+  font-family: "Roboto", sans-serif;
+}
+
+.display-summary{
+  margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+}
+
+.counter-area{
+  height: 80px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.number-background{
+  position: absolute;
+}
+
+.single-background{
+  background: white;
+  height: 73px;
+  width: 48px;
+  display: inline-block;
+  margin-right: 7px;
+  float: left;
+  box-shadow: 0px 1px 2px #bdbdbd;
+  z-index: -1;
+}
+
+#explore-button{
+  background-color: #F02E2E;
+  border-radius: 20px;
+  border: 1px solid #F02E2E;
+  padding: 10px 15px;
+  font-weight: 100;
+}
+
+.button-url{
+  color: white !important;
+}
+
+.button-url:hover {
+  text-decoration: none;
+}
+
+.project-title{
+  font-family: "Noto Serif", serif;
+  font-size: 64px;
+  font-weight: bold;
+  margin-top:0px;
+  margin-bottom:0px;
+}
