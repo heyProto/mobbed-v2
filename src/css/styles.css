@@ -8,7 +8,6 @@
   position: relative;
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-  /*border: 1px solid rgb(241, 241, 241);*/
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
 .modal-dialog{
@@ -85,4 +84,14 @@
 #display-tweets {
   height: 640px;
   overflow-y: scroll;
+}
+
+.sidebar-url {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-url:hover{
+  text-decoration: none;
+  color: black;
 }
