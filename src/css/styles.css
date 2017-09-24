@@ -1,0 +1,55 @@
+.mob-justice-incidents {
+  width: 270px;
+  display: inline-block;
+  text-align: left;
+  background: white;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  /*border: 1px solid rgb(241, 241, 241);*/
+  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+
+.protograph-gradient{
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background: -webkit-linear-gradient(rgba(255,255,255,0.5), #fff 60%);
+  background: -o-linear-gradient(rgba(255,255,255,0.5), #fff 60%);
+  background: -moz-linear-gradient(rgba(255,255,255,0.5), #fff 60%);
+  background: linear-gradient(rgba(255,255,255,0.5), #fff 60%);
+  pointer-events: none;
+}
+
+.data-card-content{
+  position: absolute;
+  display: inline-block;
+  bottom: 0px;
+  width: 88%;
+  padding:15px;
+}
+
+.data-card-content .data-card-title{
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.3em;
+  font-family: arial;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.data-card-content .data-card-date{
+  display: inline-block;
+  font-size: 10px;
+  color: #999;
+}
