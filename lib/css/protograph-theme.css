@@ -1,7 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Roboto:400,700");
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 body {
-  margin-top: 50px; }
+  margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+}
+
+p{
+  font-family: "Noto Serif", serif;
+  font-size: 14px;
+  color:#4a4a4a;
+  column-count: 1;
+  /*font-style: italic;*/
+  margin-top: 30px;
+}
 
 .proto-container {
   width: 1260px;
@@ -98,7 +109,7 @@ body {
     margin-top: 30px; }
 
 .briefs-column {
-  background: #fcfcfc; 
+  background: #fcfcfc;
 }
   .briefs-column .tolink-card {
     padding-bottom: 10px; }
@@ -107,11 +118,12 @@ body {
     padding-top: 15px;
     padding-right: 20px;
     padding-bottom: 30px;
-    font-size: 28px;
+    font-size: 14px;
     color: white;
     background-color: #55a8fd;
-    padding-bottom: 15px; 
-    font-family: 'Courgette', cursive;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    /*font-family: 'Courgette', cursive;*/
   }
   .briefs-column .briefs-layout .card-text {
     font-size: 12px;
