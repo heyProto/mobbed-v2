@@ -11,13 +11,31 @@
   </head>
   <body>
     <div class="container proto-container">
-      <div class="col-sm-2">
-
-        <div class="filter-column">
-          <div class="branding-area">
-            <img src="src/img/ie-small-logo.png" width="120px">
-            <hr>
+      <div class="col-sm-16 hero-cover">
+        <div class="col-sm-16">
+          <img src="src/img/cover-image.png" width="100%">
+          <p class="project-description">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India? This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</p>
+          <div class="banner-div">
+            <h1 class="project-title">#mobbed</h1>
+            <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
+            <div class="counter-area">
+              <div class="number-background">
+                <div class="single-background"></div>
+                <div class="single-background"></div>
+                <div class="single-background"></div>
+              </div>
+              <div class="display-counter">
+                <span id="animate-number" class="animate-number">0</span>
+              </div>
+            </div>
+            <p class="display-summary">Instances of lynching and mob vigilantism were reported<br>from <span id="start-date"></span> to <span id="end-date"></span>
+            </p>
+            <button id="explore-button"><a class="button-url" href="data.html">Explore the data</a></button>
           </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="filter-column">
           <div class="single-option">
             <div class="category-dash news-dash"></div>
             <div class="category-name"><a class="sidebar-url" href="index.html">Coverage</a></div>
@@ -36,23 +54,6 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-14 hero-cover">
-        <div class="col-sm-16">
-          <img src="http://protograph.indianexpress.com/mobbed/img/lynching-cover-desktop.jpg" width="100%">
-            <hr>
-            <p class="project-description">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India? This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</p>
-        </div>
-        <!-- <div class="col-sm-3">
-          <div class="hero-cover-title">
-            Macao, the ultimate event destination
-          </div>
-          <div class="by-time-line">
-            <div class="by-line">Saikat Datta</div>
-            <div class="time-ago">20m ago</div>
-          </div>
-        </div> -->
-      </div>
-      <div class="col-sm-2"></div>
       <div class="col-sm-7">
         <div class="proto-card tolink-card">
           <div class="title-small-img-text-layout">
@@ -137,10 +138,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/jquery.sticky.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
     <script src="https://d2m6lzru8erw1k.cloudfront.net/lib/protoGraph.min.js"></script>
     <script src="src/js/home.js"></script>
   </body>
