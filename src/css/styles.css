@@ -95,3 +95,18 @@
   text-decoration: none;
   color: black;
 }
+
+.morecontent span {
+  display: none;
+}
+.morelink {
+  display: inline-block;
+  color: #55a8fd;
+}
+.morelink:hover {
+  text-decoration: none;
+  color: #55a8fd;
+}
+.less {
+  display: none;
+}
