@@ -96,14 +96,18 @@ let interval = setInterval(function(){
       alert('Something went wrong: ' + err);
     } else {
       let tweets = '';
-      data.map((d,i) => {       
+      data.map((d,i) => { 
+        let new_date = d.date.split(" "),
+          month = new_date[0].slice(0,3),
+          day = new_date[1],
+          year = new_date[2];      
         tweets += '<a href="'+d.canonical+'" target="_blank" class="protograph-url"><div class="proto-card tolink-card">'+
           '<div class="briefs-layout">'+
             '<div class="card-text">' + d.description + '</div>'+
             '<div class="by-time-line">'+
               '<div class="by-line">' + d.author + '</div>'+
             '</div>'+
-            '<div class="hint-text">'+ d.date +'</div>'+
+            '<div class="hint-text">'+  month +" "+day+ " "+ year+'</div>'+
           '</div>'+
         '</div></a>';
       document.getElementById('display-tweets').innerHTML = tweets;   
