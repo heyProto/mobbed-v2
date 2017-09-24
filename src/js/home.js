@@ -29,7 +29,7 @@ function getJSON(url, callback) {
 
 $(document).ready(function() {
     // Configure/customize these variables.
-  var showChar = 440;  // How many characters are shown by default
+  var showChar = 520;  // How many characters are shown by default
   var ellipsestext = "...";
   var moretext = "keep reading";
   var lesstext = "Show less";  
