@@ -22,13 +22,13 @@ getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', 
     data.map((d,i) => {
       let img = d.screen_shot_url,
         new_date = d.date.split("-"),
-        month = new Date(d.date).toLocaleDateString('en-US', {month: 'long'});
+        month = new Date(d.date).toLocaleDateString('en-US', {month: 'short'});
       mob_cards += '<div id="ProtoCard-'+ i +'" class="mob-justice-incidents" style="height:220px;overflow:hidden;">' +
         '<img src="'+img+ '" width="100%"/>'+
         '<div class="protograph-gradient">'+
           '<div class="data-card-content">'+
             '<div class="data-card-title">' + d.title + '</div>'+
-            '<div class="data-card-date">' + new_date[2]+"th "+ month + " "+ new_date[0]+'</div>' +
+            '<div class="data-card-date">' + month + " "+ new_date[2] + ", "+ new_date[0]+'</div>' +
             '</div>'+
           '</div>'+
         '</div>'
@@ -80,14 +80,18 @@ getJSON('https://protograph.newslaundry.com/toReportJournalistKilling/twitter.js
       alert('Something went wrong: ' + err);
     } else {
       let tweets = '';
-      data.map((d,i) => {       
+      data.map((d,i) => { 
+        let new_date = d.date.split(" "),
+          month = new_date[0].slice(0,3),
+          day = new_date[1],
+          year = new_date[2];      
         tweets += '<a href="'+d.canonical+'" target="_blank" class="protograph-url"><div class="proto-card tolink-card">'+
           '<div class="briefs-layout">'+
             '<div class="card-text">' + d.description + '</div>'+
             '<div class="by-time-line">'+
               '<div class="by-line">' + d.author + '</div>'+
             '</div>'+
-            '<div class="hint-text">'+ d.date +'</div>'+
+            '<div class="hint-text">'+ month +" "+day+ " "+ year+'</div>'+
           '</div>'+
         '</div></a>';
       document.getElementById('display-tweets').innerHTML = tweets;   
