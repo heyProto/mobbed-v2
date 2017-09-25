@@ -235,5 +235,28 @@ p{
   color: black;
 }
 
+.banner-div{
+  height: 211px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  padding: 30px;
+}
+
+.project-title{
+  font-family: "Noto Serif", serif;
+  font-size: 52px;
+  font-weight: bold;
+  margin-top:0px;
+  margin-bottom:0px;
+  color: white;
+}
+
+.project-tag-line{
+  color: white;
+  font-weight: 100;
+  margin-top: 5px;
+}
+
 
 /*# sourceMappingURL=style.css.map */
