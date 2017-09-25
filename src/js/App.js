@@ -221,6 +221,7 @@ class App extends React.Component {
 
   showFilters() {
     this.setState({
+      height:(Object.keys(this.state.filterHeaders).length / 4) * 225+'px',
       overflow: 'hidden',
       showTapArea: 'none',
       hideTapArea: 'block'
@@ -367,7 +368,6 @@ class App extends React.Component {
         rows.push([]);
       }
       let count = -1;
-      console.log(rows);
       
       Object.keys(optionsObj).forEach((key,index)=>{
         if(index % 4 === 0){
@@ -375,7 +375,6 @@ class App extends React.Component {
         }
         rows[count].push(key);
       });
-      console.log(rows);
       return (
         <div className="banner-area">
           <div className="filter-area">
