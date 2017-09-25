@@ -2,12 +2,30 @@
   padding: 10px;
   margin-bottom: 30px;
 }
-
+.question1{
+  border-top: 1px solid lightgrey;
+}
 .highlight{
   background-color: #FCFAB2;
 }
-
 .qa-highlight-color{
   background-color: #CCE2FF !important;
   color: black !important;
+}
+.explainers-sticky-segment-question{
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding: 15px;
+}
+.right-floated-content{
+  display: inline;
+  float: right;
+}
+.left-floated-content{
+  
+}
+.item {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 10px;
 }

@@ -1,4 +1,5 @@
-$('.ui.sticky').sticky({topSpacing:62});
+$('.explainers-sticky-segment').sticky({topSpacing:62});
+$('.filter-column').sticky({topSpacing:62});
   $(window).scroll(function(event){
     $('.qa-highlight-color').removeClass('qa-highlight-color');
 
@@ -9,7 +10,6 @@ $('.ui.sticky').sticky({topSpacing:62});
     }
     var cutoff = $(window).scrollTop();
     $('.answer').removeClass('qa-highlight-color').each(function() {
-      console.log($(this).offset().top -62, "$(this).offset().top")
       if ($(this).offset().top + 62 >= cutoff) {
         $('#q'+$(this).attr('id')).addClass('qa-highlight-color');
         return false; // stops the iteration after the first one on screen
@@ -20,10 +20,10 @@ $('.ui.sticky').sticky({topSpacing:62});
 
   $('.question').hover(function(){
     $(this).addClass('qa-highlight-color');
-    $( $(this).children('p').children('a')[0].hash ).addClass('qa-highlight-color');
+    $( $(this).children('div').children('a')[0].hash ).addClass('qa-highlight-color');
   },function(){
     $(this).removeClass('qa-highlight-color');
-    $( $(this).children('p').children('a')[0].hash ).removeClass('qa-highlight-color');
+    $( $(this).children('div').children('a')[0].hash ).removeClass('qa-highlight-color');
   });
   $('.answer').hover(function(){
     $(this).addClass('qa-highlight-color');
