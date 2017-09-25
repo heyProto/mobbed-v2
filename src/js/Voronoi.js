@@ -21,28 +21,19 @@ class Voronoi extends React.Component {
 
   handleOnClick(e, card, name) {
     let props = this.props; 
-    $('.ui.modal').modal({
-      onShow: function() {
-        $("#proto-modal").css("height", 0)
-      },
-      onHide: function(){
-        if (props.mode === 'laptop') {
-          $("#proto-modal").css("height", "100%")
-        }
-      },
-      onHidden: function(e) {
-        let element = document.querySelector("#proto-embed-card iframe");
-        element.parentNode.removeChild(element);
-        props.handleCircleClicked(false);
-      }
-    }).modal('attach events', '.close').modal('show')
-    if (this.props.mode === 'laptop'){
-      this.props.handleCircleClicked(true);
-      Util.highlightCircle(name) 
-      let pro = new ProtoEmbed.initFrame('proto-embed-card', card.iframe_url, "laptop")
+    $('#proto-modal').modal('show');
+    $('#proto-modal').on('hidden.bs.modal', function(){
+      let element = document.querySelector("#proto-embed-card iframe");
+      element.parentNode.removeChild(element);
+    })
+    if (this.props.mode === 'laptop') {
+      let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), card.iframe_url, 'laptop')
     } else {
-      let pro = new ProtoEmbed.initFrame('proto-embed-card', card.iframe_url, "mobile")
-    }
+      let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), card.iframe_url, 'mobile', true)
+    } 
+    $('.modal-close').click(function(){
+      $("#proto-modal").modal('hide');
+    });
   }
 
   render() {
