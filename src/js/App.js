@@ -221,8 +221,7 @@ class App extends React.Component {
 
   showFilters() {
     this.setState({
-      height: 800,
-      overflow: 'auto',
+      overflow: 'hidden',
       showTapArea: 'none',
       hideTapArea: 'block'
     })
@@ -362,7 +361,21 @@ class App extends React.Component {
       second_tap_area_style = {
         display: this.state.hideTapArea
       }
-
+      let rows=[];
+      let num = Object.keys(this.state.filterHeaders).length/4;
+      for( let i = 0;i<num;i++){
+        rows.push([]);
+      }
+      let count = -1;
+      console.log(rows);
+      
+      Object.keys(optionsObj).forEach((key,index)=>{
+        if(index % 4 === 0){
+          count++;
+        }
+        rows[count].push(key);
+      });
+      console.log(rows);
       return (
         <div className="banner-area">
           <div className="filter-area">
@@ -371,19 +384,27 @@ class App extends React.Component {
             </div>
             <div id="filter-region" className="ui grid" style={styles}>
               {
-                Object.keys(optionsObj).map((key)=>{
+                rows.map((row,index)=>{
                   return(
-                    <div className="col-sm-4 filter-title">
-                      <table>
-                        <thead className="table-thead">
-                          <tr>
-                            <th className="table-head">
-                              {this.state.filterHeaders[key]}
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="table-tbody">{optionsObj[key]}</tbody>
-                      </table>
+                    <div className="row">
+                      {
+                        rows[index].map((key,index)=>{
+                          return(
+                            <div className="col-sm-4 filter-title">
+                              <table>
+                                <thead className="table-thead">
+                                  <tr>
+                                    <th className="table-head">
+                                      {this.state.filterHeaders[key]}
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody className="table-tbody">{optionsObj[key]}</tbody>
+                              </table>
+                            </div>
+                          )
+                        })
+                      }
                     </div>
                   )
                 })

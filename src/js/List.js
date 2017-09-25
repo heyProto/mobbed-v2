@@ -69,7 +69,7 @@ class ListCards extends React.Component {
         <div>
           <div id="cards-list" className="protograph-card-area">{cards}</div>
           <Modal handleCircleClicked={this.props.handleCircleClicked} mode={this.props.mode}/>
-          <button id="show-more-cards" onClick={(e) => this.loadMoreCard()}>Show more</button>
+          {this.state.no_of_cards < this.props.dataJSON.length ? <button id="show-more-cards" onClick={(e) => this.loadMoreCard()}>Show more</button> : null}
         </div>
       )
     }
