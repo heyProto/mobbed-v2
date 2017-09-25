@@ -337,7 +337,7 @@ table{
 .card-list-div{
   width: 100% !important;
 }
-.accused_active_item, .victim_active_item, .menu_active_item, .state_active_item, .police_active_item, .judge_active_item, .police_prevent_active_item, .lynching_active_item, .criminalise_active_item, .area_active_item, .police_vehicles_active_item, .defence_force_active_item, .police_intervene_active_item, .hate_active_item, .gender_active_item, .caste_active_item, .race_active_item, .religion_active_item, .political_active_item, .sexual_active_item, .disability_active_item, .ethnicity_active_item {
+.active_item {
   background: #F02E2E;
   color: white;
 }
@@ -437,4 +437,33 @@ tr th{
   color: white;
   font-weight: 100;
   margin-top: 5px;
+}
+.modal-dialog{
+  width: 675px;
+  height:100%;
+  margin-top: 200px;
+}
+.modal-close{
+  position: absolute;
+  top:0;
+  width:20px;
+  height:20px;
+  cursor:pointer;
+  right:0px;
+  margin-right: -27px;
+  margin-top:-30px;
+  color:white;
+  font-size: 20px;
+}
+.modal-backdrop {
+  opacity: 0.8 !important;
+  background-color:black !important;
+  height:100% !important;
+}
+.modal-body{
+  padding: 0px;
+}
+.show {
+  display:block;
+  opacity: 1;
 }

@@ -61,6 +61,8 @@ class App extends React.Component {
         });
     }));
     this.showCounter();
+    $('.briefs-column').sticky({topSpacing:20});
+    $('.filter-column').sticky({topSpacing:20});    
   }
 
   sortObject(obj) {

@@ -2,18 +2,17 @@ import React from 'react';
 
 class Modal extends React.Component {
   render() {
-    let scroll;
-    if (this.props.mode === 'laptop'){
-      scroll = "ui modal small content scrolling"
-    } else {
-      scroll = "ui modal small"
-    }
     return(
-      <div id="proto-modal" className={scroll}>
-        <div id="proto-embed-card">
-          <i className="close icon proto-close"></i>
+      <div id="proto-modal" className="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="modal-dialog" role="document">
+        <div className="modal-content"> 
+          <div className="modal-body">
+            <div id="proto-embed-card"></div>
+          </div>
         </div>
+        <div className="modal-close" role="close">&times;</div>
       </div>
+    </div>
     )
   }
 }
