@@ -225,5 +225,15 @@ p{
   font-size: 12px;
   line-height: 17px;
 }
+.sidebar-url {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-url:hover{
+  text-decoration: none;
+  color: black;
+}
+
 
 /*# sourceMappingURL=style.css.map */
