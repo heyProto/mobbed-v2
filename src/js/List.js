@@ -4,8 +4,19 @@ import Utils from '../js/Utils';
 
 class ListCards extends React.Component {
   constructor () {
-    super();   
+    super();  
+    this.state = {
+      no_of_cards: 18
+    } 
     this.handleOpenModal = this.handleOpenModal.bind(this);
+  }
+
+   componentDidMount(prevProps, prevState) {
+    let cards = $("#cards-list .protograph-card").slice(0, this.state.no_of_cards)
+    console.log(cards, cards[0], "cards")
+    for (let i=0; i<cards.length; i++) {
+      cards[i].style.display = "inline-block" 
+    }   
   }
 
   handleOpenModal(e, card){
@@ -23,6 +34,17 @@ class ListCards extends React.Component {
     $('.modal-close').click(function(){
       $("#proto-modal").modal('hide');
     });
+  }
+
+  loadMoreCard() {
+    let size = $("#cards-list .protograph-card").length;
+    let x = (this.state.no_of_cards + 18 <= size) ? this.state.no_of_cards + 18 : size;
+    for(let i=0; i<x; i++) {
+      $("#cards-list .protograph-card")[i].style.display = "inline-block" 
+    } 
+    this.setState({
+      no_of_cards : x
+    })
   }
 
   render() {
@@ -45,8 +67,9 @@ class ListCards extends React.Component {
       })
       return (
         <div>
-          <div className="protograph-card-area">{cards}</div>
+          <div id="cards-list" className="protograph-card-area">{cards}</div>
           <Modal handleCircleClicked={this.props.handleCircleClicked} mode={this.props.mode}/>
+          <button id="show-more-cards" onClick={(e) => this.loadMoreCard()}>Show more</button>
         </div>
       )
     }

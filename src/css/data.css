@@ -179,7 +179,8 @@ table{
   width: 270px;
   height: 150px;
   overflow:hidden;
-  display: inline-block;
+  display: none;
+  /*display: inline-block;*/
   text-align: left;
   background: white;
   margin-left: 15px;
@@ -455,3 +456,19 @@ tr th{
   color: white;
 }
 
+#show-more-cards {
+  width: 80%;
+  background-color: black;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 115px;
+  margin-right: 100px;
+}
+
+.one-br-space{height: 10px !important;}
+.two-br-space{height: 20px !important;}
+.five-br-space{height: 50px !important;}
+.ten-br-space{height: 100px !important;}
