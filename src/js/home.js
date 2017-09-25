@@ -98,8 +98,8 @@ getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', 
   } else {      
     let mob_cards = '';
     data.map((d,i) => {
-      let img = "http://images.indianexpress.com/2017/07/suicide-759111.jpg",
-      // let img = d.screen_shot_url,
+      // let img = "http://images.indianexpress.com/2017/07/suicide-759111.jpg",
+      let img = d.screen_shot_url,
         new_date = d.date.split("-"),
         month = new Date(d.date).toLocaleDateString('en-US', {month: 'short'});
       mob_cards += '<div id="ProtoCard-'+ i +'" class="mob-justice-incidents">' +
