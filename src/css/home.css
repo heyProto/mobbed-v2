@@ -88,16 +88,6 @@
   overflow-y: scroll;
 }
 
-.sidebar-url {
-  text-decoration: none;
-  color: black;
-}
-
-.sidebar-url:hover{
-  text-decoration: none;
-  color: black;
-}
-
 .morecontent span {
   display: none;
 }
@@ -188,6 +178,10 @@
   color: white;
   font-weight: 100;
   margin-top: 5px;
+}
+
+.light-text{
+  color: #adacac;
 }
 
 @media only screen and (max-width: 450px){

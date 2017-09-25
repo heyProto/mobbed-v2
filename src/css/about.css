@@ -1,0 +1,13 @@
+.answer{
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.highlight{
+  background-color: #FCFAB2;
+}
+
+.qa-highlight-color{
+  background-color: #CCE2FF !important;
+  color: black !important;
+}
