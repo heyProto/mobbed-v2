@@ -9,7 +9,7 @@
   background-color: #FCFAB2;
 }
 .qa-highlight-color{
-  background-color: #CCE2FF !important;
+  background-color: #fafafa !important;
   color: black !important;
 }
 .explainers-sticky-segment-question{
@@ -28,4 +28,20 @@
 .item {
   border-bottom: 1px solid lightgrey;
   margin-bottom: 10px;
+}
+
+.explainers-sticky-segment-question{
+  border: 0px;
+  border-left: 3px solid white;
+}
+
+.explainers-sticky-segment-question:hover{
+  border: 0px;
+  border-left: 3px solid #F02E2E;
+}
+
+.explainers-sticky-segment-question a{
+  color: #333 !important;
+  font-size: 12px;
+  border: 0px;
 }
