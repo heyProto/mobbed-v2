@@ -457,13 +457,15 @@ tr th{
 }
 
 #show-more-cards {
-  width: 100%;
+  width: 80%;
   background-color: black;
   border: 1px solid grey;
   border-radius: 5px;
   color: white;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-left: 115px;
+  margin-right: 100px;
 }
 
 .one-br-space{height: 10px !important;}
