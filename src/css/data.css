@@ -176,19 +176,17 @@ table{
   text-align: center;
 }
 .protograph-card{
-  width: 220px;
-  height: 220px;
+  width: 270px;
+  height: 150px;
+  overflow:hidden;
   display: inline-block;
   text-align: left;
   background: white;
-  margin-right: 7px;
-  margin-left: 7px;
+  margin-left: 15px;
   margin-bottom: 25px;
   position: relative;
   cursor: pointer;
-  /*box-shadow: 0 20px 20px rgba(0,0,0,0.08);*/
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-  border: 1px solid rgb(241, 241, 241);
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
 .card-image{
@@ -198,27 +196,6 @@ table{
 .empty-card{
   height: 220px;
   display: inline-block;
-}
-
-.protograph-gradient{
-  width: 100%;
-  height: 220px;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  background: -webkit-linear-gradient(rgba(255,255,255,0.5), #fff 60%);
-  background: -o-linear-gradient(rgba(255,255,255,0.5), #fff 60%);
-  background: -moz-linear-gradient(rgba(255,255,255,0.5), #fff 60%);
-  background: linear-gradient(rgba(255,255,255,0.5), #fff 60%);
-  pointer-events: none;
-}
-
-.data-card-content{
-  position: absolute;
-  display: inline-block;
-  bottom: 0px;
-  width: 88%;
-  padding:15px;
 }
 
 .filter-section{background: #F2F2F2; margin-bottom: 30px !important;}
@@ -292,38 +269,6 @@ table{
 
 #map_circles{
   cursor: pointer;
-}
-
-#protograph_map_title{
-  font-size: 20px;
-  color: #000;
-  margin:0px;
-  padding: 20px;
-  font-weight: 400;
-  border-top: 2px solid #D80202;
-}
-
-#protograph_parent{
-  position: relative;
-  border: 1px solid #efefef;
-  border-top: 0px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-#protograph-tooltip {
-  background: #fafafa;
-  color: black;
-  font-family: sans-serif;
-  font-size: 14px;
-  padding: 10px;
-  position: absolute;
-  width: 244px;
-  line-height: 24px;
-  z-index: 100;
-  pointer-events: all;
-  overflow-y: scroll;
-  height: 413px;
 }
 
 .single-tab {
@@ -467,3 +412,46 @@ tr th{
   display:block;
   opacity: 1;
 }
+
+.protograph-gradient{
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
+  background: -o-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
+  background: -moz-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
+  pointer-events: none;
+}
+
+.data-card-content{
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  width: 100%;
+  padding:15px;
+}
+
+.data-card-content .data-card-title{
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.3em;
+  font-family: arial;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.data-card-content .data-card-date{
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+}
+
