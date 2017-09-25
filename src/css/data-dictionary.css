@@ -1,0 +1,17 @@
+table td{
+  border-left: 1px solid rgba(34,36,38,.1) !important;
+  vertical-align: top !important;
+}
+
+table{
+  padding: 0px !important;
+}
+
+.centr{
+  text-align: center;
+}
+
+.one-br-space{height: 10px !important;}
+.two-br-space{height: 20px !important;}
+.five-br-space{height: 50px !important;}
+.ten-br-space{height: 100px !important;}
