@@ -71,7 +71,20 @@ getJSON('https://cdn.protograph.pykih.com/49a045aea2b71456f5d04f4a/index.json', 
       end_date_split = (new Date (data[0].date)).toDateString().split(" "),
       start_date = start_date_split[2] + " " + start_date_split[1] + " '" + start_date_split[3].slice(-2),
       end_date = end_date_split[2] + " " + end_date_split[1] + " '" + end_date_split[3].slice(-2);
-        
+
+    let number_of_digits = data.length.toString().length;
+    if (number_of_digits !== 3) {
+      document.getElementById('first-number').innerHTML = 0
+    } else {
+      let element = document.getElementById("first-number");
+      element.parentNode.removeChild(element);
+    }
+    if (number_of_digits === 1) {
+      document.getElementById('second-number').innerHTML = 0
+    } else {
+      let element = document.getElementById("second-number");
+      element.parentNode.removeChild(element);
+    }       
     document.getElementById('animate-number').innerHTML = data.length;
     document.getElementById('start-date').innerHTML = start_date;
     document.getElementById('end-date').innerHTML = end_date;

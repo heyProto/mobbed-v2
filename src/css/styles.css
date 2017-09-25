@@ -190,6 +190,10 @@
   margin-top: 5px;
 }
 
+.light-text{
+  color: #adacac;
+}
+
 @media only screen and (max-width: 450px){
   .modal-dialog{
     width: 400px;
