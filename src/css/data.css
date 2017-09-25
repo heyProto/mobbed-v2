@@ -39,8 +39,8 @@
 }
 
 .filter-area .tap-area .tap-area-div{
-  margin-left: 320px;
-  margin-right: 330px;
+  margin-left: 350px;
+  margin-right: 400px;
   display: inline-block;
 }
 
@@ -49,6 +49,8 @@
   color: #F02E2E;
   background-color: #fafafa;
   z-index: 200;
+  border-radius: 5px;
+  padding: 7px 20px;
 }
 
 .filter-area .tap-area .reset-all:hover {
@@ -312,11 +314,12 @@ table{
   height:150px;
   overflow-y:auto;
   display:block;
+  margin-bottom: 25px;
 }
 
 tr{
  border-top: 1px solid #efefef;
- font-size: 11px;
+ font-size: 12px;
 }
 
 tr:hover{
@@ -350,6 +353,11 @@ tr th{
   padding: 3px 5px;
   padding-bottom: 5px;
   vertical-align: bottom;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .filter-help-text{

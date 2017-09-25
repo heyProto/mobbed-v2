@@ -221,7 +221,7 @@ class App extends React.Component {
 
   showFilters() {
     this.setState({
-      height:(Object.keys(this.state.filterHeaders).length / 4) * 225+'px',
+      height:(Object.keys(this.state.filterHeaders).length / 4) * 229+'px',
       overflow: 'hidden',
       showTapArea: 'none',
       hideTapArea: 'block'
@@ -413,7 +413,7 @@ class App extends React.Component {
               <div className="tap-area-div">
                 <span className="arrow-up"></span><div id="tap-me">Tap here to hide filters</div><span className="arrow-up"></span>
               </div>
-              <button className="ui secondary button reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
+              <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>
           <div className="col-sm-16">
