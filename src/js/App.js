@@ -221,8 +221,8 @@ class App extends React.Component {
 
   showFilters() {
     this.setState({
-      height: 800,
-      overflow: 'auto',
+      height:(Object.keys(this.state.filterHeaders).length / 4) * 229+'px',
+      overflow: 'hidden',
       showTapArea: 'none',
       hideTapArea: 'block'
     })
@@ -362,7 +362,19 @@ class App extends React.Component {
       second_tap_area_style = {
         display: this.state.hideTapArea
       }
-
+      let rows=[];
+      let num = Object.keys(this.state.filterHeaders).length/4;
+      for( let i = 0;i<num;i++){
+        rows.push([]);
+      }
+      let count = -1;
+      
+      Object.keys(optionsObj).forEach((key,index)=>{
+        if(index % 4 === 0){
+          count++;
+        }
+        rows[count].push(key);
+      });
       return (
         <div className="banner-area">
           <div className="filter-area">
@@ -371,19 +383,27 @@ class App extends React.Component {
             </div>
             <div id="filter-region" className="ui grid" style={styles}>
               {
-                Object.keys(optionsObj).map((key)=>{
+                rows.map((row,index)=>{
                   return(
-                    <div className="col-sm-4 filter-title">
-                      <table>
-                        <thead className="table-thead">
-                          <tr>
-                            <th className="table-head">
-                              {this.state.filterHeaders[key]}
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="table-tbody">{optionsObj[key]}</tbody>
-                      </table>
+                    <div className="row">
+                      {
+                        rows[index].map((key,index)=>{
+                          return(
+                            <div className="col-sm-4 filter-title">
+                              <table>
+                                <thead className="table-thead">
+                                  <tr>
+                                    <th className="table-head">
+                                      {this.state.filterHeaders[key]}
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody className="table-tbody">{optionsObj[key]}</tbody>
+                              </table>
+                            </div>
+                          )
+                        })
+                      }
                     </div>
                   )
                 })
@@ -393,7 +413,7 @@ class App extends React.Component {
               <div className="tap-area-div">
                 <span className="arrow-up"></span><div id="tap-me">Tap here to hide filters</div><span className="arrow-up"></span>
               </div>
-              <button className="ui secondary button reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
+              <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>
           <div className="col-sm-16">
@@ -410,7 +430,7 @@ class App extends React.Component {
                   <span className="animate-number">{number_of_incidents}</span>
                 </div>
               </div>
-              <div className="display-text">Instances of journalist killings were reported
+              <div className="display-text">Instances of lynchings and mob vigilantism were reported 
                {start_date === '' || end_date === '' ? '' : ` from ${start_date} to ${end_date}` }
               </div>
               <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/>

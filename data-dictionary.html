@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>#mobbed: What emboldens lynching and vigilantism in India?</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/protograph-theme.css">
+    <link rel="stylesheet" type="text/css" href="src/css/data-dictionary.css">
+</head>
+<body>
+  <div class="container proto-container">
+    <div class="col-sm-16 hero-cover">
+      <div class="col-sm-16">
+        <img class="cover-image" src="src/img/cover-image.png" width="100%">
+        <div class="banner-div">
+          <h1 class="project-title">#mobbed</h1>
+          <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="filter-column">
+        <div class="single-option">
+          <div class="category-dash news-dash"></div>
+          <div class="category-name"><a class="sidebar-url" href="index.html">Coverage</a></div>
+        </div>
+        <div class="single-option">
+          <div class="category-dash news-dash"></div>
+          <div class="category-name"><a class="sidebar-url" href="findings.html">Findings</a></div>
+        </div>
+        <div class="single-option">
+          <div class="category-dash news-dash"></div>
+          <div class="category-name"><a class="sidebar-url" href="data.html">Data</a></div>
+        </div>
+        <div class="single-option">
+          <div class="category-dash news-dash"></div>
+          <div class="category-name"><a class="sidebar-url" href="about.html">About</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-14">
+      <h1 class="centr">How we filled the data</h1>
+      <div>
+        <h3>Below is the data that we collected</h3>
+        <table class="celled table">
+          <thead>
+            <tr>
+              <th style="width: 10%;">Section</th>
+              <th style="width: 20%;">Data Point</th>
+              <th>Where we found it</th>
+              <th style="width: 30%;">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr id="url">
+              <td class="top aligned" rowspan="3"><h4>Copy paste from article</h4></td>
+              <td>*URL of primary article</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="headline">
+              <td>*Headline of primary article</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="image">
+              <td>*Cover Image URL of primary article</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="approximate_date_of_incident">
+              <td class="top aligned" rowspan="8"><h4>When and where did it occur?</h4></td>
+              <td>*Approximate date of incident</td>
+              <td>Interpret from article</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="area">
+              <td>*Area - Village or town where the event occurred</td>
+              <td>Mentioned in article</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="district">
+              <td>*District</td>
+              <td>Mentioned in article</td>
+              <td>List of districts</td>
+           </tr>
+           <tr id="area_classification">
+              <td>*Approximately rural or urban?</td>
+              <td>Quick Google Search</td>
+              <td>
+                <ul>
+                  <li>Rural</li>
+                  <li>Urban</li>
+                </ul>
+              </td>
+           </tr>
+           <tr id="state">
+              <td>*State</td>
+              <td>&nbsp;</td>
+              <td>List of states</td>
+           </tr>
+           <tr id="party_whose_chief_minister_is_in_power">
+              <td>*Party whose Chief Minister was in power when the incident took place</td>
+              <td>Quick Google Search</td>
+              <td>
+                <ul>
+                    <li>AAP</li>
+                    <li>AIADMK</li>
+                    <li>BJP</li>
+                    <li>BJD</li>
+                    <li>Congress</li>
+                    <li>CPI-M</li>
+                    <li>JDU</li>
+                    <li>LDF</li>
+                    <li>PDP</li>
+                    <li>SAD</li>
+                    <li>SP</li>
+                    <li>TDP</li>
+                    <li>TRS</li>
+                    <li>TMC</li>
+                    <li>UDF</li>
+                    <li>NPF</li>
+                    <li>President's rule</li>
+                </ul>
+              </td>
+           </tr>
+           <tr id="lat">
+              <td>*Latitude</td>
+              <td>Find via Google Maps</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="lng">
+              <td>*Longtitude</td>
+              <td>Find via Google Maps</td>
+              <td>&nbsp;</td>
+           </tr>
+
+           <tr id="police_vehicles_per_km">
+              <td class="top aligned" rowspan="6"><h4>Law and Order Situation</h4></td>
+              <td>*Number of police vehicles per square kilometres in the state</td>
+              <td>Data compiled by Bureau of Police Research and Development as on Jan 2016.</td>
+              <td>
+                  <ul>
+                      <li>Good</li>
+                      <li>Above average</li>
+                      <li>Average</li>
+                      <li>Below average</li>
+                      <li>Bad</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="does_state_have_village_defence_force">
+              <td>*Does the state have a village defence force?</td>
+              <td>
+                <p>Based on what we could find from Google Searches. We found some version of Village Defence Forces or a government organised Neighbourhood Watch like organisations:</p>
+                <ul>
+                    <li>Assam's Village Defence Organisation (<a target="_blank" href="http://assampolice.gov.in/departments/vdo/vdo.php">ref</a>)</li>
+                    <li>Bihar's Gram Rakshak Dal (<a target="_blank" href="http://www.gramrakshadal.com/">ref</a>)</li>
+                    <li>Chhattisgarh's Gram Raksha Samiti (<a target="_blank" href="https://www.patrika.com/news/raigarh/raigarh-conference-in-naxal-affected-village-1278132">ref</a>)</li>
+                    <li>New Delhi's Prahari (<a target="_blank" href="http://www.delhipolice.nic.in/CP%20Forword.pdf">ref</a>)</li>
+                    <li>Gujarat's Home Guards (<a target="_blank" href="http://www.homeguards.gujarat.gov.in/homeguards/default.aspx">ref</a>)</li>
+                    <li>Jammu and Kashmir's Village Defence Committee</li>
+                    <li>Jharkhand's Gram Raksha Dal (<a target="_blank" href="http://www.jharkhand.gov.in/documents/10179/54369/Gram%20Raksha%20Dal?version=1.0&t=1417164686000">ref</a>)</li>
+                    <li>Karnataka's Village Defense Parties (<a target="_blank" href="http://dpal.kar.nic.in/pdf_files%5CLEGISLATURE%20(Prevention%20of%20disqualification).pdf">ref</a>)</li>
+                    <li>Kerala's Kadalora Jagratha Samithi</li>
+                    <li>Madhya Pradesh's Gram Raksha Samiti (<a target="_blank" href="http://mppolice.gov.in//Static/Community/Gram%20Raksha%20Samiti.PDF">ref</a>)</li>
+                    <li>Maharashtra's Village Defence Party (<a target="_blank" href="http://www.mahapolice.gov.in/">ref</a>)</li>
+                    <li>Manipur's Village Defence Force (<a target="_blank" href="http://manipurpolice.org/Village%20Defene%20Force.html">ref</a>)</li>
+                    <li>Meghalaya's Village Defense Party (<a target="_blank" href="http://megpolice.gov.in/good_practices/good_practices_in_meghalaya_police.pdf">ref</a>)</li>
+                    <li>Mizoram's Village Defense Party (<a target="_blank" href="https://police.mizoram.gov.in/uploads/files/mizoram-police-act-2011.pdf">ref</a>)</li>
+                    <li>Nagaland's Naga Village Guards (<a target="_blank" href="http://kanglaonline.com/2016/02/modernizing-village-guards-will-solve-many-problems-in-enpo-areas/">ref</a>)</li>
+                    <li>Odisha's Grama Rakshi (<a target="_blank" href="http://angulpolice.nic.in/sites/default/files/The%20Orissa%20Grama%20Rakshi%20Rules%20%2C%201969.pdf">ref</a>)</li>
+                    <li>Tripura's Prayaas (<a target="_blank" href="http://tripurapolice.gov.in/prayaas">ref</a>)</li>
+                    <li>West Bengal's Village Police Volunteers (<a target="_blank" href="http://policewb.gov.in/wbp/misc/2012/878_34_180612.pdf">ref</a>)</li>
+                </ul>
+              </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Don't know</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="police_to_population_in_state">
+              <td>*Police-to-population ratio in the state</td>
+              <td>Data compiled by Bureau of Police Research and Development as on Jan 2016. The UN recommended police to population ratio is 230.</td>
+              <td>
+                <ul>
+                    <li>Above UN recommendation</li>
+                    <li>Below UN recommendation</li>
+                </ul>
+              </td>
+           </tr>
+           <tr id="judge_to_population_in_state">
+              <td>*Judge-to-population ratio in the state</td>
+              <td>From Court News, publication of the Supreme Court, Vol XI Issue No. 1 Jan - Mar 2016.</td>
+              <td>
+                  <ul>
+                      <li>Good</li>
+                      <li>Above average</li>
+                      <li>Average</li>
+                      <li>Below average</li>
+                      <li>Bad</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="did_the_police_intervene">
+              <td>*Did the police intervene?</td>
+              <td>Interpret from article</td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="did_the_police_intervention_prevent_death">
+              <td>*If yes, was the police intervention able to prevent a death?</td>
+              <td>Interpret from article</td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="count_injured">
+              <td class="top aligned" rowspan="7"><h4>The incident</h4></td>
+              <td>*Count of people injured</td>
+              <td>Mentioned in article</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="count_dead">
+              <td>*Count of people dead</td>
+              <td>Mentioned in article</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="describe_the_event">
+              <td>*Description of the incident in 1-2 lines.</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="was_incident_planned">
+              <td>*Was the incident planned?</td>
+              <td>
+                  <ul>
+                      <li>"Planned" if it was clearly planned against a specific victim. Example - a village meeting that decides that someone needs to be lynched.</li>
+                      <li>"Neighbourhood watch" where local citizens were on the lookout for potential "wrong-doers" and the victim  was targeted incidentally. ( Cow vigilante groups, neighbourhood watch for thieves etc).</li>
+                      <li>"Spontaneous" if the incident was triggered with no prior planning and occurred as an immediate, spontaneous response to the victim's actions.</li>
+                      <li>"Not clear" if nothing is mentioned in the article.</li>
+                  </ul>
+              </td>
+              <td>
+                  <ul>
+                    <li>Planned</li>
+                    <li>Neighbourhood watch</li>
+                    <li>Spontaneous</li>
+                    <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="classification">
+              <td>*How we classified the incident</td>
+              <td>&nbsp;</td>
+              <td>
+                  <ul>
+                      <li>Cow protection related</li>
+                      <li>Disputes and altercations</li>
+                      <li>Witchcraft related</li>
+                      <li>Murder / Death</li>
+                      <li>Sexual harassment</li>
+                      <li>Child lifting</li>
+                      <li>Others</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="what_the_victim_did">
+              <td>*Description of what the victim was doing prior to the lynching</td>
+              <td>Interpret from article</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="what the mob was doing ">
+              <td>*Description of what the accused doing</td>
+              <td>Interpret from article</td>
+              <td>&nbsp;</td>
+           </tr>
+           <td class="top aligned" rowspan="10"><h4>People involved</h4></td>
+
+           <tr id="victim_names">
+              <td>Name of the victims</td>
+              <td>Generally comma separated list of name followed by age in bracket. Example Ram (15), Shyam (16)</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="victim_social_classification">
+              <td>*Social classification of the victims</td>
+              <td>Interpret from article</td>
+              <td>
+                  <ul>
+                      <li>Hindu (caste not clear)</li>
+                      <li>Hindus majorly (plus some others)</li>
+                      <li>Muslim</li>
+                      <li>Muslim majorly (plus some others)</li>
+                      <li>Dalit</li>
+                      <li>Sikh</li>
+                      <li>Christian</li>
+                      <li>Law enforcement</li>
+                      <li>Tribal</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="victim_social_classification_notes">
+              <td>*How did you decipher the social classification of the victims?</td>
+              <td>&nbsp;</td>
+              <td>
+                  <ul>
+                      <li>Mentioned in article</li>
+                      <li>Inferred from names</li>
+                      <li>Inferred from actions</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="victim_sex">
+              <td>*What is the sex of the victim(s)?</td>
+              <td>Interpret from article</td>
+              <td>
+                  <ul>
+                      <li>Male</li>
+                      <li>Female</li>
+                      <li>Transgender</li>
+                      <li>Both sex</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="title">
+              <td>*Title of the card</td>
+              <td>Generally name of a victim. If there are more than one victim then follow it by “and others”. Example - Ram (15) and others</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="accused_names">
+              <td>Names of the accused</td>
+              <td>Generally comma separated list of name followed by age in bracket. Example Ram (15), Shyam (16)</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="accused_social_classification">
+              <td>*Social classification of the accused</td>
+              <td>Interpret from article</td>
+              <td>
+                  <ul>
+                      <li>Hindu (caste not clear)</li>
+                      <li>Hindus majorly (plus some others)</li>
+                      <li>Muslim</li>
+                      <li>Muslim majorly (plus some others)</li>
+                      <li>Dalit</li>
+                      <li>Sikh</li>
+                      <li>Christian</li>
+                      <li>Law enforcement</li>
+                      <li>Tribal</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="accused_social_classification_notes">
+              <td>*How did you decipher the social classification of the accused?</td>
+              <td>&nbsp;</td>
+              <td>
+                  <ul>
+                      <li>Mentioned in article</li>
+                      <li>Inferred from names</li>
+                      <li>Inferred from actions</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="accused_sex">
+              <td>*What is the sex of the accused(s)?</td>
+              <td>Interpret from article</td>
+              <td>
+                  <ul>
+                      <li>Male</li>
+                      <li>Female</li>
+                      <li>Transgender</li>
+                      <li>Both sex</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+
+
+           <tr id="is_gender_hate_crime">
+              <td class="top aligned" rowspan="9"><h4>Hate Crime Classification</h4></td>
+              <td>*Is this incident a gender based hate crime?</td>
+              <td>Cases of witchcraft (in case of women), "social deviance", where it is evident that the victim was attacked because of being a woman/ transgender. If they were attacked not for their sex, but the nature of attack was gendered, example, sexual harassment, rape threats. </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_caste_hate_crime">
+              <td>*Is this incident a caste based hate crime?</td>
+              <td>Yes if someone is attacked because they belong to a different caste, for certain caste specific practices, for inter-caste marriage and relationships, for transgressing caste boundaries, for caste based derogatory remarks. </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_race_hate_crime">
+              <td>*Is this incident a race based hate crime?</td>
+              <td>Yes if someone is attacked because they belong/perceived to belong to a different racial group i.e. have distinct biological and physical traits / features / appearances. Example: Attacks on people from the North-eastern part of India, on people from African nationals.</td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_religion_hate_crime">
+              <td>*Is this incident a religion based hate crime?</td>
+              <td>Yes if attacked for practicing/not practicing a certain religious faith, for hurting religious sentiments, for a particular religious practice, inter-religious marriage/relationship. </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_political_affiliation_hate_crime">
+              <td>*Is this incident a politicial affiliation based hate crime?</td>
+              <td>Yes if someone is attacked because they belong to a different political party, or ideology, have criticized a certain political viewpoint, are trying to convert people politically etc.</td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_sexual_orientation_and_gender_identity_hate_crime">
+              <td>*Is this incident a sexual orientation and gender identity based hate crime?</td>
+              <td>Yes if someone is attacked merely because they are homosexual / bisexual / asexual and / or for their gender identity/expression. For example,for cross dressing, for identifying with a gender that is different from their biological sex </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_disability_hate_crime">
+              <td>*Is this incident a disability based hate crime?</td>
+              <td>Yes if someone with physical and/or mental disability is attacked (especially cases of Suspicions of witchcraft, Child lifting etc) </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_ethnicity_hate_crime">
+              <td>*Is this incident an ethnicity based hate crime?</td>
+              <td>Yes if someone is attacked because they belong to a different social or cultural group, speak a different dialect or language, trace their ancestry to a different lineage, come from a different tribe, or from a different region etc. </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+           </tr>
+           <tr id="is_hate_crime">
+              <td>*Overall, is this incident a hate crime? </td>
+              <td>Yes if any of the hate crime categories above are yes. </td>
+              <td>
+                  <ul>
+                      <li>Yes</li>
+                      <li>No</li>
+                      <li>Not clear</li>
+                  </ul>
+              </td>
+            </tr>
+           <tr id="notes_to_explain_nuances">
+              <td class="top aligned" rowspan="4"><h4>Addendum</h4></td>
+              <td>Are there any extra notes or caveats that you want readers to know about how you filled up this card?</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="referral_link_1">
+              <td>Referral Link 1</td>
+              <td>Which other articles did you refer to fill up this card?</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="referral_link_2">
+              <td>Referral Link 2</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+           </tr>
+           <tr id="referral_link_3">
+              <td>Referral Link 3</td>
+              <td>&nbsp;</td>
+              <td></td>
+           </tr>
+          </tbody></table>
+          <br/>
+          <br/>
+          <h3>Reference Data</h3>
+          <table class="ui celled table">
+            <thead>
+              <tr>
+                <th>*State</th>
+                <th>*Police to population ratio in the state</th>
+                <th>*Judge to population ratio in the state</th>
+                <th>*Number of police vehicles per square kilometres in the state</th>
+                <th>*Does the state have a village defence force?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Andaman and Nicobar Island</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Below average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Andhra Pradesh</td>
+                <td>Below UN recommendation</td>
+                <td>Bad</td>
+                <td>Below Average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Arunachal Pradesh</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Bad</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Assam</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Bihar</td>
+                <td>Below UN recommendation</td>
+                <td>Bad</td>
+                <td>Bad</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Chandigarh</td>
+                <td>Above UN recommendation</td>
+                <td>Above average</td>
+                <td>Good</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Chhattisgarh</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Bad</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Dadra and Nagar Haveli</td>
+                <td>Below UN recommendation</td>
+                <td></td>
+                <td>Above average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Daman and Diu</td>
+                <td>Below UN recommendation</td>
+                <td>Average</td>
+                <td>Good</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>New Delhi</td>
+                <td>Above UN recommendation</td>
+                <td>Above average</td>
+                <td>Good</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Goa</td>
+                <td>Above UN recommendation</td>
+                <td>Above average</td>
+                <td>Above average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Gujarat</td>
+                <td>Below UN recommendation</td>
+                <td>Average</td>
+                <td>Below average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Haryana</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Above average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Himachal Pradesh</td>
+                <td>Below UN recommendation</td>
+                <td>Average</td>
+                <td>Bad</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Jammu and Kashmir</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Below average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Jharkhand</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Karnataka</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Kerala</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Good</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Lakshadweep</td>
+                <td>Above UN recommendation</td>
+                <td>Good</td>
+                <td>Good</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Madhya Pradesh</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Bad</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Maharashtra</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Manipur</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Meghalaya</td>
+                <td>Above UN recommendation</td>
+                <td>Bad</td>
+                <td>Below average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Mizoram</td>
+                <td>Above UN recommendation</td>
+                <td>Average</td>
+                <td>Bad</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Nagaland</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Above average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Odisha</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Below average</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Puducherry</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Good</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Punjab</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Above average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Rajasthan</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Bad</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Sikkim</td>
+                <td>Above UN recommendation</td>
+                <td>Average</td>
+                <td>Average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Tamil Nadu</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Above average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Telangana</td>
+                <td>Below UN recommendation</td>
+                <td>Bad</td>
+                <td>Above average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Tripura</td>
+                <td>Above UN recommendation</td>
+                <td>Below average</td>
+                <td>Good</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Uttar Pradesh</td>
+                <td>Below UN recommendation</td>
+                <td>Bad</td>
+                <td>Average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>Uttarakhand</td>
+                <td>Below UN recommendation</td>
+                <td>Average</td>
+                <td>Below average</td>
+                <td>Don't know</td>
+              </tr>
+              <tr>
+                <td>West Bengal</td>
+                <td>Below UN recommendation</td>
+                <td>Below average</td>
+                <td>Average</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <div class="ten-br-space"></div>
+    </div>
+  </div>
+  <script src="lib/js/jquery.min.js"></script>
+  <script src="lib/js/jquery.sticky.js"></script>
+</body>
+</html>

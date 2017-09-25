@@ -75,7 +75,7 @@ class MapsCard extends React.Component {
     let styles = {
       strokeWidth: 0.675
     }
-    const {projection, regions, outlines, country, path, offsetWidth, actualHeight} = this.state
+    const {projection, regions, outlines, country, path, offsetWidth, actualHeight} = this.state;
     return(
       <svg id='map_svg' viewBox={`0, 0, ${offsetWidth}, ${actualHeight}`} width={offsetWidth} height={actualHeight}>
         <g id="regions-grp" className="regions">{regions}</g>
