@@ -194,7 +194,6 @@
 @media only screen and (max-width: 450px){
   .stories-section, .chatter-section, .cards-section{
     width: 100%;
-    z-index: -999;
   }
   .chatter-section, .cards-section{
     display: none;
@@ -237,10 +236,11 @@
     overflow: hidden;
     border-bottom: 0px;
   }
-
   .mobile-tab-area{
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
+    z-index: 999 !important;
+    background: white;
   }
   .banner-div{
     padding: 20px;
