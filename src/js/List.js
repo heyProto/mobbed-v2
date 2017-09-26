@@ -52,14 +52,15 @@ class ListCards extends React.Component {
       return(<h2>No cards to show</h2>)
     } else {
       let cards = this.props.dataJSON.map((card, i) => {
-        let x = Utils.formatDate(card.date)
+        let x = card.date.split("-"),
+          month = new Date(x).toLocaleDateString('en-US', {month: 'short'});
         return(
           <div key={i} className="protograph-card" onClick={(e) => this.handleOpenModal(e, card)}>
             {card.image ? <img className="card-image" src={card.image} width='100%'/> : <img className="card-image" src={card.screen_shot_url} width='100%'/>}
             <div className="protograph-gradient">
               <div className="data-card-content">
                 <div className="data-card-title">{card.title}</div>
-                <div className="data-card-date">{card.date.split("-")[2]} {x.split(" ")[0].substring(0, 3)} '{x.split(" ")[1].substring(3, 5)} | {card.state.substring(0, 13)}</div>
+                <div className="data-card-date">{month} {x[2]}, {x[0]} | {card.state.substring(0, 13)}</div>
               </div>
             </div>
           </div>
