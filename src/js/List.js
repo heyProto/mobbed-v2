@@ -29,7 +29,7 @@ class ListCards extends React.Component {
     if (this.props.mode === 'laptop') {
       let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), card.iframe_url, 'laptop')
     } else {
-      let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), card.iframe_url, 'mobile', true)
+      let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), card.iframe_url, 'mobile')
     } 
     $('.modal-close').click(function(){
       $("#proto-modal").modal('hide');
