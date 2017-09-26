@@ -9,15 +9,25 @@
     <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="lib/css/protograph-theme.css">
     <link rel="stylesheet" type="text/css" href="src/css/data.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <div class="container proto-container">
-      <div class="col-sm-16 hero-cover">
-        <div class="col-sm-16">
-          <img src="src/img/cover-image.png" width="100%">
-          <div class="banner-div">
-            <h1 class="project-title">#mobbed</h1>
-            <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
+      <div class="mobile-header">
+        <div class="mobbed-title-mobile">
+          <div class="page-navigation-mobile">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle page-name" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="src/img/menu-icon.png" width="30px">Menu
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">COVERAGE</a>
+                <a class="dropdown-item" href="data.html">DATA</a>
+                <a class="dropdown-item" href="findings.html">FINDINGS</a>
+                <a class="dropdown-item" href="about.html">ABOUT</a>
+              </div>
+            </div>
+            <!-- <div class="page-name"><img src="src/img/menu-icon.png" width="30px">Menu</div> -->
           </div>
         </div>
       </div>
@@ -39,11 +49,27 @@
             <div class="category-dash news-dash"></div>
             <div class="category-name"><a class="sidebar-url" href="about.html">ABOUT</a></div>
           </div>
+          <div class="social-share-icons">
+            <a href="http://www.facebook.com/sharer/sharer.php?u=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn facebook">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="http://twitter.com/share?url=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn twitter">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="col-sm-14">
-        <div id="card-list-div"></div>
-      </div>
+      <div class="col-sm-14 hero-cover">
+          <div class="col-sm-16">
+            <img src="src/img/cover-image.png" width="100%" class="data-cover-img">
+            <div class="hate-crime-toggle">
+              <button type="button" class="btn btn-hate-crime">Law & order</button>
+              <button type="button" class="btn btn-law">Hate crime</button>
+            </div>
+            <div class="hint">Based on selection, data points in filters change.</div>
+            <div id="card-list-div"></div>
+          </div>
+        </div>
     </div>
     <div class="ten-br-space"></div>
     <!-- Optional JavaScript -->
@@ -62,7 +88,7 @@
         topoURL: 'src/data/india-topo.json',
         chartOptions: {
           chartTitle: 'Mob Justice in India',
-          height: 600,
+          height: 500,
           defaultCircleColor: '#F02E2E'
         },
         filterNames:[
