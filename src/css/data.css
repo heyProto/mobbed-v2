@@ -610,4 +610,7 @@ tr th{
   .data-cover-img{
     height: 530px !important;
   }
+  .mobile-header{
+    margin-bottom: 0px !important;
+  }
 }

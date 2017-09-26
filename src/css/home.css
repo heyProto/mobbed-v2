@@ -295,5 +295,9 @@
     color: white;
     background-color:#F02E2E; 
   }
+
+  .mobile-header{
+    margin-bottom: 0px !important;
+  }
   
 }

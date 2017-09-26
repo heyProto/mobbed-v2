@@ -206,6 +206,14 @@ p{
 .filter-column .single-option .news-dash {
   background: #F02E2E;
 }
+
+.filter-column .single-option .social-share-facebook{
+  background: #3b5998 !important;
+}
+
+.filter-column .single-option .social-share-twitter{
+  background: #00aced !important;
+}
 .filter-column .single-option .category-name {
   font-size: 14px;
   font-weight: 700;
@@ -273,12 +281,33 @@ p{
   color: black;
 }
 
+.sidebar-url a{
+  color: black;
+}
+
+.social-share-icons{
+  padding-left: 10px;
+}
+
+.social-share-icons .fa{
+  font-size: 30px;
+  margin-right: 5px;
+}
+
 .banner-div{
   height: 211px;
   width: 100%;
   position: absolute;
   top: 0px;
   padding: 30px;
+}
+
+.back-to-home{
+  text-decoration: none;
+}
+
+.back-to-home:hover{
+  text-decoration: none;
 }
 
 .project-title{
