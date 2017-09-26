@@ -364,4 +364,21 @@ p{
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  .dropdown-item{
+    display: block;
+    width: 100%;
+    padding: 10px 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #292b2c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border-bottom: 1px solid #efefef;
+  }
+  .dropdown button {
+    background-color: white;
+    padding: 0px;
+  }
+
 }
