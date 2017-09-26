@@ -67,6 +67,8 @@ $(".morelink").click(function(){
 if (mode === 'laptop'){
   $('.briefs-column').sticky({topSpacing:20});
   $('.filter-column').sticky({topSpacing:20});
+} else {
+  $('.mobile-tab-area').sticky({topSpacing:0});
 }
 
 //counter

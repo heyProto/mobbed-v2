@@ -194,6 +194,7 @@
 @media only screen and (max-width: 450px){
   .stories-section, .chatter-section, .cards-section{
     width: 100%;
+    z-index: -999;
   }
   .chatter-section, .cards-section{
     display: none;
@@ -213,6 +214,7 @@
     border-right: 1px solid #efefef;
     border-bottom: 0px solid #efefef;
     cursor: pointer;
+    background-color: white;
   }
   .modal-dialog{
     width: 400px;
@@ -260,8 +262,11 @@
   .filter-column{
     display: none;
   }
-  #sticky-wrapper{
+ /* #sticky-wrapper{
     display: none;
+  }*/
+  .col-sm-2 #sticky-wrapper {
+    display: block;
   }
   .proto-card .card-text{
     column-count: 1 !important;
