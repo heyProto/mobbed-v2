@@ -517,6 +517,10 @@ tr th{
   margin-top: -60px;
 }
 
+.hate-crime-img{
+  height: 560px !important;
+}
+
 .hate-crime-toggle{
   text-align: center;
   margin-bottom: 15px;
