@@ -345,10 +345,12 @@ class App extends React.Component {
         start_date = '';
         end_date = '';
       } else {
-        let formated_start_date = Utils.formatDate(range[length].date);
-        start_date = range[length].date.split("-")[2] + " " +formated_start_date.split(" ")[0].substring(0, 3) + " '" + formated_start_date.split(" ")[1].substring(3, 5)
-        let formated_end_date = Utils.formatDate(range[0].date)
-        end_date = range[0].date.split("-")[2] + " " +formated_end_date.split(" ")[0].substring(0, 3) + " '" + formated_end_date.split(" ")[1].substring(3, 5) ;
+        let formated_start_date = range[length].date.split("-"),
+          start_month = new Date(range[length].date).toLocaleDateString('en-US', {month: 'short'});
+        start_date = start_month + " " +formated_start_date[2] + ", "+formated_start_date[0]
+        let formated_end_date = range[0].date.split("-"),
+          end_month = new Date(range[0].date).toLocaleDateString('en-US', {month: 'short'});
+        end_date = end_month + " " +formated_end_date[2] + ", "+formated_end_date[0]
       }
 
       let styles = {

@@ -76,10 +76,12 @@ getJSON('http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json
   if (err != null) {
     alert('Something went wrong: ' + err);
   } else {
-    let start_date_split = (new Date (data[data.length - 1].date)).toDateString().split(" "),
-      end_date_split = (new Date (data[0].date)).toDateString().split(" "),
-      start_date = start_date_split[2] + " " + start_date_split[1] + " '" + start_date_split[3].slice(-2),
-      end_date = end_date_split[2] + " " + end_date_split[1] + " '" + end_date_split[3].slice(-2);
+    let start_date_split = data[data.length - 1].date.split("-"),
+      start_month = new Date(data[data.length - 1].date).toLocaleDateString('en-US', {month: 'short'}),
+      end_date_split = data[0].date.split("-"),
+      end_month = new Date(data[0].date).toLocaleDateString('en-US', {month: 'short'}),
+      start_date = start_month + " " + start_date_split[2] + ", " + start_date_split[0],
+      end_date = end_month + " " + end_date_split[2] + ", " + end_date_split[0];
 
     let number_of_digits = data.length.toString().length;
     if (number_of_digits !== 3) {
