@@ -533,6 +533,13 @@ tr th{
   color: gray;
 }
 
+.data-title{
+  position:absolute;
+  color:white;
+  z-index:100;
+  padding: 10px;
+}
+
 @media only screen and (max-width: 450px){
   .modal-dialog{
     width: 100%;
