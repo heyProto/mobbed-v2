@@ -608,6 +608,8 @@ tr th{
   #map_svg{
     padding-top: 0px;
     padding-bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
   }
   .data-cover-img{
     height: 530px !important;

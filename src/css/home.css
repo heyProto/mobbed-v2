@@ -216,10 +216,12 @@
     background-color: white;
   }
   .modal-dialog{
-    width: 400px;
-    height:100%;
-    margin-top: 200px;
-  }
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+  }  
   .container{
     width: 100%;
   }
@@ -307,4 +309,22 @@
   .mobile-header{
     margin-bottom: 0px !important;
   } 
+  .modal-content{
+    width: 300px !important;
+    margin-left: 50%;
+    transform: translate(-50%, 150px);
+    border-radius: 5px;
+  }
+  .modal-close{
+    position: absolute;
+    top: 150px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    right: 35px;
+    margin-right: -27px;
+    margin-top: -30px;
+    color: white;
+    font-size: 20px;
+  }
 }
