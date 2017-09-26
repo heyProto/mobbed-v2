@@ -28,7 +28,7 @@ function getJSON(url, callback) {
 };
 
 let dimension = getScreenSize(), mode;
-if (dimension.width <= 400){
+if (dimension.width <= 450){
   mode = 'mobile';
 } else {
   mode = 'laptop';
@@ -123,7 +123,7 @@ getJSON('http://protograph.indianexpress.com/be0b3c8854f0b1e774b96580/index.json
       document.getElementById('display-cards').innerHTML = mob_cards
     })
     let dimension = getScreenSize(), mode;
-    if (dimension.width <= 400){
+    if (dimension.width <= 450){
       mode = 'mobile';
     } else {
       mode = 'laptop';

@@ -20,7 +20,7 @@ ProtoGraph.Card.toMaps.prototype.getData = function (data) {
 ProtoGraph.Card.toMaps.prototype.renderLaptop = function () {
   let dimension = getScreenSize(),
     mode;
-  if (dimension.width <= 400){
+  if (dimension.width <= 450){
     mode = 'mobile';
   } else {
     mode = 'laptop';

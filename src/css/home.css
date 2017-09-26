@@ -272,6 +272,7 @@
   }*/
   .col-sm-2 #sticky-wrapper {
     display: block;
+    height: 0px !important;
   }
   .proto-card .card-text{
     column-count: 1 !important;
