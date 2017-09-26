@@ -1,20 +1,19 @@
 const webpack = require('webpack');
 const minifier = require('minifier')
-const input = './src/css/data.css'
+const input = './src/css/about.css'
 const options = {
-  output: "mobbed-data.min.css"
+  output: "mobbed-about.min.css"
 }
 minifier.minify(input, options);
 
 module.exports = {
   // entry: './main.js',
   entry: {
-    app: './main.js'
+    app: './main-about.js'
   },
   output: {
     path: __dirname,
-    publicPath: '/',
-    filename: 'mobbed-data.min.js',
+    filename: 'mobbed-about.min.js',
   },
   plugins: [
     new webpack.DefinePlugin({
