@@ -381,6 +381,7 @@ tr th{
   position: absolute;
   top: 0px;
   padding: 30px;
+  display: none;
 }
 
 .project-title{
@@ -491,6 +492,15 @@ tr th{
 
 .filter-title svg{
   margin-left: -20px;
+}
+
+.branding{
+  color: black;
+  font-family: "Noto Serif", serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 450px){
