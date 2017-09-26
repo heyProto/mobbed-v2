@@ -1,6 +1,6 @@
 .answer{
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px !important;
 }
 .question1{
   border-top: 1px solid lightgrey;

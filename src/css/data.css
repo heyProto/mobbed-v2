@@ -497,15 +497,6 @@ tr th{
   margin-left: -20px;
 }
 
-.branding{
-  color: black;
-  font-family: "Noto Serif", serif;
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 5px;
-  margin-bottom: 30px;
-}
-
 .hero-cover{
     padding: 0px;
     overflow: hidden;
