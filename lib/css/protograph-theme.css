@@ -19,6 +19,13 @@ p{
   padding-left: 5px;
   margin-bottom: 30px;
 }
+.mobile-branding{
+  display: none;
+}
+
+.mobile-header{
+  display: none;
+}
 
 .answer h3{
   font-size: 20px;
@@ -331,3 +338,30 @@ p{
 
 
 /*# sourceMappingURL=style.css.map */
+
+
+@media only screen and (max-width: 450px){
+  .mobile-branding{
+    display: inline-block;
+    color: black;
+    font-family: "Noto Serif", serif;
+    font-size: 42px;
+    /*text-align: center;*/
+    font-weight: bold;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .mobile-header{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .page-navigation-mobile{
+    padding-left: 10px;
+    border-bottom: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
