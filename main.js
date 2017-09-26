@@ -18,12 +18,14 @@ ProtoGraph.Card.toMaps.prototype.getData = function (data) {
 }
 
 ProtoGraph.Card.toMaps.prototype.renderLaptop = function () {
-  let dimension = getScreenSize();
+  let dimension = getScreenSize(),
+    mode;
   if (dimension.width <= 400){
-    this.mode = 'mobile';
+    mode = 'mobile';
   } else {
-    this.mode = 'laptop';
+    mode = 'laptop';
   } 
+  console.log(mode, "mode")
   ReactDOM.render(
     <App
       dataURL={this.options.dataURL}
@@ -31,7 +33,7 @@ ProtoGraph.Card.toMaps.prototype.renderLaptop = function () {
       chartOptions={this.options.chartOptions}
       filterNames={this.options.filterNames}
       filterHeaders={this.options.filterHeaders}
-      mode={this.mode}
+      mode={mode}
       dimensionWidth = {dimension.width}
       ref={(e) => {
         this.containerInstance = this.containerInstance || e;

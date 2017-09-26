@@ -59,13 +59,26 @@ class TimeBrush extends React.Component {
   }
 
   render() {
-    let start_domain, end_domain;
+    let start_domain, end_domain, bar_color, brush_color, brush_opacity, handle_color, label_color;
     if (this.props.start_domain === 'undefined' && this.props.end_domain === 'undefined'){
       start_domain = this.state.sorted_arr[0].date_obj;
       end_domain = this.state.sorted_arr[this.state.sorted_arr.length -1].date_obj;
     } else {
       start_domain = this.props.start_domain;
       end_domain = this.props.end_domain;
+    }
+    if (this.props.mode === 'mobile') {
+      bar_color= "F02E2E"
+      brush_color="black"
+      brush_opacity=0.1
+      handle_color="#bdb8b8"
+      label_color="#252525"
+    } else {
+      bar_color= "white"
+      brush_color="red"
+      brush_opacity=0.3
+      handle_color="#fafafa"
+      label_color="#fafafa"
     }
     return (
       <VictoryChart 
@@ -77,22 +90,22 @@ class TimeBrush extends React.Component {
             selectedDomain={{x:[start_domain, end_domain]}}
             dimension="x" 
             responsive={this.props.mode === 'mobile' ? true : false}
-            handleStyle={{fill: "#fafafa", height: 27, y:25, width: 7}}
-            selectionStyle={{stroke: "transparent", fill: "red", fillOpacity: 0.3}}
+            handleStyle={{fill: handle_color, height: 27, y:25, width: 7}}
+            selectionStyle={{stroke: "transparent", fill: brush_color, fillOpacity: brush_opacity}}
             onDomainChange={(domain) => this.props.handleSelectDateRange(domain)}/>
         }
       > 
         <VictoryAxis
           fixLabelOverlap={true}
           style={{
-            axis: {stroke: "#fafafa", strokeWidth: 1},
+            axis: {stroke: handle_color, strokeWidth: 1},
             axisLabel: {fontSize: 10},
-            ticks: {stroke: "#fafafa", size: 5},
-            tickLabels: {fontSize: 10, fill:"#fafafa"}
+            ticks: {stroke: handle_color, size: 5},
+            tickLabels: {fontSize: 10, fill:label_color}
           }}/>
 
         <VictoryBar
-          style={{ data: { fill: "white" } }}
+          style={{ data: { fill: bar_color } }}
           padding={{left: 20, right: 20, bottom:50}}
           data={this.state.sorted_arr}
           x="date_obj"
