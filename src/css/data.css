@@ -497,15 +497,6 @@ tr th{
   margin-left: -20px;
 }
 
-.branding{
-  color: black;
-  font-family: "Noto Serif", serif;
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 5px;
-  margin-bottom: 30px;
-}
-
 .hero-cover{
     padding: 0px;
     overflow: hidden;
@@ -515,6 +506,8 @@ tr th{
   height: 500px !important;
   width: auto !important;
   margin-bottom: 10px;
+  filter: blur(5px);
+  margin-left: -20px;
 }
 
 @media only screen and (max-width: 450px){
@@ -600,6 +593,9 @@ tr th{
     margin-top: -30px;
     color: white;
     font-size: 20px;
+  }
+  #show-more-cards{
+    width: 80%;
   }
   .count-area{
     margin-top: 10px;

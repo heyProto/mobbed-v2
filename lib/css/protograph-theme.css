@@ -11,6 +11,34 @@ p{
   column-count: 1;
   margin-top: 30px;
 }
+.branding{
+  color: black;
+  font-family: "Noto Serif", serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+
+.answer h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.answer p{
+  margin-top: 20px;
+}
+
+.answer{
+  margin-bottom: 0px !important;
+}
+.page-title{
+  padding-left: 10px;
+  font-weight: bold;
+  color: #333;
+  font-family: "Noto Serif", serif;
+  margin-top: 0px;
+}
 .proto-container {
   width: 1260px;
   padding: 0px; }
