@@ -480,3 +480,69 @@ tr th{
 .two-br-space{height: 20px !important;}
 .five-br-space{height: 50px !important;}
 .ten-br-space{height: 100px !important;}
+
+@media only screen and (max-width: 450px){
+  .modal-dialog{
+    width: 305px;
+    height:auto;
+    margin-top: 0px;
+    transform: translate(10%, 10%) !important;
+  }
+  .container{
+    width: 100%;
+  }
+
+  .hero-cover{
+    padding: 0px;
+  }
+  .hero-cover img{
+    padding: 0px;
+    height: 250px;
+    width: auto;
+    margin-left: -10px;
+  }
+  .banner-div{
+    padding: 20px;
+    left: 0px;
+    text-align: center;
+  }
+  .counter-area{
+    margin-top: 160px;
+  }
+  .display-text{
+    text-align: center
+  }
+  .number-background{
+    transform: translate(50%,0px);
+  }
+  .filter-column{
+    display: none;
+  }
+  #sticky-wrapper{
+    display: none;
+  }
+  .proto-card .card-text{
+    column-count: 1 !important;
+  }
+  .proto-card{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .mob-justice-incidents{
+    margin-left: 0px;
+    width: auto;
+  }
+  .display-number{
+    top: -7px;
+    left: 102px;
+    /*transform: translate(50%,0px);*/
+  }
+  .filter-area .tap-area .tap-area-div{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #show-more-cards {
+    margin-left: 35px;
+    margin-right: 0px;
+  }
+}

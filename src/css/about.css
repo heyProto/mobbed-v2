@@ -45,3 +45,33 @@
   font-size: 12px;
   border: 0px;
 }
+
+.list-items{
+  margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 450px){
+  .container{
+    width: 100%;
+  }
+  .hero-cover{
+    padding: 0px;
+  }
+  .hero-cover img{
+    padding: 0px;
+    height: 250px;
+    width: auto;
+    margin-left: -10px;
+  }
+  .banner-div{
+    padding: 20px;
+    left: 0px;
+    text-align: center;
+  }
+  .filter-column{
+    display: none;
+  }
+  #sticky-wrapper{
+    display: none;
+  }
+}
