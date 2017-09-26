@@ -10,7 +10,7 @@ setTimeout(function(){
       }
     });
   }); 
-},1000)
+},2000)
 
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -162,7 +162,7 @@ getJSON('http://protograph.indianexpress.com/948123634d965de58d04623d/index.json
         createDiv.id = 'ProtoCard-article'+i
         createDiv.className= 'ProtoCard-article'
         document.getElementById('display-stories').appendChild(createDiv)
-        new ProtoEmbed.initFrame(document.getElementById("ProtoCard-article"+i), data[i].iframe_url, 'laptop')
+        new ProtoEmbed.initFrame(document.getElementById("ProtoCard-article"+i), data[i].iframe_url, 'big_image_text')
       })
     }
 })
