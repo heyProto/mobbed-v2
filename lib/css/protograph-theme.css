@@ -184,6 +184,9 @@ p{
 .filter-column .single-option:hover .category-dash {
   width: 120px;
 }
+.category-dash-active{
+  width: 120px !important;
+}
 .filter-column .drill-down-filters {
   margin-top: 20px;
   border-top: 1px solid #efefef;
