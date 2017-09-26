@@ -186,19 +186,28 @@ table{
   margin-top: 50px;
 }
 .protograph-card{
-  width: 270px;
+  width: 165px;
   height: 150px;
-  overflow:hidden;
+  overflow: hidden;
   display: none;
-  /*display: inline-block;*/
+  /* display: inline-block; */
   text-align: left;
   background: white;
-  margin-left: 15px;
-  margin-bottom: 25px;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 10px;
   position: relative;
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+
+.protograph-card img{
+  height: 100%;
+  width: auto;
+}
+
+
 }
 .card-image{
   height: 150px;
@@ -232,10 +241,14 @@ table{
   -webkit-box-orient: vertical;
 }
 
+.hero-cover{
+  border-bottom: 0px !important;
+}
+
 .data-card-date{
   display: inline-block;
   font-size: 10px;
-  color: #999;
+  color: #a5a5a5;
 }
 
 .protograph-filters-container{
@@ -459,7 +472,7 @@ tr th{
 }
 
 .data-card-content .data-card-title{
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   font-weight: bold;
   line-height: 1.3em;
@@ -476,8 +489,16 @@ tr th{
 
 .data-card-content .data-card-date{
   display: inline-block;
-  font-size: 11px;
-  /*color: white;*/
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 105px;
+  width: 82%;
+  /* text-orientation: upright; */
+  /* color: white; */
+  border-top: 1px solid #737373;
+  padding-top: 5px;
+  text-transform: uppercase;
 }
 
 #show-more-cards {
