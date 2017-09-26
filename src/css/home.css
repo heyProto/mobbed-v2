@@ -4,12 +4,13 @@
   display: inline-block;
   text-align: left;
   background: white;
-  margin-left: 15px;
-  margin-bottom: 25px;
+  margin-left: 0px;
+  margin-bottom: 10px;
   position: relative;
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  filter:grayscale(100%);
 }
 .modal-dialog{
   width: 675px;
