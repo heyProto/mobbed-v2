@@ -23,6 +23,12 @@
   background: #fafafa;
 }
 
+.project-title-other-pages-black{
+  color: white;
+  font-size: 18px;
+  opacity: 1;
+}
+
 .filter-area .tap-area {
   display: inline-block;
   width: 100%;
@@ -508,6 +514,7 @@ tr th{
   margin-bottom: 10px;
   filter: blur(5px);
   margin-left: -20px;
+  margin-top: -60px;
 }
 
 .hate-crime-toggle{

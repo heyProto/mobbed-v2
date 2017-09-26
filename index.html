@@ -31,36 +31,10 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-16 hero-cover">
-        <div class="col-sm-16">
-          <img class="cover-image" src="src/img/cover-image.png" width="100%">
-          <p class="project-description">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India? This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</p>
-          <div class="banner-div">
-            <a href="index.html" class="back-to-home"><h1 class="project-title">#mobbed</h1></a>
-            <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
-            <div class="counter-area">
-              <div class="number-background">
-                <div class="single-background"></div>
-                <div class="single-background"></div>
-                <div class="single-background"></div>
-              </div>
-              <div class="display-counter">
-                <span id="first-number" class="light-text"></span><!--
-              --><span id="second-number" class="light-text"></span><!--
-              --><span id="animate-number" class="animate-number">0</span>
-              </div>
-            </div>
-            <p class="display-summary">Instances of lynchings and mob vigilantism were reported <br>from <span id="start-date"></span> to <span id="end-date"></span>
-            </p>
-            <button id="explore-button"><a class="button-url" href="data.html">EXPLORE</a></button>
-          </div>
-        </div>
-      </div>
       <div class="col-sm-2">
         <div class="filter-column">
-          <a href="index.html" class="back-to-home"><div class="branding">#mobbed</div></a>
-          <div class="single-option">
-            <div class="category-dash news-dash category-dash-active"></div>
+          <div class="single-option category-dash-active">
+            <div class="category-dash news-dash"></div>
             <div class="category-name"><a class="sidebar-url" href="index.html">COVERAGE</a></div>
           </div>
           <div class="single-option">
@@ -85,6 +59,29 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-14 hero-cover">
+        <img class="cover-image" src="src/img/cover-image.png" width="100%">
+        <p class="project-description">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India? This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</p>
+        <div class="banner-div">
+          <a href="index.html" class="back-to-home"><h1 class="project-title">#mobbed</h1></a>
+          <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
+          <div class="counter-area">
+            <div class="number-background">
+              <div class="single-background"></div>
+              <div class="single-background"></div>
+              <div class="single-background"></div>
+            </div>
+            <div class="display-counter">
+              <span id="first-number" class="light-text"></span><!--
+            --><span id="second-number" class="light-text"></span><!--
+            --><span id="animate-number" class="animate-number">0</span>
+            </div>
+          </div>
+          <p class="display-summary">Instances of lynchings and mob vigilantism were reported <br>from <span id="start-date"></span> to <span id="end-date"></span>
+          </p>
+          <button id="explore-button"><a class="button-url" href="data.html">EXPLORE</a></button>
+        </div>
+      </div>
       <div class="mobile-tab-area">
         <div id="articles-tab" class="col-sm-5 section-tabs tabs-active-class">Stories</div>
         <div id="cards-tab" class="col-sm-5 section-tabs">Incidents</div>
@@ -94,7 +91,6 @@
         <div id="display-stories"></div>
       </div>
       <div class="col-sm-4 cards-section">
-        <div id="display-cards"></div>
       </div>
       <div id="proto-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -107,6 +103,7 @@
         </div>
       </div>
       <div class="col-sm-3 chatter-section">
+        <div id="display-cards"></div>
         <div class="briefs-column">
           <div class="column-name">Social Chatter</div>
           <div id="display-tweets"></div>

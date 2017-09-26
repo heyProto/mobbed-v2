@@ -45,12 +45,12 @@ ul{
   margin-bottom: 0px !important;
 }
 .page-title{
-  padding-left: 10px;
   font-weight: bold;
   color: #333;
   font-family: "Noto Serif", serif;
+  margin-bottom: 30px;
+  font-size: 52px;
   margin-top: 0px;
-  margin-bottom: 40px !important;
 }
 .proto-container {
   width: 1260px;
@@ -197,12 +197,13 @@ ul{
   height: 100vh;
 }
 .filter-column .single-option {
-  padding-left: 10px;
-  padding-top: 15px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
   cursor: pointer;
+  opacity: 0.3;
+}
+
+.filter-column .single-option:hover {
+  opacity: 1;
 }
 .filter-column .single-option .category-dash {
   height: 2px;
@@ -213,28 +214,22 @@ ul{
   background: #F02E2E;
 }
 
-.filter-column .single-option .social-share-facebook{
-  background: #3b5998 !important;
-}
-
-.filter-column .single-option .social-share-twitter{
-  background: #00aced !important;
-}
 .filter-column .single-option .category-name {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 21px;
   color: #333;
-  padding-left: 2px;
+  letter-spacing: 0.5px;
+  /*padding-left: 2px;*/
   padding-top: 3px;
-  padding-right: 4px;
-  padding-bottom: 6px;
+  /*padding-right: 4px;*/
+  /*padding-bottom: 6px;*/
 }
 .filter-column .single-option:hover .category-dash {
-  width: 120px;
+  width: 137px;
 }
 .category-dash-active{
-  width: 120px !important;
+  opacity: 1 !important;
 }
 .filter-column .drill-down-filters {
   margin-top: 20px;
@@ -277,7 +272,7 @@ ul{
   font-size: 12px;
   line-height: 17px;
 }
-.sidebar-url {
+.sidebar-url{
   text-decoration: none;
   color: black;
 }
@@ -288,11 +283,7 @@ ul{
 }
 
 .sidebar-url a{
-  color: black;
-}
-
-.social-share-icons{
-  padding-left: 10px;
+  color: #999;
 }
 
 .social-share-icons .fa{
@@ -329,6 +320,21 @@ ul{
   color: white;
   font-weight: 100;
   margin-top: 5px;
+}
+
+.project-title-other-pages{
+
+}
+
+.project-title-other-pages-black{
+  color: black;
+  font-size: 18px;
+  opacity: 0.3;
+}
+
+.project-title-area{
+  margin-bottom: 20px;
+  padding: 15px;
 }
 
 .social-share-icons{
