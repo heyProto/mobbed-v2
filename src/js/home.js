@@ -72,7 +72,7 @@ if (mode === 'laptop'){
 }
 
 //counter
-getJSON('http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json', function (err, data){
+getJSON('https://cdn.protograph.pykih.com/49a045aea2b71456f5d04f4a/index.json', function (err, data){
   if (err != null) {
     alert('Something went wrong: ' + err);
   } else {
@@ -101,7 +101,7 @@ getJSON('http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json
 })
 
 //cards column 
-getJSON('http://protograph.indianexpress.com/be0b3c8854f0b1e774b96580/index.json', function (err, data){
+getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', function (err, data){
   if (err != null) {
     alert('Something went wrong: ' + err);
   } else {      
@@ -153,7 +153,7 @@ getJSON('http://protograph.indianexpress.com/be0b3c8854f0b1e774b96580/index.json
 })
 
 //articles section
-getJSON('http://protograph.indianexpress.com/948123634d965de58d04623d/index.json', function (err, data){
+getJSON('https://cdn.protograph.pykih.com/948123634d965de58d04623d/index.json', function (err, data){
     if (err != null) {
       alert('Something went wrong: ' + err);
     } else {
@@ -168,7 +168,7 @@ getJSON('http://protograph.indianexpress.com/948123634d965de58d04623d/index.json
 })
 
 //twitter chatter
-getJSON('http://protograph.indianexpress.com/toReportViolence/twitter.json', function (err, data){
+getJSON('https://cdn.protograph.pykih.com/toReportViolence/twitter.json', function (err, data){
     if (err != null) {
       alert('Something went wrong: ' + err);
     } else {
@@ -193,7 +193,7 @@ getJSON('http://protograph.indianexpress.com/toReportViolence/twitter.json', fun
   })
 
 let interval = setInterval(function(){   
-  getJSON('http://protograph.indianexpress.com/toReportViolence/twitter.json', function (err, data){
+  getJSON('https://cdn.protograph.pykih.com/toReportViolence/twitter.json', function (err, data){
     if (err != null) {
       alert('Something went wrong: ' + err);
     } else {
