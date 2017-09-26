@@ -416,7 +416,7 @@ class App extends React.Component {
               <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>
-          <div className="col-sm-16">
+          <div className="col-sm-16" style={{position: 'absolute', top:0}}>
             <div className="col-sm-6 filter-title">
               <div className="count-area">
                 <div className="number-background">
