@@ -520,9 +520,8 @@ tr th{
 @media only screen and (max-width: 450px){
   .modal-dialog{
     width: 305px;
-    height:auto;
-    margin-top: 0px;
-    transform: translate(10%, 10%) !important;
+    height: auto;
+    position: absolute;
   }
   .container{
     width: 100%;
@@ -580,5 +579,8 @@ tr th{
   #show-more-cards {
     margin-left: 35px;
     margin-right: 0px;
+  }
+  .modal-content{
+    width: 300px !important;
   }
 }
