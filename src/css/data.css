@@ -543,7 +543,9 @@ tr th{
     text-align: center
   }
   .number-background{
-    transform: translate(50%,0px);
+    transform: translate(-50%,0px);
+    left: 50%;
+    width: 172px;
   }
   .filter-column{
     display: none;
@@ -563,9 +565,9 @@ tr th{
     width: auto;
   }
   .display-number{
-    top: -7px;
-    left: 102px;
-    /*transform: translate(50%,0px);*/
+    top: -10px;
+    left: 51%;
+    transform: translate(-50%,0px);
   }
   .filter-area .tap-area .tap-area-div{
     margin-left: 0px;
