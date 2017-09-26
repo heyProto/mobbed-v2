@@ -650,9 +650,12 @@ tr th{
     transform: translate(-50%, 0px);
   }
   .data-cover-img{
-    height: 530px !important;
+    height: 600px !important;
   }
   .mobile-header{
     margin-bottom: 0px !important;
+  }
+  .data-title{
+    display: none;
   }
 }

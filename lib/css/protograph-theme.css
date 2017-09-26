@@ -427,5 +427,14 @@ ul{
     background-color: white;
     padding: 0px;
   }
+  .mobile-title{
+    float: right;
+    font-size: 18px;
+    font-family: "Noto Serif", serif;
+    margin-top: 3px;
+  }
+  .project-title-other-pages-black{
+    display: none;
+  }
 
 }
