@@ -259,6 +259,11 @@
   .display-summary br{
     display: none;
   }
+  .display-number{
+    top: -10px;
+    left: 51%;
+    transform: translate(-50%,0px);
+  }
   .filter-column{
     display: none;
   }
@@ -284,11 +289,13 @@
     height: auto;
   }
   .number-background{
-    transform: translate(50%,0px);
+    transform: translate(-50%,0px);
+    left: 50%;
+    width: 172px;
   }
   .display-counter{
     top: -5px;
-    left: 50%;
+    left: 51%;
     transform: translate(-50%,0);
   }
   .tabs-active-class {
