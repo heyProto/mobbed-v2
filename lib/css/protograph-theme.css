@@ -323,7 +323,10 @@ ul{
 }
 
 .project-title-other-pages{
-
+  color: white;
+  font-size: 18px;
+  font-family: "Noto Serif", serif;
+  margin-top: 0px;
 }
 
 .project-title-other-pages-black{
