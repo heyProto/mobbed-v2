@@ -63,7 +63,7 @@
   font-size: 72px;
   font-weight: 300;
   letter-spacing: 15px;
-  top: 40px;
+  top: 328px;
   position: absolute;
   left: 18px;
 }
@@ -89,13 +89,13 @@
 
 .count-area{
   height: 80px;
-  margin-top: 50px;
+  margin-top: 340px;
 }
 
 .display-text{
-  font-size: 18px;
-  line-height: 32px;
-  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 15px;
 }
 
 .display-text-dropdown{
@@ -176,6 +176,7 @@ table{
 .protograph-card-area{
   width: 100%;
   text-align: center;
+  margin-top: 50px;
 }
 .protograph-card{
   width: 270px;
@@ -193,7 +194,11 @@ table{
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
 .card-image{
-  height: 220px;
+  height: 150px;
+  filter:grayscale(100%);
+  opacity: 0.8;
+  filter:sepia(50%);
+  filter:blur(2px);
 }
 
 .empty-card{
@@ -242,8 +247,8 @@ table{
 }
 
 .geo-borders {
-  fill: none;
-  stroke: white;
+  fill: #fafafa;
+  stroke: #ddd;
   stroke-width: 0.5px;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -428,10 +433,10 @@ tr th{
   position: absolute;
   top: 0px;
   bottom: 0px;
-  background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
-  background: -o-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
-  background: -moz-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
-  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 60%);
+  /*background: -o-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);*/
+  /*background: -moz-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);*/
+  /*background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);*/
   pointer-events: none;
 }
 
@@ -448,8 +453,9 @@ tr th{
   color: white;
   font-weight: bold;
   line-height: 1.3em;
+  letter-spacing: 0.5px;
   font-family: arial;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
@@ -460,26 +466,32 @@ tr th{
 
 .data-card-content .data-card-date{
   display: inline-block;
-  font-size: 12px;
-  color: white;
+  font-size: 11px;
+  /*color: white;*/
 }
 
 #show-more-cards {
-  width: 80%;
-  background-color: black;
-  border: 1px solid grey;
+  width: 20%;
+  background-color: #efefef;
+  border: 0px solid grey;
   border-radius: 5px;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 115px;
-  margin-right: 100px;
+  /* padding-top: 5px; */
+  /* padding-bottom: 5px; */
+  color: #333;
+  padding: 11px;
+  margin-left: 40%;
+  margin-right: auto;
 }
 
 .one-br-space{height: 10px !important;}
 .two-br-space{height: 20px !important;}
 .five-br-space{height: 50px !important;}
 .ten-br-space{height: 100px !important;}
+
+.filter-title svg{
+  margin-left: -20px;
+}
 
 @media only screen and (max-width: 450px){
   .modal-dialog{
