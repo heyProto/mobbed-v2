@@ -25,7 +25,7 @@
               <div class="category-name"><a class="sidebar-url" href="findings.html">Findings</a></div>
             </div>
             <div class="single-option">
-              <div class="category-dash news-dash"></div>
+              <div class="category-dash news-dash category-dash-active"></div>
               <div class="category-name"><a class="sidebar-url" href="data.html">Data</a></div>
             </div>
             <div class="single-option">
@@ -44,7 +44,7 @@
         </div>
         <div class="col-sm-14 hero-cover">
           <div class="col-sm-16">
-            <img src="src/img/cover-image.png" width="100%">
+            <img src="src/img/cover-image.png" width="100%" class="data-cover-img">
             <div class="hint">Based on selection, data points in filters change.</div>
             <div id="card-list-div"></div>
           </div>
@@ -68,7 +68,7 @@
         topoURL: 'src/data/india-topo.json',
         chartOptions: {
           chartTitle: 'Mob Justice in India',
-          height: 600,
+          height: 500,
           defaultCircleColor: '#F02E2E'
         },
         filterNames:[

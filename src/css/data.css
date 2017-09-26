@@ -63,9 +63,9 @@
   font-size: 72px;
   font-weight: 300;
   letter-spacing: 15px;
-  top: 328px;
+  top: 230px;
   position: absolute;
-  left: 18px;
+  left: 17px;
 }
 
 .number-background{
@@ -89,13 +89,14 @@
 
 .count-area{
   height: 80px;
-  margin-top: 340px;
+  margin-top: 240px;
 }
 
 .display-text{
   font-size: 14px;
   line-height: 20px;
   margin-top: 15px;
+  color: white;
 }
 
 .display-text-dropdown{
@@ -272,7 +273,9 @@ table{
 #map_svg{
   padding-top:20px;
   padding-bottom:20px;
-  float: left;
+  /*float: left;*/
+  position: absolute;
+  right: 0px;
 }
 
 #map_circles{
@@ -501,6 +504,17 @@ tr th{
   font-weight: bold;
   padding-left: 5px;
   margin-bottom: 30px;
+}
+
+.hero-cover{
+    padding: 0px;
+    overflow: hidden;
+  }
+
+.data-cover-img{
+  height: 500px !important;
+  width: auto !important;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 450px){
