@@ -1,4 +1,5 @@
 .mob-justice-incidents {
+  width: 270px;
   height: 150px;
   overflow:hidden;
   display: inline-block;
@@ -85,6 +86,16 @@
 #display-tweets {
   height: 640px;
   overflow-y: scroll;
+}
+
+.sidebar-url {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-url:hover{
+  text-decoration: none;
+  color: black;
 }
 
 .morecontent span {
@@ -179,74 +190,35 @@
   margin-top: 5px;
 }
 
-.light-text{
-  color: #adacac;
-}
-
-.card-image{
-  height: 150px;
-}
-
-.mobile-tab-area{
-  display: none;
-}
-
 @media only screen and (max-width: 450px){
-  .stories-section, .chatter-section, .cards-section{
-    width: 100%;
-  }
-  .chatter-section, .cards-section{
-    display: none;
-  } 
-  .mobile-tab-area{
-    display: block;
-    width:100%;
-  } 
-  .cards-section{
-    text-align: center;
-  }
-  .section-tabs{
-    display: inline-block;
-    padding: 10px;
-    width: 32.5%;
-    text-align: center;
-    border-right: 1px solid #efefef;
-    border-bottom: 0px solid #efefef;
-    cursor: pointer;
-  }
   .modal-dialog{
     width: 400px;
     height:100%;
     margin-top: 200px;
   }
+
   .container{
     width: 100%;
   }
+
   .hero-cover{
     padding: 0px;
   }
+
   .hero-cover img{
     padding: 0px;
     height: 250px;
     width: auto;
     margin-left: -10px;
   }
-  .hero-cover{
-    overflow: hidden;
-    border-bottom: 0px;
-  }
 
-  .mobile-tab-area{
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
-  }
   .banner-div{
     padding: 20px;
     left: 0px;
     text-align: center;
   }
   .counter-area{
-    margin-top: 150px;
+    margin-top: 160px;
   }
   .project-description{
     margin-top: 240px;
@@ -266,6 +238,9 @@
   .proto-card .card-text{
     column-count: 1 !important;
   }
+  .title-thumbnail-layout .card-title{
+    padding-right: 0px;
+  }
   .proto-card{
     padding-left: 0px;
     padding-right: 0px;
@@ -274,21 +249,4 @@
     margin-left: 0px;
     width: auto;
   }
-  #display-tweets{
-    padding-left: 10px;
-    height: auto;
-  }
-  .number-background{
-    transform: translate(50%,0px);
-  }
-  .display-counter{
-    top: -5px;
-    left: 50%;
-    transform: translate(-50%,0);
-  }
-  .tabs-active-class {
-    color: white;
-    background-color:#F02E2E; 
-  }
-  
 }
