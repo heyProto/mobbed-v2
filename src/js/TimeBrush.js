@@ -77,22 +77,22 @@ class TimeBrush extends React.Component {
             selectedDomain={{x:[start_domain, end_domain]}}
             dimension="x" 
             responsive={this.props.mode === 'mobile' ? true : false}
-            handleStyle={{fill: "#bdb8b8", height: 27, y:25, width: 7}}
-            selectionStyle={{stroke: "transparent", fill: "black", fillOpacity: 0.1}}
+            handleStyle={{fill: "#fafafa", height: 27, y:25, width: 7}}
+            selectionStyle={{stroke: "transparent", fill: "red", fillOpacity: 0.3}}
             onDomainChange={(domain) => this.props.handleSelectDateRange(domain)}/>
         }
       > 
         <VictoryAxis
           fixLabelOverlap={true}
           style={{
-            axis: {stroke: "#bdb8b8", strokeWidth: 0.5},
+            axis: {stroke: "#fafafa", strokeWidth: 1},
             axisLabel: {fontSize: 10},
-            ticks: {stroke: "#bdb8b8", size: 5},
-            tickLabels: {fontSize: 10}
+            ticks: {stroke: "#fafafa", size: 5},
+            tickLabels: {fontSize: 10, fill:"#fafafa"}
           }}/>
 
         <VictoryBar
-          style={{ data: { fill: "#F02E2E" } }}
+          style={{ data: { fill: "white" } }}
           padding={{left: 20, right: 20, bottom:50}}
           data={this.state.sorted_arr}
           x="date_obj"
