@@ -293,4 +293,10 @@ p{
 .social-share-icons .share-btn.twitter { color: #55acee !important; }
 .social-share-icons .share-btn.facebook { color: #3B5998 !important; }
 
+.one-br-space{height: 10px !important;}
+.two-br-space{height: 20px !important;}
+.five-br-space{height: 50px !important;}
+.ten-br-space{height: 100px !important;}
+
+
 /*# sourceMappingURL=style.css.map */

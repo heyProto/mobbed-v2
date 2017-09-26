@@ -187,35 +187,55 @@
   height: 150px;
 }
 
+.mobile-tab-area{
+  display: none;
+}
+
 @media only screen and (max-width: 450px){
+  .stories-section, .chatter-section, .cards-section{
+    width: 100%;
+  }
+  .chatter-section, .cards-section{
+    display: none;
+  } 
+  .mobile-tab-area{
+    display: block;
+    width:100%;
+  } 
+  .cards-section{
+    text-align: center;
+  }
+  .section-tabs{
+    display: inline-block;
+    padding: 10px;
+    width: 32.5%;
+    text-align: center;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+  }
   .modal-dialog{
     width: 400px;
     height:100%;
     margin-top: 200px;
   }
-
   .container{
     width: 100%;
   }
-
   .hero-cover{
     padding: 0px;
   }
-
   .hero-cover img{
     padding: 0px;
     height: 250px;
-    width: auto;
-    margin-left: -10px;
   }
-
   .banner-div{
     padding: 20px;
     left: 0px;
     text-align: center;
   }
   .counter-area{
-    margin-top: 160px;
+    margin-top: 185px;
   }
   .project-description{
     margin-top: 240px;
@@ -235,9 +255,6 @@
   .proto-card .card-text{
     column-count: 1 !important;
   }
-  .title-thumbnail-layout .card-title{
-    padding-right: 0px;
-  }
   .proto-card{
     padding-left: 0px;
     padding-right: 0px;
@@ -246,4 +263,20 @@
     margin-left: 0px;
     width: auto;
   }
+  #display-tweets{
+    padding-left: 10px;
+    height: auto;
+  }
+  .number-background{
+    transform: translate(50%,0px);
+  }
+  .display-counter{
+    top: -5px;
+    left: 92px;
+  }
+  .tabs-active-class {
+    color: white;
+    background-color:#F02E2E; 
+  }
+  
 }

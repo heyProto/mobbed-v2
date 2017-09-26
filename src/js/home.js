@@ -27,41 +27,48 @@ function getJSON(url, callback) {
   xhr.send();
 };
 
-    // Configure/customize these variables.
-  var showChar = 520;  // How many characters are shown by default
-  var ellipsestext = "...";
-  var moretext = "keep reading";
-  var lesstext = "Show less";  
+let dimension = getScreenSize(), mode;
+if (dimension.width <= 400){
+  mode = 'mobile';
+} else {
+  mode = 'laptop';
+} 
+// Configure/customize these variables.
+var showChar = 520;  // How many characters are shown by default
+var ellipsestext = "...";
+var moretext = "keep reading";
+var lesstext = "Show less";  
 
-  $('.project-description').each(function() {
-    var content = $(this).html();
+$('.project-description').each(function() {
+  var content = $(this).html();
 
-    if(content.length > showChar) {
-      var c = content.substr(0, showChar);
-      var h = content.substr(showChar, content.length - showChar);
+  if(content.length > showChar) {
+    var c = content.substr(0, showChar);
+    var h = content.substr(showChar, content.length - showChar);
 
-      var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
+    var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
 
-      $(this).html(html);
-    }
+    $(this).html(html);
+  }
+});
 
-  });
+$(".morelink").click(function(){
+  if($(this).hasClass("less")) {
+    $(this).removeClass("less");
+    $(this).html(moretext);
+  } else {
+    $(this).addClass("less");
+    $(this).html(lesstext);
+  }
+  $(this).parent().prev().toggle();
+  $(this).prev().toggle();
+  return false;
+});
+if (mode === 'laptop'){
+  $('.briefs-column').sticky({topSpacing:20});
+  $('.filter-column').sticky({topSpacing:20});
+}
 
-  $(".morelink").click(function(){
-    if($(this).hasClass("less")) {
-      $(this).removeClass("less");
-      $(this).html(moretext);
-    } else {
-      $(this).addClass("less");
-      $(this).html(lesstext);
-    }
-    $(this).parent().prev().toggle();
-    $(this).prev().toggle();
-    return false;
-  });
-
-$('.briefs-column').sticky({topSpacing:20});
-$('.filter-column').sticky({topSpacing:20});
 //counter
 getJSON('https://cdn.protograph.pykih.com/49a045aea2b71456f5d04f4a/index.json', function (err, data){
   if (err != null) {
@@ -207,7 +214,35 @@ let interval = setInterval(function(){
       })
     }
   })
-}, 60000)
+}, 60000) 
+
+if (mode === 'mobile') {
+  $("#articles-tab").on("click", function() {
+    $(this).addClass("tabs-active-class");
+    $("#cards-tab").removeClass("tabs-active-class");
+    $("#chatter-tab").removeClass("tabs-active-class");
+    $(".cards-section").css("display", "none")
+    $(".chatter-section").css("display", "none")
+    $(".stories-section").css("display", "block")
+  })
+  $("#cards-tab").on("click", function() {
+    $(this).addClass("tabs-active-class");
+    $("#articles-tab").removeClass("tabs-active-class");
+    $("#chatter-tab").removeClass("tabs-active-class");
+    $(".stories-section").css("display", "none")
+    $(".chatter-section").css("display", "none")
+    $(".cards-section").css("display", "block")
+  })
+  $("#chatter-tab").on("click", function() {
+    $(this).addClass("tabs-active-class");
+    $("#cards-tab").removeClass("tabs-active-class");
+    $("#articles-tab").removeClass("tabs-active-class");
+    $(".stories-section").css("display", "none")
+    $(".cards-section").css("display", "none")
+    $(".chatter-section").css("display", "block")
+    $("#sticky-wrapper").css("display", "block")
+  })
+}
 
 function getScreenSize() {
   let w = window,

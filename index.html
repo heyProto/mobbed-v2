@@ -15,7 +15,12 @@
     <div class="container proto-container">
       <div class="col-sm-16 hero-cover">
         <div class="col-sm-16">
-          <img src="src/img/cover-image.png" width="100%">
+          <img class="cover-image" src="src/img/cover-image.png" width="100%">
+          <div class="mobile-tab-area">
+            <div id="articles-tab" class="col-sm-5 section-tabs tabs-active-class">Stories</div>
+            <div id="cards-tab" class="col-sm-5 section-tabs">Incidents</div>
+            <div id="chatter-tab" class="col-sm-5 section-tabs">Chatter</div>
+          </div>
           <p class="project-description">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India? This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</p>
           <div class="banner-div">
             <h1 class="project-title">#mobbed</h1>
@@ -66,18 +71,15 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-7">
+      <div class="col-sm-7 stories-section">
         <div id="display-stories"></div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 cards-section">
         <div id="display-cards"></div>
       </div>
       <div id="proto-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button> -->
             <div class="modal-body">
               <div id="proto-embed-card"></div>
             </div>
@@ -85,14 +87,14 @@
           <div class="modal-close" role="close">&times;</div>
         </div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 chatter-section">
         <div class="briefs-column">
           <div class="column-name">Social Chatter</div>
           <div id="display-tweets"></div>
         </div>
       </div>
     </div>
-
+    <div class="five-br-space"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="lib/js/jquery.min.js"></script>
