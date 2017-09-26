@@ -91,7 +91,7 @@ getJSON('https://cdn.protograph.pykih.com/49a045aea2b71456f5d04f4a/index.json', 
   }
 })
 
-//Middle column
+//cards column 
 getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', function (err, data){
   if (err != null) {
     alert('Something went wrong: ' + err);
@@ -103,7 +103,7 @@ getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', 
         new_date = d.date.split("-"),
         month = new Date(d.date).toLocaleDateString('en-US', {month: 'short'});
       mob_cards += '<div id="ProtoCard-'+ i +'" class="mob-justice-incidents">' +
-        '<img src="'+img+ '" width="100%"/>'+
+        '<img class="card-image" src="'+img+ '" width="100%;"/>'+
         '<div class="protograph-gradient">'+
           '<div class="data-card-content">'+
             '<div class="data-card-title">' + d.title + '</div>'+
@@ -143,8 +143,23 @@ getJSON('https://cdn.protograph.pykih.com/be0b3c8854f0b1e774b96580/index.json', 
   }
 })
 
+//articles section
+getJSON('https://dkqrqc7q64awx.cloudfront.net/1f79c591ab1d13a410707b75/index.json', function (err, data){
+    if (err != null) {
+      alert('Something went wrong: ' + err);
+    } else {
+      data.map((d,i) => {
+        let createDiv = document.createElement('div');
+        createDiv.id = 'ProtoCard-article'+i
+        createDiv.className= 'ProtoCard-article'
+        document.getElementById('display-stories').appendChild(createDiv)
+        new ProtoEmbed.initFrame(document.getElementById("ProtoCard-article"+i), data[i].iframe_url, 'laptop')
+      })
+    }
+})
+
 //twitter chatter
-getJSON('https://protograph.newslaundry.com/toReportJournalistKilling/twitter.json', function (err, data){
+getJSON('http://protograph.indianexpress.com/toReportViolence/twitter.json', function (err, data){
     if (err != null) {
       alert('Something went wrong: ' + err);
     } else {
@@ -169,7 +184,7 @@ getJSON('https://protograph.newslaundry.com/toReportJournalistKilling/twitter.js
   })
 
 let interval = setInterval(function(){   
-  getJSON('https://protograph.newslaundry.com/toReportJournalistKilling/twitter.json', function (err, data){
+  getJSON('http://protograph.indianexpress.com/toReportViolence/twitter.json', function (err, data){
     if (err != null) {
       alert('Something went wrong: ' + err);
     } else {

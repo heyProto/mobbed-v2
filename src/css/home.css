@@ -1,5 +1,4 @@
 .mob-justice-incidents {
-  width: 270px;
   height: 150px;
   overflow:hidden;
   display: inline-block;
@@ -182,6 +181,10 @@
 
 .light-text{
   color: #adacac;
+}
+
+.card-image{
+  height: 150px;
 }
 
 @media only screen and (max-width: 450px){
