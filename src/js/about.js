@@ -1,5 +1,5 @@
-$('.explainers-sticky-segment').sticky({topSpacing:62});
-$('.filter-column').sticky({topSpacing:62});
+$('.explainers-sticky-segment').sticky({topSpacing:0});
+$('.filter-column').sticky({topSpacing:0});
   $(window).scroll(function(event){
     $('.qa-highlight-color').removeClass('qa-highlight-color');
 
@@ -10,7 +10,7 @@ $('.filter-column').sticky({topSpacing:62});
     }
     var cutoff = $(window).scrollTop();
     $('.answer').removeClass('qa-highlight-color').each(function() {
-      if ($(this).offset().top + 62 >= cutoff) {
+      if ($(this).offset().top >= cutoff) {
         $('#q'+$(this).attr('id')).addClass('qa-highlight-color');
         return false; // stops the iteration after the first one on screen
       }
