@@ -1,6 +1,11 @@
 .answer{
-  padding: 10px;
-  margin-bottom: 10px !important;
+  padding: 0px;
+  margin-bottom: 5px !important;
+}
+
+.answer > h3{
+  font-weight: bold;
+  font-size: 1.2em;
 }
 .question1{
   border-top: 1px solid lightgrey;
@@ -23,7 +28,7 @@
   float: right;
 }
 .left-floated-content{
-  
+
 }
 .item {
   border-bottom: 1px solid lightgrey;
@@ -48,6 +53,9 @@
 
 .list-items{
   margin-bottom: 35px;
+  font-family: "Noto Serif", serif;
+  font-size: 14px;
+  color:#4a4a4a;
 }
 
 #contributors h4{

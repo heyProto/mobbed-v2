@@ -4,13 +4,18 @@ body {
   margin-top: 50px;
   font-family: "Roboto", sans-serif;
 }
-p{
+p, ul{
   font-family: "Noto Serif", serif;
   font-size: 14px;
   color:#4a4a4a;
   column-count: 1;
   margin-top: 30px;
 }
+
+ul{
+  margin-top: 10px !important;
+}
+
 .branding{
   color: black;
   font-family: "Noto Serif", serif;
@@ -45,6 +50,7 @@ p{
   color: #333;
   font-family: "Noto Serif", serif;
   margin-top: 0px;
+  margin-bottom: 40px !important;
 }
 .proto-container {
   width: 1260px;
