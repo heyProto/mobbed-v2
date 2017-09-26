@@ -377,6 +377,7 @@ class App extends React.Component {
       });
       return (
         <div className="banner-area">
+          {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
           <div className="filter-area">
             <div className="tap-area" style={first_tap_area_style} onClick={(e) => this.showFilters(e)}>
               <span className="arrow-down"></span><div id="tap-me">Tap here to explore data</div><span className="arrow-down"></span>
@@ -433,7 +434,7 @@ class App extends React.Component {
               <div className="display-text">Instances of lynchings and mob vigilantism were reported 
                {start_date === '' || end_date === '' ? '' : ` from ${start_date} to ${end_date}` }
               </div>
-              <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/>
+              {this.props.mode === 'laptop' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
             </div>
             <div className="col-sm-10 filter-title">
               <Map dataJSON={this.state.filteredJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} circleClicked={this.state.circleClicked} handleCircleClicked={this.handleCircleClicked} circleHover={this.state.circleHover}/>
@@ -450,12 +451,7 @@ class App extends React.Component {
   }
 
   render() {
-    switch(this.props.mode) {
-      case 'laptop' :
-        return this.renderLaptop();
-      case 'mobile' :
-        return this.renderLaptop();
-    }
+    return this.renderLaptop();
   }
 }
 
