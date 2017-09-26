@@ -583,4 +583,10 @@ tr th{
   .modal-content{
     width: 300px !important;
   }
+  .count-area{
+    margin-top: 10px;
+  }
+  .filter-title svg {
+    margin-left: 0px;
+  }
 }
