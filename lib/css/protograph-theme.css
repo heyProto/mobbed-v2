@@ -289,7 +289,7 @@ ul{
 .social-share-icons .fa{
   font-size: 30px;
   margin-right: 5px;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3) !important;
 }
 
 .banner-div{
