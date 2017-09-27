@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           $(this).text(Math.ceil(now));
         }
       });
-    }); 
+    });
   },2000)
 
   function getJSON(url, callback) {
@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   } else {
     mode = 'laptop';
     showChar = 460;
-  } 
-  // Configure/customize these variables.  
+  }
+  // Configure/customize these variables.
   var ellipsestext = "...";
   var moretext = "keep reading";
-  var lesstext = "Show less";  
+  var lesstext = "Show less";
 
   $('.project-description').each(function() {
     var content = $(this).html();
@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (mode === 'laptop'){
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20});
+    $('.about-advertisement').sticky({topSpacing:20});
     $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
   } else {
     $('.mobile-tab-area').sticky({topSpacing:0});
@@ -99,18 +100,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
       } else {
         let element = document.getElementById("second-number");
         element.parentNode.removeChild(element);
-      }       
+      }
       document.getElementById('animate-number').innerHTML = data.length;
       document.getElementById('start-date').innerHTML = start_date;
       document.getElementById('end-date').innerHTML = end_date;
     }
   })
 
-  //cards column 
+  //cards column
   getJSON('http://protograph.indianexpress.com/be0b3c8854f0b1e774b96580/index.json', function (err, data){
     if (err != null) {
       alert('Something went wrong: ' + err);
-    } else {      
+    } else {
       let mob_cards = '';
       data.map((d,i) => {
         // let img = "http://images.indianexpress.com/2017/07/suicide-759111.jpg",
@@ -133,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         mode = 'mobile';
       } else {
         mode = 'laptop';
-      } 
+      }
       for (let i=0; i<data.length; i++) {
         let createDiv = document.createElement('div');
           createDiv.id = 'ProtoCard-'+i
@@ -149,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'laptop')
           } else {
             let pro = new ProtoEmbed.initFrame(document.getElementById("proto-embed-card"), data[i].iframe_url, 'mobile', true)
-          } 
+          }
         });
         $('.modal-close').click(function(){
           $("#proto-modal").modal('hide');
@@ -179,11 +180,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         alert('Something went wrong: ' + err);
       } else {
         let tweets = '';
-        data.map((d,i) => { 
+        data.map((d,i) => {
           let new_date = d.date.split(" "),
             month = new_date[0].slice(0,3),
             day = new_date[1],
-            year = new_date[2];      
+            year = new_date[2];
           tweets += '<a href="'+d.canonical+'" target="_blank" class="protograph-url"><div class="proto-card tolink-card">'+
             '<div class="briefs-layout">'+
               '<div class="card-text">' + d.description + '</div>'+
@@ -193,22 +194,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
               '<div class="hint-text">'+ month +" "+day+ " "+ year+'</div>'+
             '</div>'+
           '</div></a>';
-        document.getElementById('display-tweets').innerHTML = tweets;   
+        document.getElementById('display-tweets').innerHTML = tweets;
         })
       }
     })
 
-  let interval = setInterval(function(){   
+  let interval = setInterval(function(){
     getJSON('http://protograph.indianexpress.com/toReportViolence/twitter.json', function (err, data){
       if (err != null) {
         alert('Something went wrong: ' + err);
       } else {
         let tweets = '';
-        data.map((d,i) => { 
+        data.map((d,i) => {
           let new_date = d.date.split(" "),
             month = new_date[0].slice(0,3),
             day = new_date[1],
-            year = new_date[2];      
+            year = new_date[2];
           tweets += '<a href="'+d.canonical+'" target="_blank" class="protograph-url"><div class="proto-card tolink-card">'+
             '<div class="briefs-layout">'+
               '<div class="card-text">' + d.description + '</div>'+
@@ -218,11 +219,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
               '<div class="hint-text">'+  month +" "+day+ " "+ year+'</div>'+
             '</div>'+
           '</div></a>';
-        document.getElementById('display-tweets').innerHTML = tweets;   
+        document.getElementById('display-tweets').innerHTML = tweets;
         })
       }
     })
-  }, 60000) 
+  }, 60000)
 
   if (mode === 'mobile') {
     $("#articles-tab").on("click", function() {
