@@ -639,11 +639,6 @@ tr th{
     margin-left: 0px;
     margin-right: 0px;
   }
-  #show-more-cards {
-    margin-left: 100px;
-    margin-right: 100px;
-    width: 40%;
-  }
   .modal-content{
     width: 300px !important;
     margin-left: 50%;
@@ -663,7 +658,8 @@ tr th{
     font-size: 20px;
   }
   #show-more-cards{
-    width: 80%;
+    width: 100%;
+    margin-left: 0px;
   }
   .count-area{
     margin-top: 10px;
@@ -685,5 +681,10 @@ tr th{
   }
   .data-title{
     display: none;
+  }
+  .protograph-card{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
