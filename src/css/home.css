@@ -242,9 +242,9 @@
   .section-tabs{
     display: inline-block;
     padding: 10px;
-    width: 49.3%;
+    width: 32%;
     text-align: center;
-    border-right: 0px solid #efefef;
+    border-right: 1px solid #efefef;
     border-bottom: 0px solid #efefef;
     cursor: pointer;
     background-color: white;
