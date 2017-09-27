@@ -1,3 +1,24 @@
+.about-advertisement{
+  background: #c71f00;
+  border-top: 8px solid #252d3c;
+  box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+  color: white;
+  padding: 20px 25px;
+}
+
+.about-advertisement > h4{
+  font-weight: 800;
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.about-advertisement > p{
+  color: white;
+  line-height: 20px;
+  font-size: 12px;
+}
+
 .mob-justice-incidents {
   height: 150px;
   overflow:hidden;
@@ -215,11 +236,11 @@
   }
   .chatter-section, .cards-section{
     display: none;
-  } 
+  }
   .mobile-tab-area{
     display: block;
     width:100%;
-  } 
+  }
   .cards-section{
     text-align: center;
   }
@@ -239,7 +260,7 @@
     position: absolute;
     margin: 0px;
     top: 0px;
-  }  
+  }
   .container{
     width: 100%;
   }
@@ -321,12 +342,12 @@
   }
   .tabs-active-class {
     color: white;
-    background-color:#F02E2E; 
+    background-color:#F02E2E;
   }
 
   .mobile-header{
     margin-bottom: 0px !important;
-  } 
+  }
   .modal-content{
     width: 300px !important;
     margin-left: 50%;
