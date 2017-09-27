@@ -215,7 +215,7 @@
   .section-tabs{
     display: inline-block;
     padding: 10px;
-    width: 32.5%;
+    width: 49.5%;
     text-align: center;
     border-right: 1px solid #efefef;
     border-bottom: 0px solid #efefef;
@@ -292,7 +292,7 @@
   }
   .mob-justice-incidents{
     margin-left: 0px;
-    width: auto;
+    width: 100%;
   }
   #display-tweets{
     padding-left: 10px;
@@ -333,5 +333,14 @@
     margin-top: -30px;
     color: white;
     font-size: 20px;
+  }
+
+  .hero-cover p{
+    padding: 0px 10px;
+  }
+
+  #display-cards .card-image{
+    width: 100% !important;
+    height: auto !important;
   }
 }
