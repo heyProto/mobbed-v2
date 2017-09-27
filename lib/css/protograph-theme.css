@@ -345,6 +345,7 @@ ul{
   display: inline-block;
   left: 50px;
   top: 30%;
+  text-align: center;
   /*width: 3em;*/
 }
 

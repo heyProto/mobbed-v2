@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     mode = 'laptop';
   } 
   // Configure/customize these variables.
-  var showChar = 520;  // How many characters are shown by default
+  var showChar = 460;  // How many characters are shown by default
   var ellipsestext = "...";
   var moretext = "keep reading";
   var lesstext = "Show less";  
@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (mode === 'laptop'){
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20});
+    $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
   } else {
     $('.mobile-tab-area').sticky({topSpacing:0});
   }

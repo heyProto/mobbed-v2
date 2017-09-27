@@ -61,8 +61,10 @@ class App extends React.Component {
         });
     }));
     this.showCounter();
+    let dimension = this.getScreenSize();
     $('.briefs-column').sticky({topSpacing:20});
-    $('.filter-column').sticky({topSpacing:20});    
+    $('.filter-column').sticky({topSpacing:20}); 
+    $('.social-share-icons').sticky({topSpacing: dimension.height - 100})  
   }
 
   sortObject(obj) {
@@ -322,6 +324,7 @@ class App extends React.Component {
         </div>
       )
     } else {
+      $('.social-share-icons').css("display", "block") 
       let optionsObj={};
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
@@ -454,6 +457,20 @@ class App extends React.Component {
 
   render() {
     return this.renderLaptop();
+  }
+
+  getScreenSize() {
+    let w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.getElementsByTagName('body')[0],
+      width = w.innerWidth || e.clientWidth || g.clientWidth,
+      height = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+    return {
+      width: width,
+      height: height
+    };
   }
 }
 

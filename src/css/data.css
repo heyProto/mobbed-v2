@@ -569,6 +569,10 @@ tr th{
   padding: 15px;
 }
 
+.data-page-icons{
+  display: none;
+}
+
 @media only screen and (max-width: 450px){
   .modal-dialog{
     width: 100%;
