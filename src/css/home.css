@@ -47,10 +47,10 @@
   position: absolute;
   top: 0px;
   bottom: 0px;
-  background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
-  background: -o-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
-  background: -moz-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
-  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.17) 60%);
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 60%);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 60%);
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 60%);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 60%);
   pointer-events: none;
 }
 
@@ -77,10 +77,25 @@
   -webkit-box-orient: vertical;
 }
 
-.data-card-content .data-card-date{
+.data-card-content .data-card-date {
   display: inline-block;
-  font-size: 12px;
-  color: white;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 105px;
+  width: 82%;
+  border-top: 1px solid #737373;
+  padding-top: 5px;
+  text-transform: uppercase;
+  color: #a5a5a5;
+}
+
+.card-image{
+  height: 150px;
+  filter:grayscale(100%);
+  opacity: 0.8;
+  filter:sepia(50%);
+  filter:blur(2px);
 }
 
 #display-tweets {
@@ -182,10 +197,6 @@
 
 .light-text{
   color: #adacac;
-}
-
-.card-image{
-  height: 150px;
 }
 
 .mobile-tab-area{
