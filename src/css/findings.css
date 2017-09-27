@@ -1,4 +1,5 @@
 
+
 .answer{
     padding: 10px;
     margin-bottom: 30px;
@@ -30,3 +31,9 @@
     border-bottom: 1px solid lightgrey;
     margin-bottom: 10px;
   }
+
+@media only screen and (max-width: 450px){
+  .no-padding-col{
+    padding: 0px 10px !important;
+  }
+}
