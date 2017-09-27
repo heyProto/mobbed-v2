@@ -15,3 +15,12 @@ table{
 .two-br-space{height: 20px !important;}
 .five-br-space{height: 50px !important;}
 .ten-br-space{height: 100px !important;}  
+
+@media only screen and (max-width: 450px){
+	.filter-column{
+		display: none;
+	}
+	#sticky-wrapper{
+		display: none;
+	}
+}
