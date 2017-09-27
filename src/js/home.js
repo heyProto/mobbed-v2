@@ -29,13 +29,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   let dimension = getScreenSize(), mode;
+  var showChar;
   if (dimension.width <= 450){
     mode = 'mobile';
+    showChar = 200
   } else {
     mode = 'laptop';
+    showChar = 460;
   } 
-  // Configure/customize these variables.
-  var showChar = 460;  // How many characters are shown by default
+  // Configure/customize these variables.  
   var ellipsestext = "...";
   var moretext = "keep reading";
   var lesstext = "Show less";  
@@ -120,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           '<div class="protograph-gradient">'+
             '<div class="data-card-content">'+
               '<div class="data-card-title">' + d.title + '</div>'+
-              '<div class="data-card-date">' + month + " "+ new_date[2] + ", "+ new_date[0]+'</div>' +
+              '<div class="data-card-date">' + month + " "+ new_date[2] + ", "+ new_date[0]+ " | "+d.state.substring(0, 13) +'</div>' +
               '</div>'+
             '</div>'+
           '</div>'
