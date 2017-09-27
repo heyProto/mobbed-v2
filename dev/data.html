@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>#mobbed: What emboldens lynching and vigilantism in India?</title>
-    <link rel="stylesheet" type="text/css" href="./mobbed-lib.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="lib/css/protograph-theme.css">
-    <link rel="stylesheet" type="text/css" href="./mobbed-data.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/data.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <div class="container proto-container">
@@ -16,7 +18,7 @@
           <div class="page-navigation-mobile">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle page-name" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="./src/img/menu-icon.png" width="30px">Menu
+                <img src="src/img/menu-icon.png" width="30px">Menu
               </button>
               <div class="mobile-title">#mobbed</div>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -48,11 +50,11 @@
               <div class="category-dash news-dash"></div>
               <div class="category-name"><a class="sidebar-url" href="about.html">ABOUT</a></div>
             </div>
-            <div class="single-option page-bottom">
+            <div class="social-share-icons data-page-icons">
               <a href="http://www.facebook.com/sharer/sharer.php?u=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn facebook">
-                <i class="fa fa-facebook-square"></i>
+                  <i class="fa fa-facebook-square"></i>
               </a>
-              <a href="http://twitter.com/share?url=http://protograph.indianexpress.com/ie-mobbed/index.html" target="_blank" class="share-btn twitter">
+              <a href="http://twitter.com/share?url=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn twitter">
                 <i class="fa fa-twitter-square"></i>
               </a>
             </div>
@@ -60,8 +62,9 @@
         </div>
         <div class="col-sm-14 hero-cover no-padding-col">
           <h1 class="data-title project-title-other-pages">#mobbed</h1>
+          <!-- <a href="index.html" class="back-to-home"><h1 class="project-title project-title-other-pages-black">#mobbed</h1></a> -->
           <div class="col-sm-16 no-padding-col">
-            <img src="./src/img/cover-image.png" width="100%" class="data-cover-img">
+            <img src="src/img/cover-image.png" width="100%" class="data-cover-img">
             <div class="hate-crime-toggle">
               <a href="data.html"><button type="button" class="btn btn-law">Law & order</button></a>
               <a href="hate-crime.html"><button type="button" class="btn btn-hate-crime">Hate crime</button></a>
@@ -72,8 +75,58 @@
         </div>
     </div>
     <div class="ten-br-space"></div>
-    <script src="./mobbed-lib.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jquery.sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
     <script src="https://d2m6lzru8erw1k.cloudfront.net/lib/protoGraph.min.js"></script>
     <script src = "./mobbed-data.min.js"></script>
+    <script type="text/javascript">
+      var x = new ProtoGraph.Card.toMaps()
+        x.init({
+        selector: document.querySelector('#card-list-div'),
+        dataURL: "http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json",
+        // dataURL: 'https://cdn.protograph.pykih.com/49a045aea2b71456f5d04f4a/index.json',
+        topoURL: 'src/data/india-topo.json',
+        chartOptions: {
+          chartTitle: 'Mob Justice in India',
+          height: 500,
+          defaultCircleColor: '#F02E2E'
+        },
+        filterNames:[
+          'classification',
+          "was_incident_planned",
+          'state',
+          'party_whose_chief_minister_is_in_power',
+          "area_classification",
+          "judge_to_population_in_state",
+          "police_to_population_in_state",
+          "police_vehicles_per_km",
+          "did_the_police_intervene",
+          "did_the_police_intervention_prevent_death",
+          "does_state_have_village_defence_force",
+          "victim_social_classification",
+          "accused_social_classification"
+        ],
+        filterHeaders:[
+          "What led to the violence?",
+          "Was the incident planned?",
+          "State",
+          "Party whose Chief Minister was in power",
+          "Area type",
+          "Judge to population ratio",
+          "Police to population ratio",
+          "Police vehicles per sq. km",
+          "Did the police intervene?",
+          "Did the police intervention prevent death?",
+          "Does state have village defence force?",
+          "Victim social classification",
+          "Accused social classification"
+        ]
+      })
+      x.renderLaptop();
+    </script>
   </body>
 </html>
