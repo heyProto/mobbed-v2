@@ -29,6 +29,12 @@
   color:white;
   font-size: 20px;
 }
+
+.social-share-icons .fa{
+  font-size: 30px;
+  margin-right: 5px;
+  color: rgba(0, 0, 0, 0.3);
+}
 .modal-backdrop {
   opacity: 0.8 !important;
   background-color:black !important;
@@ -220,9 +226,9 @@
   .section-tabs{
     display: inline-block;
     padding: 10px;
-    width: 32.5%;
+    width: 49.3%;
     text-align: center;
-    border-right: 1px solid #efefef;
+    border-right: 0px solid #efefef;
     border-bottom: 0px solid #efefef;
     cursor: pointer;
     background-color: white;
@@ -297,7 +303,7 @@
   }
   .mob-justice-incidents{
     margin-left: 0px;
-    width: auto;
+    width: 100%;
   }
   #display-tweets{
     padding-left: 10px;
@@ -338,5 +344,14 @@
     margin-top: -30px;
     color: white;
     font-size: 20px;
+  }
+
+  .hero-cover p{
+    padding: 0px 10px;
+  }
+
+  #display-cards .card-image{
+    width: 100% !important;
+    height: auto !important;
   }
 }
