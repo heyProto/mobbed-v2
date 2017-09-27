@@ -6,7 +6,7 @@ class ListCards extends React.Component {
   constructor () {
     super();  
     this.state = {
-      no_of_cards: 18
+      no_of_cards: 30
     } 
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
@@ -38,7 +38,7 @@ class ListCards extends React.Component {
 
   loadMoreCard() {
     let size = $("#cards-list .protograph-card").length;
-    let x = (this.state.no_of_cards + 18 <= size) ? this.state.no_of_cards + 18 : size;
+    let x = (this.state.no_of_cards + 30 <= size) ? this.state.no_of_cards + 30 : size;
     for(let i=0; i<x; i++) {
       $("#cards-list .protograph-card")[i].style.display = "inline-block" 
     } 
