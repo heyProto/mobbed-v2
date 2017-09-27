@@ -202,9 +202,29 @@ ul{
   opacity: 0.3;
 }
 
+.filter-column .social-option{
+  padding-bottom: 20px;
+  cursor: pointer;
+  opacity: 1;
+}
+
 .filter-column .single-option:hover {
   opacity: 1;
 }
+
+.filter-column .social-options a .fa{
+  opacity: 0.3;
+}
+
+.filter-column .social-options a:hover .fa{
+  opacity: 1;
+}
+
+.filter-column .social-options a:hover{
+  text-decoration: none;
+  opacity: 1;
+}
+
 .filter-column .single-option .category-dash {
   height: 2px;
   width: 10px;
