@@ -246,7 +246,12 @@ ul{
 
 .hero-cover {
   padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.index-page .hero-cover {
+  height: 380px;
+  overflow: hidden;
 }
 
 .hero-cover-title {
@@ -289,6 +294,10 @@ ul{
   font-size: 30px;
   margin-right: 5px;
   color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.cover-image{
+
 }
 
 .banner-div{
