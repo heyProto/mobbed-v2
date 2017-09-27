@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>#mobbed: What emboldens lynching and vigilantism in India?</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/protograph-theme.css">
+    <link rel="stylesheet" type="text/css" href="src/css/home.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container proto-container">
+      <div class="mobile-header">
+        <div class="mobbed-title-mobile">
+          <div class="page-navigation-mobile">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle page-name" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="src/img/menu-icon.png" width="30px">Menu
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">COVERAGE</a>
+                <a class="dropdown-item" href="data.html">DATA</a>
+                <a class="dropdown-item" href="findings.html">FINDINGS</a>
+                <a class="dropdown-item" href="about.html">ABOUT</a>
+              </div>
+            </div>
+            <!-- <div class="page-name"><img src="src/img/menu-icon.png" width="30px">Menu</div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="filter-column">
+          <div class="single-option category-dash-active">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="index.html">COVERAGE</a></div>
+          </div>
+          <div class="single-option">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="findings.html">FINDINGS</a></div>
+          </div>
+          <div class="single-option">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="data.html">DATA</a></div>
+          </div>
+          <div class="single-option">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="about.html">ABOUT</a></div>
+          </div>
+          <div class="social-share-icons">
+            <a href="http://www.facebook.com/sharer/sharer.php?u=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn facebook">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="http://twitter.com/share?url=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn twitter">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-14 hero-cover">
+        <img class="cover-image" src="src/img/cover-image.png" width="100%">
+        <p class="project-description">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India? This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</p>
+        <div class="banner-div">
+          <a href="index.html" class="back-to-home"><h1 class="project-title">#mobbed</h1></a>
+          <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
+          <div class="counter-area">
+            <div class="number-background">
+              <div class="single-background"></div>
+              <div class="single-background"></div>
+              <div class="single-background"></div>
+            </div>
+            <div class="display-counter">
+              <span id="first-number" class="light-text"></span><!--
+            --><span id="second-number" class="light-text"></span><!--
+            --><span id="animate-number" class="animate-number">0</span>
+            </div>
+          </div>
+          <p class="display-summary">Instances of lynchings and mob vigilantism were reported <br>from <span id="start-date"></span> to <span id="end-date"></span>
+          </p>
+          <button id="explore-button"><a class="button-url" href="data.html">EXPLORE</a></button>
+        </div>
+      </div>
+      <div class="mobile-tab-area">
+        <div id="articles-tab" class="col-sm-5 section-tabs tabs-active-class">Stories</div>
+        <div id="chatter-tab" class="col-sm-5 section-tabs">Latest</div>
+      </div>
+      <div class="col-sm-7 stories-section">
+        <div id="display-stories"></div>
+      </div>
+      <div class="col-sm-4 cards-section">
+      </div>
+      <div id="proto-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div id="proto-embed-card"></div>
+            </div>
+          </div>
+          <div class="modal-close" role="close">&times;</div>
+        </div>
+      </div>
+      <div class="col-sm-3 chatter-section">
+        <div id="display-cards"></div>
+        <div class="briefs-column">
+          <div class="column-name">Social Chatter</div>
+          <div id="display-tweets"></div>
+        </div>
+      </div>
+    </div>
+    <div class="five-br-space"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jquery.sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="https://d2m6lzru8erw1k.cloudfront.net/lib/protoGraph.min.js"></script>
+    <script src="src/js/home.js"></script>
+  </body>
+</html>

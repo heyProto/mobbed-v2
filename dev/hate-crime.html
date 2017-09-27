@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>#mobbed: What emboldens lynching and vigilantism in India?</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/protograph-theme.css">
+    <link rel="stylesheet" type="text/css" href="src/css/data.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container proto-container">
+      <div class="mobile-header">
+        <div class="mobbed-title-mobile">
+          <div class="page-navigation-mobile">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle page-name" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="src/img/menu-icon.png" width="30px">Menu
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">COVERAGE</a>
+                <a class="dropdown-item" href="data.html">DATA</a>
+                <a class="dropdown-item" href="findings.html">FINDINGS</a>
+                <a class="dropdown-item" href="about.html">ABOUT</a>
+              </div>
+            </div>
+            <!-- <div class="page-name"><img src="src/img/menu-icon.png" width="30px">Menu</div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="filter-column">
+          <div class="single-option">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="index.html">COVERAGE</a></div>
+          </div>
+          <div class="single-option">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="findings.html">FINDINGS</a></div>
+          </div>
+          <div class="single-option category-dash-active">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="data.html">DATA</a></div>
+          </div>
+          <div class="single-option">
+            <div class="category-dash news-dash"></div>
+            <div class="category-name"><a class="sidebar-url" href="about.html">ABOUT</a></div>
+          </div>
+          <div class="social-share-icons data-page-icons">
+            <a href="http://www.facebook.com/sharer/sharer.php?u=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn facebook">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="http://twitter.com/share?url=http://protograph.indianexpress.com/mobbed/index.html" target="_blank" class="share-btn twitter">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-14 hero-cover no-padding-col">
+        <div class="col-sm-16 no-padding-col">
+          <img src="src/img/cover-image.png" width="100%" class="data-cover-img hate-crime-img">
+          <div class="hate-crime-toggle">
+            <a href="data.html"><button type="button" class="btn btn-hate-crime">Law & order</button></a>
+            <button type="button" class="btn btn-law">Hate crime</button>
+          </div>
+          <div class="hint">Based on selection, data points in filters change.</div>
+          <div id="card-list-div"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ten-br-space"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jquery.sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="https://d2m6lzru8erw1k.cloudfront.net/lib/protoGraph.min.js"></script>
+    <script src = "./mobbed-data.min.js"></script>
+    <script type="text/javascript">
+      var x = new ProtoGraph.Card.toMaps()
+        x.init({
+        selector: document.querySelector('#card-list-div'),
+        dataURL: "http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json",
+        topoURL: 'src/data/india-topo.json',
+        chartOptions: {
+          chartTitle: 'Mob Justice in India',
+          height: 500,
+          defaultCircleColor: '#F02E2E'
+        },
+        filterNames:[
+          "is_hate_crime",
+          "is_gender_hate_crime",
+          "is_caste_hate_crime",
+          "is_race_hate_crime",
+          "is_religion_hate_crime",
+          "is_political_affiliation_hate_crime",
+          "is_sexual_orientation_and_gender_identity_hate_crime",
+          "is_disability_hate_crime",
+          "is_ethnicity_hate_crime",
+          'classification',
+          "was_incident_planned",
+          'state',
+          'party_whose_chief_minister_is_in_power',
+          "area_classification",
+          "victim_social_classification",
+          "accused_social_classification"
+        ],
+        filterHeaders:[
+          "Is it a hate crime?",
+          "Is it a gender hate crime?",
+          "Is it a caste hate crime?",
+          "Is it a race hate crime?",
+          "Is it a religion hate crime?",
+          "Is it a political affiliation hate crime?",
+          "Is it a sexual orientation and gender identity hate crime?",
+          "Is it a disability hate crime?",
+          "Is it a ethnicity hate crime?",
+          "What led to the violence?",
+          "Was the incident planned?",
+          "State",
+          "Party whose Chief Minister was in power",
+          "Area type",
+          "Victim social classification",
+          "Accused social classification"
+        ]
+      })
+      x.renderLaptop();
+    </script>
+  </body>
+</html>
