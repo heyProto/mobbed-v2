@@ -25,7 +25,7 @@
     float: right;
   }
   .left-floated-content{
-    
+
   }
   .item {
     border-bottom: 1px solid lightgrey;
@@ -36,4 +36,7 @@
   .no-padding-col{
     padding: 0px 10px !important;
   }
+}
+.dull-out {
+  opacity: 0.4;
 }

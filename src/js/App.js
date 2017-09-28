@@ -444,7 +444,7 @@ class App extends React.Component {
                                     {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down"></th> : <th className="arrow-up"></th>}
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filteredDat[key].length * 24}}>{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filteredDat[key].length * 32}}>{optionsObj[key]}</tbody>
                               </table>
                             </div>
                           )
@@ -455,7 +455,7 @@ class App extends React.Component {
                 })
               }
             </div>
-            <div className="tap-area">
+            <div className="reset-area">
               <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>

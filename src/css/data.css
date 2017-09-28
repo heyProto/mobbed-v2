@@ -40,6 +40,17 @@
   background: #fafafa;
 }
 
+.reset-area{
+  display: inline-block;
+  width: 100%;
+  color: #F02E2E;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fafafa;
+}
+
 .filter-title{
   font-weight: 400;
 }
@@ -50,7 +61,7 @@
   display: inline-block;
 }
 
-.filter-area .tap-area .reset-all {
+.filter-area .reset-area .reset-all {
   border: 1px solid #F02E2E;
   color: #F02E2E;
   background-color: #fafafa;
@@ -59,7 +70,7 @@
   padding: 7px 100px;
 }
 
-.filter-area .tap-area .reset-all:hover {
+.filter-area .reset-area .reset-all:hover {
   border: 1px solid #F02E2E;
   color: white;
   background-color: #F02E2E;
