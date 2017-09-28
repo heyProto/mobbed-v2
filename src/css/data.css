@@ -597,6 +597,10 @@ tr:last-child{
   color:white;
 }
 
+.btn-law:hover{
+  color:white;
+}
+
 .btn-hate-crime{
   background-color: #efefef;
   color: gray;

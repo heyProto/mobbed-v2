@@ -267,10 +267,12 @@ ul{
   text-align: center;
   display: inline-block;
   color: #F02E2E;
+  cursor: pointer;
 }
 
 .red-link:hover{
   color: #F02E2E;
+  text-decoration: underline;
 }
 
 .filter-column .single-option:hover .category-dash {
