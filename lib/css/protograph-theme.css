@@ -241,11 +241,38 @@ ul{
   line-height: 21px;
   color: #333;
   letter-spacing: 0.5px;
-  /*padding-left: 2px;*/
   padding-top: 3px;
-  /*padding-right: 4px;*/
-  /*padding-bottom: 6px;*/
 }
+
+.filters-option{
+  opacity: 1 !important;
+  margin-top: 100px;
+  font-size: 12px;
+  color: #999;
+}
+
+.filters-option .category-name{
+  margin-top: 5px;
+  text-align: center;
+  background: #F02E2E;
+  border-radius: 20px;
+  padding: 7px 0px !important;
+  color: white !important;
+  width: 80%;
+  opacity: 1 !important;
+}
+
+.red-link{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  color: #F02E2E;
+}
+
+.red-link:hover{
+  color: #F02E2E;
+}
+
 .filter-column .single-option:hover .category-dash {
   width: 137px;
 }
