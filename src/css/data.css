@@ -352,9 +352,9 @@ table{
   /*height:150px;*/
   overflow-y:auto;
   display:block;
-  transition: 2s ease-in;
-  -webkit-transition: 2s ease-in;
-  /*margin-bottom: 10px;*/
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  margin-bottom: 15px;
 }
 
 tr{

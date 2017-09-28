@@ -428,15 +428,15 @@ class App extends React.Component {
                           return(
                             <div className="filter-title">
                               <table>
-                                <thead className="table-thead">
+                                <thead className="table-thead" onClick={(e) => this.toggleFilters(key)}>
                                   <tr>
                                     <th className="table-head">
                                       {this.state.filterHeaders[key]}
                                     </th>
-                                    {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down" onClick={(e) => this.toggleFilters(key)}></th> : <th className="arrow-up" onClick={(e) => this.toggleFilters(key)}></th>}
+                                    {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down"></th> : <th className="arrow-up"></th>}
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filtDat[key].length * 23.8 ,display: this.state.filtDatShowMore[key] ? 'none' :'block'}}>{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filtDat[key].length * 24}}>{optionsObj[key]}</tbody>
                               </table>
                             </div>
                           )
