@@ -78,6 +78,14 @@
   position: absolute;
 }
 
+.grid-filter-col{
+  width: 160px;
+}
+
+.grid-cards-col{
+  width: 960px;
+}
+
 .single-background{
   background: #fafafa;
   height: 80px;
