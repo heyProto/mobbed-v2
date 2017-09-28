@@ -46,9 +46,11 @@ class App extends React.Component {
         let filtDat=this.state.filters.map((dat)=> this.sortObject(Utils.groupBy(this.state.dataJSON,dat)));
         let filtDatObj={};
         let filtDatObjValues={};
+        let filtDatShowMore={};
         filtDat.forEach((dat,index)=>{
           filtDatObj[this.state.filters[index]] = dat;
           filtDatObjValues[this.state.filters[index]] = undefined;
+          filtDatShowMore[this.state.filters[index]] = true;
         });
         let filterHeads={};
         this.props.filterHeaders.forEach((header,index)=>{
@@ -57,7 +59,8 @@ class App extends React.Component {
         this.setState({
           filtDat:filtDatObj,
           filtDatVals: filtDatObjValues,
-          filterHeaders: filterHeads
+          filterHeaders: filterHeads,
+          filtDatShowMore: filtDatShowMore
         });
     }));
     this.showCounter();
@@ -302,9 +305,12 @@ class App extends React.Component {
     }
   }
 
-  showAllFilters(classname) {
-    $('.'+classname).css("display", "block")
-    document.getElementById('show-all-filters-'+classname).innerHTML = 'hide'
+  toggleFilters(classname) {
+    let showarr = this.state.filtDatShowMore;
+    showarr[classname]=!showarr[classname];
+    this.setState({
+      filtDatShowMore: showarr
+    })
   }
 
   renderLaptop() {
@@ -430,9 +436,9 @@ class App extends React.Component {
                                     </th>
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody">{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{display: this.state.filtDatShowMore[key] ? 'none' :'block'}}>{optionsObj[key]}</tbody>
                               </table>
-                              {this.state.filtDat[key].length >=5 ? <div id={`show-all-filters-${key}`} className="show-all-filters" onClick={(e) => this.showAllFilters(key)}>show all</div> : <div className="show-all-filters"></div>}
+                              {this.state.filtDatShowMore[key] ? <div id={`show-all-filters-${key}`} className="arrow-down" onClick={(e) => this.toggleFilters(key)}></div> : <div className="arrow-up" onClick={(e) => this.toggleFilters(key)}></div>}
                             </div>
                           )
                         })
