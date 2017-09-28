@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="lib/css/protograph-theme.css">
     <link rel="stylesheet" type="text/css" href="./mobbed-about.min.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#myNavbar" data-offset="100" style="position: relative;">
   <div class="container proto-container">
     <div class="mobile-header">
         <div class="mobbed-title-mobile">
@@ -62,39 +62,47 @@
       <br>
       <h1 class="page-title">About</h1>
     </div>
-    <div class="col-sm-7 no-padding-col" data-spy="scroll" data-target=".explainers-sticky-segment">
+    <div id="spyContainer" class="col-sm-7 no-padding-col">
       <div class="answer" id="what">
-         <h3>What is #mobbed?</h3>
-         <p>#mobbed is a public database of incidents of mob violence reported by The Indian Express from  2010 onwards. We hope this database will lead us to discover indicative insights that add to our collective understanding of the culture of mob violence in India.</p>
+          <a class="anchorjs-link" href="#what"></a>
+          <h3>What is #mobbed?</h3>
+          <p>#mobbed is a public database of incidents of mob violence reported by The Indian Express from  2010 onwards. We hope this database will lead us to discover indicative insights that add to our collective understanding of the culture of mob violence in India.</p>
       </div>
       <br>
       <div class="answer" id="why">
-         <h3>Why #mobbed?</h3>
-         <p>It is said that not everything that can be counted should be counted, and that not everything that counts should be counted. We believe this phrase neatly sums up the advantages and disadvantages of the quantitative approach. The public discourse thus far on mob violence is heavily qualitative, meaning that most of the discussion is sparked by media reports. We asked ourselves if counting all these instances and sifting through them would offer a more enriching narrative. The results, we believe, speak for themselves.</p>
+        <a class="anchorjs-link" href="#why"></a>
+        <h3>Why #mobbed?</h3>
+        <p>It is said that not everything that can be counted should be counted, and that not everything that counts should be counted. We believe this phrase neatly sums up the advantages and disadvantages of the quantitative approach. The public discourse thus far on mob violence is heavily qualitative, meaning that most of the discussion is sparked by media reports. We asked ourselves if counting all these instances and sifting through them would offer a more enriching narrative. The results, we believe, speak for themselves.</p>
       </div>
       <br>
       <div class="answer" id="options">
+        <a class="anchorjs-link" href="#options"></a>
+
          <h3>Why are there two options to explore the data?</h3>
          <p>In the dataset, we offer two primary filters to explore the data: as a law & order issue and as a hate crime issue. Why? Because if the ‘left’ screams hate crime, the ‘right’ in India often parries back with law & order. In this polarised atmosphere, our primary aim is to investigate if the trends changed if we looked at the issue through the two filters. Here again, the results speak for themselves, as can be seen in the data. The Findings page also contains a short commentary.</p>
       </div>
       <br>
       <div class="answer" id="hate-crime">
+        <a class="anchorjs-link" href="#hate-crime"></a>
           <h3>How have we defined mob violence and hate crimes?</h3>
           <p>We have defined mob violence as three or more people ganging up against one person or more. This includes vigilantism that is both about <span class="highlight">retributive justice (“he stole my bike”) and social control (“he is eating beef/they married out of caste”)</span>.</p>
           <p>We have defined hate crimes as offences motivated by hatred against an individual based on her race, religion, sexual orientation, gender, caste, ethnicity, or political affiliation. We have drawn from the definition of hate crime from the <a href="https://www.ncjrs.gov/pdffiles1/bja/162304.pdf" target="_blank">U.S. Department of Justice</a> and modified it to suit the Indian context.</p>
       </div>
       <br>
       <div class="answer" id="included">
+        <a class="anchorjs-link" href="#included"></a>
           <h3>Which incidents are included?</h3>
           <p>As we explained above, we have only included those crimes that are defined either as ‘mob violence’ and/or ‘hate crime’. Also, only stories reported by The Indian Express have been considered.</p>
       </div>
       <br>
       <div class="answer" id="excluded">
+        <a class="anchorjs-link" href="#excluded"></a>
           <h3>Which incidents are not included?</h3>
           <p>We have not included cases that have been categorised as riots, protests, naxal violence, insurgency and stone pelting.</p>
       </div>
       <br>
       <div class="answer" id="difference">
+        <a class="anchorjs-link" href="#difference"></a>
           <h3>How is this data project different from what exists already?</h3>
           <p>Public data projects on the issue have so far restricted themselves to cow vigilantism (<a href="http://www.aljazeera.com/indepth/opinion/2017/07/india-epidemic-mob-lynching-170706113733914.html" target="_blank">here</a>, <a href="https://thewire.in/153091/storymap-lynchings-india-cow-slaughter-beef-ban-gau-rakshak/" target="_blank">here</a>, <a href="http://www.indiaspend.com/cover-story/86-dead-in-cow-related-violence-since-2010-are-muslim-97-attacks-after-2014-2014" target="_blank">here</a>) or <a href="http://www.hindustantimes.com/hate-tracker" target="_blank">hate crime</a>. Our goal is to be more comprehensive, and we have <span class="highlight">tried to go  beyond “what happened” to situate these incidents in their social, political and legal context.</span></p>
           <p>The variables that we are studying include:</p>
@@ -111,12 +119,16 @@
       </div>
       <br>
       <div class="answer" id="data-collection">
+        <a class="anchorjs-link" href="#data-collection"></a>
+
           <h3>How did we collect the data?</h3>
           <p>The National Crimes Records Bureau (NCRB), which collects data on crime in India, does not record incidents of mob violence. Short of going through police records in every thana in India, the only way to track mob violence is to rely on media reports. </p>
           <p>We used MIT Media Cloud to scour through IndianExpress.com from 2010 until 2017 for <span class="highlight">first reports of mob violence</span>.  This gave us more than 1,00,000 results. We then ran a code to narrow this down to roughly 7,000 incidents, which we then manually sifted to arrive at more than 200 unique incidents. In several cases, we cross-referenced them with reports from other media organisations. <a href="data-dictionary.html">Read more on our data collection methodology</a>.</p>
       </div>
       <br>
       <div class="answer" id="numerical-analysis">
+        <a class="anchorjs-link" href="#numerical-analysis"></a>
+
           <h3>What does the data indicate?</h3>
           <p>This is not a statistical or numerical analysis. Our endeavour is simply to collect and organise <span class="highlight">a representative sample of mob violence in India</span>. This includes vigilantism, lynchings, spontaneous disputes and hate crimes.</p>
           <p>We’re not making any definitive claims as to why lynchings and other forms of mob violence happen in India. Hopefully, <span class="highlight">you will draw your own conclusions as you explore, slice and dice the data using the filters we’ve provided</span>. However, in order for us the contextualise the data, we are using the following grading system:</p>
@@ -130,6 +142,7 @@
       </div>
       <br>
       <div class="answer" id="limitations">
+        <a class="anchorjs-link" href="#limitations"></a>
         <h3>What are the limitations of our approach?</h3>
           <p>This database is built on first reports  of incidents that appeared on IndianExpress.com. This approach was necessary since the government does not collect data on mob violence. Because of this approach, there are a few other limitations: </p>
           <ul>
@@ -146,6 +159,7 @@
       </div>
       <br>
       <div class="answer" id="contributors">
+        <a class="anchorjs-link" href="#contributors"></a>
         <h3>Contributors</h3>
         <br>
         <h4>Data, Methodology, Observations</h4>
@@ -273,41 +287,21 @@
     </div>
     <div class="col-sm-4"></div>
     <div class="col-sm-3">
-        <div class="explainers-sticky-segment">
-          <div class="question explainers-sticky-segment-question question1" id="qwhat">
-            <div><a href="#what">What is #mobbed?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question question1" id="qwhy">
-            <div><a href="#why">Why #mobbed?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question question1" id="qoptions">
-            <div><a href="#options">Why are there two options to explore the data?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qhate-crime">
-            <div><a href="#hate-crime">How have we defined mob violence and hate crimes?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qincluded">
-            <div><a href="#included">Which incidents are included?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qexcluded">
-            <div><a href="#excluded">Which incidents are not been included?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qdifference">
-            <div><a href="#difference">How is this data project different from what exists already?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qdata-collection">
-            <div><a href="#data-collection">How did we collect the data?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qnumerical-analysis">
-            <div><a href="#numerical-analysis">What does the data indicate?</a></div>
-          </div>
-          <div class="question explainers-sticky-segment-question" id="qlimitations">
-            <div><a href="#limitations">What are the limitations of our approach?</a></div>
-          </div>
-          <div class=" question explainers-sticky-segment-question" id="qcontributors">
-            <div><a href="#contributors">Contributors</a></div>
-          </div>
-       </div>
+        <nav class="explainers-sticky-segment scrollspy-navbar" id="myNavbar">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a class="list-group-item" href="#what">What is #mobbed?</a></li>
+            <li><a class="list-group-item" href="#why">Why #mobbed?</a></li>
+            <li><a class="list-group-item" href="#options">Why are there two options to explore the data?</a></li>
+            <li><a class="list-group-item" href="#hate-crime">How have we defined mob violence and hate crimes?</a></li>
+            <li><a class="list-group-item" href="#included">Which incidents are included?</a></li>
+            <li><a class="list-group-item" href="#excluded">Which incidents are not been included?</a></li>
+            <li><a class="list-group-item" href="#difference">How is this data project different from what exists already?</a></li>
+            <li><a class="list-group-item" href="#data-collection">How did we collect the data?</a></li>
+            <li><a class="list-group-item" href="#numerical-analysis">What does the data indicate?</a></li>
+            <li><a class="list-group-item" href="#limitations">What are the limitations of our approach?</a></li>
+            <li><a class="list-group-item" href="#contributors">Contributors</a></li>
+          </ul>
+        </nav>
     </div>
   </div>
   <script src="./mobbed-lib.min.js"></script>
