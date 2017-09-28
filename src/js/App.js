@@ -15,6 +15,7 @@ class App extends React.Component {
       filteredJSON: undefined,
       circleClicked: false,
       circleHover: false,
+      is_sidebar_open: false,
       // height: 0,
       overflow: 'hidden',
       showTapArea: 'block',
@@ -192,13 +193,13 @@ class App extends React.Component {
       inactiveClass = inactive,
       activeClass = active;
     let i = 0;
-    console.log(value,identifier,elm, inactiveClass, activeClass, "---------active-----")
+    // console.log(value,identifier,elm, inactiveClass, activeClass, "---------active-----")
     while (i < elm.length) {
       i++;
       elm[0].className = activeClass;
     }
     // console.log(document.getElementById(`${identifier}-${value}`), "id", activeClass)
-    console.log(activeClass);
+    // console.log(activeClass);
     let selectItem = document.getElementById(`${identifier}-${value}`);
     selectItem.className = activeClass;
   }
@@ -255,14 +256,16 @@ class App extends React.Component {
 
   openNav() {
     this.setState({
-      sidebar_left: 0
+      sidebar_left: 0,
+      is_sidebar_open: true
     })
     // document.getElementById("mySidenav").style.left = "0px";
   }
 
   closeNav() {
     this.setState({
-      sidebar_left: -400
+      sidebar_left: -400,
+      is_sidebar_open: false
     })
     // console.log(document.getElementById("mySidenav").style.left, "left")
     // document.getElementById("mySidenav").style.left = "-300px !important";
@@ -417,7 +420,6 @@ class App extends React.Component {
         }
         rows[count].push(key);
       });
-      console.log(this.state);
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
