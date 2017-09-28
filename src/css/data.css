@@ -776,4 +776,13 @@ tr:last-child{
     margin-left: auto;
     margin-right: auto;
   }
+  .sidenav {
+    width: 300px;
+  }
+  .table-head{
+    width: 235px;
+  }
+  .table-tbody{
+    width: 300px;
+  }
 }
