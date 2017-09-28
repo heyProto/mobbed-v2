@@ -6,8 +6,10 @@ $(window).scroll(function(event){
   $('.qa-highlight-color').removeClass('qa-highlight-color');
   $('.band_color').removeClass('band_color');
   var cutoff = $(window).scrollTop();
+  $('.answer').addClass('dull-out');
   $('.answer').removeClass('qa-highlight-color').each(function() {
     if ($(this).offset().top >= cutoff) {
+      $(this).removeClass('dull-out');
       $('#q'+$(this).attr('id')).addClass('qa-highlight-color');
       $('#q'+$(this).attr('id')).addClass('band_color');
       return false; // stops the iteration after the first one on screen
