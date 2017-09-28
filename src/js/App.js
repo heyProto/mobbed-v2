@@ -255,7 +255,7 @@ class App extends React.Component {
 
   closeNav() {
     this.setState({
-      sidebar_left: -300
+      sidebar_left: -400
     })
     // console.log(document.getElementById("mySidenav").style.left, "left")
     // document.getElementById("mySidenav").style.left = "-300px !important";
