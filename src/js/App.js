@@ -455,7 +455,7 @@ class App extends React.Component {
                 })
               }
             </div>
-            <div className="tap-area">
+            <div className="reset-area">
               <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>
