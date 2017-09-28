@@ -349,10 +349,10 @@ table{
 }
 
 .table-tbody{
-  height:150px;
+  /*height:150px;*/
   overflow-y:auto;
   display:block;
-  margin-bottom: 25px;
+  /*margin-bottom: 10px;*/
 }
 
 tr{
@@ -583,6 +583,52 @@ tr th{
 .data-page-icons{
   display: none;
 }
+
+
+.sidenav {
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: -300px;
+  background-color: #fafafa;
+  overflow-x: hidden;
+  transition: 0.2s ease-in;
+  overflow-y: scroll; 
+  padding: 15px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 25px;
+  margin-left: 50px;
+  color: #333;
+}
+
+.show-all-filters{
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: red;
+}
+/*.filters-sidebar{
+  position: fixed;
+  width: 300px;
+  left: -250px;
+  top: 0px;
+  height: 100vh;
+  background: red;
+  z-index: 999;
+  transition: 0.2s ease-in ;
+}
+
+.filters-sidebar:hover{
+  left: 0px;
+}*/
+
 
 @media only screen and (max-width: 450px){
   .modal-dialog{
