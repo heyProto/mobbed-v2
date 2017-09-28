@@ -350,7 +350,7 @@ table{
 
 .table-tbody{
   /*height:150px;*/
-  overflow-y:auto;
+  overflow-y:hidden;
   display:block;
   transition: 0.2s ease-in;
   -webkit-transition: 0.2s ease-in;
