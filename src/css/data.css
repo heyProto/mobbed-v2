@@ -33,8 +33,8 @@
   display: inline-block;
   width: 100%;
   color: #F02E2E;
-  text-align: center;
-  padding: 15px 0px;
+  text-align: left;
+  padding: 15px 5px;
   font-weight: bold;
   cursor: pointer;
   background: #fafafa;
@@ -56,7 +56,7 @@
   background-color: #fafafa;
   z-index: 200;
   border-radius: 5px;
-  padding: 7px 20px;
+  padding: 7px 100px;
 }
 
 .filter-area .tap-area .reset-all:hover {
@@ -542,10 +542,6 @@ tr th{
     overflow: hidden;
   }
 
-.project-title-other-pages{
-
-}
-
 .data-cover-img{
   height: 560px !important;
   width: auto !important;
@@ -608,6 +604,7 @@ tr th{
   font-size: 25px;
   margin-left: 50px;
   color: #afafaf;
+  font-weight: 100;
 }
 
 .show-all-filters{
