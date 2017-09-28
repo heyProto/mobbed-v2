@@ -100,6 +100,9 @@
     display: none;
   }
   .answer{
-    padding: 0px 10px 
+    padding: 0px 10px
   }
+}
+.dull-out {
+  opacity: 0.4;
 }
