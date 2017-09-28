@@ -58,6 +58,7 @@ class App extends React.Component {
         })
         this.setState({
           filtDat:filtDatObj,
+          filteredDat:filtDatObj,
           filtDatVals: filtDatObjValues,
           filterHeaders: filterHeads,
           filtDatShowMore: filtDatShowMore
@@ -149,10 +150,16 @@ class App extends React.Component {
         prevState.filtDatVals[key] = undefined; 
         this.highlightItem(value, key+'_inactive_item', key+'_inactive_item', key);
       }
-      let filteredData = this.getFilteredData(prevState)
+      let filteredData = this.getFilteredData(prevState)      
+      let filtDat=this.state.filters.map((dat)=> this.sortObject(Utils.groupBy(filteredData,dat)));
+      let filtDatObj={};
+      filtDat.forEach((dat,index)=>{
+        filtDatObj[this.state.filters[index]] = dat;
+      });
       return {
         filteredJSON: filteredData,
-        filtDatVals: prevState.filtDatVals
+        filtDatVals: prevState.filtDatVals,
+        filteredDat:filtDatObj
       }
     })
   }
@@ -410,6 +417,7 @@ class App extends React.Component {
         }
         rows[count].push(key);
       });
+      console.log(this.state);
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
@@ -436,7 +444,7 @@ class App extends React.Component {
                                     {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down"></th> : <th className="arrow-up"></th>}
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filtDat[key].length * 24}}>{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filteredDat[key].length * 24}}>{optionsObj[key]}</tbody>
                               </table>
                             </div>
                           )
