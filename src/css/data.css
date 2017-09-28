@@ -142,6 +142,7 @@
   padding: 4px;
   margin-left:10px;
   margin-right:10px;
+  margin-top: 13px;
 }
 
 .arrow-down{
@@ -153,6 +154,7 @@
   padding: 4px;
   margin-left:10px;
   margin-right:10px;
+  margin-top: 13px;
 }
 
 #tap-me{
@@ -344,8 +346,10 @@ table{
 }
 
 .table-head{
-  font-size: 16px;
-  padding: 5px !important;
+  font-size: 14px;
+  padding: 10px!important;
+  width: 330px;
+  font-weight: 400;
 }
 
 .table-tbody{
@@ -354,12 +358,24 @@ table{
   display:block;
   transition: 0.2s ease-in;
   -webkit-transition: 0.2s ease-in;
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;*/
+  width: 360px;
 }
 
 tr{
  border-top: 1px solid #efefef;
  font-size: 12px;
+ border-bottom: 1px solid #dedede;
+ padding-bottom: 10px;
+ margin-bottom: 10px;
+}
+
+tbody tr td{
+  padding: 10px 5px;
+}
+
+tbody tr{
+  border-bottom: 1px solid #f9f9f9;
 }
 
 tr:hover{
@@ -393,6 +409,10 @@ tr th{
   padding: 3px 5px;
   padding-bottom: 5px;
   vertical-align: bottom;
+}
+
+tr:last-child{
+  margin-bottom: 30px;
 }
 
 .row {
