@@ -352,7 +352,8 @@ table{
   /*height:150px;*/
   overflow-y:auto;
   display:block;
-  transition: 0.2s all ease-in;
+  transition: 2s ease-in;
+  -webkit-transition: 2s ease-in;
   /*margin-bottom: 10px;*/
 }
 

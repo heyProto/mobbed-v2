@@ -436,7 +436,7 @@ class App extends React.Component {
                                     </th>
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody" style={{display: this.state.filtDatShowMore[key] ? 'none' :'block'}}>{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filtDat[key].length * 23.8 ,display: this.state.filtDatShowMore[key] ? 'none' :'block'}}>{optionsObj[key]}</tbody>
                               </table>
                               {this.state.filtDatShowMore[key] ? <div id={`show-all-filters-${key}`} className="arrow-down" onClick={(e) => this.toggleFilters(key)}></div> : <div className="arrow-up" onClick={(e) => this.toggleFilters(key)}></div>}
                             </div>
