@@ -4,16 +4,12 @@ $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
 $('.filter-column').sticky({topSpacing:20});
 $(window).scroll(function(event){
   $('.qa-highlight-color').removeClass('qa-highlight-color');
-
-  if($('.ui.sticky').hasClass('fixed')){
-    scrollspy = true;
-  }else{
-    scrollspy = false;
-  }
+  $('.band_color').removeClass('band_color');
   var cutoff = $(window).scrollTop();
   $('.answer').removeClass('qa-highlight-color').each(function() {
     if ($(this).offset().top >= cutoff) {
       $('#q'+$(this).attr('id')).addClass('qa-highlight-color');
+      $('#q'+$(this).attr('id')).addClass('band_color');
       return false; // stops the iteration after the first one on screen
     }
   });
