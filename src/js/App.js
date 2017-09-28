@@ -15,7 +15,7 @@ class App extends React.Component {
       filteredJSON: undefined,
       circleClicked: false,
       circleHover: false,
-      height: 0,
+      // height: 0,
       overflow: 'hidden',
       showTapArea: 'block',
       hideTapArea: 'none',
@@ -46,9 +46,11 @@ class App extends React.Component {
         let filtDat=this.state.filters.map((dat)=> this.sortObject(Utils.groupBy(this.state.dataJSON,dat)));
         let filtDatObj={};
         let filtDatObjValues={};
+        let filtDatShowMore={};
         filtDat.forEach((dat,index)=>{
           filtDatObj[this.state.filters[index]] = dat;
           filtDatObjValues[this.state.filters[index]] = undefined;
+          filtDatShowMore[this.state.filters[index]] = true;
         });
         let filterHeads={};
         this.props.filterHeaders.forEach((header,index)=>{
@@ -56,15 +58,21 @@ class App extends React.Component {
         })
         this.setState({
           filtDat:filtDatObj,
+          filteredDat:filtDatObj,
           filtDatVals: filtDatObjValues,
-          filterHeaders: filterHeads
+          filterHeaders: filterHeads,
+          filtDatShowMore: filtDatShowMore
         });
     }));
     this.showCounter();
     let dimension = this.getScreenSize();
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20}); 
-    $('.social-share-icons').sticky({topSpacing: dimension.height - 100})  
+    $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
+    var that = this; 
+    $('#filters-option').on("click", function(){
+      that.openNav();
+    })
   }
 
   sortObject(obj) {
@@ -142,10 +150,16 @@ class App extends React.Component {
         prevState.filtDatVals[key] = undefined; 
         this.highlightItem(value, key+'_inactive_item', key+'_inactive_item', key);
       }
-      let filteredData = this.getFilteredData(prevState)
+      let filteredData = this.getFilteredData(prevState)      
+      let filtDat=this.state.filters.map((dat)=> this.sortObject(Utils.groupBy(filteredData,dat)));
+      let filtDatObj={};
+      filtDat.forEach((dat,index)=>{
+        filtDatObj[this.state.filters[index]] = dat;
+      });
       return {
         filteredJSON: filteredData,
-        filtDatVals: prevState.filtDatVals
+        filtDatVals: prevState.filtDatVals,
+        filteredDat:filtDatObj
       }
     })
   }
@@ -223,7 +237,7 @@ class App extends React.Component {
 
   showFilters() {
     this.setState({
-      height:(Object.keys(this.state.filterHeaders).length / 4) * 229+'px',
+      // height:(Object.keys(this.state.filterHeaders).length / 4) * 229+'px',
       overflow: 'hidden',
       showTapArea: 'none',
       hideTapArea: 'block'
@@ -232,11 +246,26 @@ class App extends React.Component {
 
   hideFilters() {
     this.setState({
-      height: 0,
+      // height: 0,
       overflow: 'hidden',
       showTapArea: 'block',
       hideTapArea: 'none'
     })
+  }
+
+  openNav() {
+    this.setState({
+      sidebar_left: 0
+    })
+    // document.getElementById("mySidenav").style.left = "0px";
+  }
+
+  closeNav() {
+    this.setState({
+      sidebar_left: -400
+    })
+    // console.log(document.getElementById("mySidenav").style.left, "left")
+    // document.getElementById("mySidenav").style.left = "-300px !important";
   }
 
   showCounter() {
@@ -283,6 +312,13 @@ class App extends React.Component {
     }
   }
 
+  toggleFilters(classname) {
+    let showarr = this.state.filtDatShowMore;
+    showarr[classname]=!showarr[classname];
+    this.setState({
+      filtDatShowMore: showarr
+    })
+  }
 
   renderLaptop() {
     if (this.state.dataJSON === undefined || this.state.filtDat === undefined) {
@@ -328,8 +364,9 @@ class App extends React.Component {
       let optionsObj={};
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
+          // let tr_display = (i<5) ? 'block' : 'none';
           return (
-            <tr className={dat+'_inactive_item'} id={`${dat}-${d.key}`}>
+            <tr className={`${dat}_inactive_item ${dat}`} id={`${dat}-${d.key}`}>
               <td id={d.key} key={i} value={d.key} onClick={(e) => this.handleOnChange(e, d.key,dat)}>{d.key}</td>
               <td>{d.value}</td>
             </tr>
@@ -357,7 +394,7 @@ class App extends React.Component {
       }
 
       let styles = {
-        height: this.state.height,
+        // height: this.state.height,
         overflow: this.state.overflow,
         transition: 'ease-in 0.3s'
       };
@@ -380,31 +417,34 @@ class App extends React.Component {
         }
         rows[count].push(key);
       });
+      console.log(this.state);
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
-          <div className="filter-area">
-            <div className="tap-area" style={first_tap_area_style} onClick={(e) => this.showFilters(e)}>
-              <span className="arrow-down"></span><div id="tap-me">Tap here to explore data</div><span className="arrow-down"></span>
+          <div id="mySidenav" className="filter-area sidenav" style={{left: this.state.sidebar_left}}>
+            <div className="tap-area">
+              <div id="tap-me">FILTERS</div>
+              <span className="closebtn" onClick={(e)=> this.closeNav()}>&times;</span>
             </div>
-            <div id="filter-region" className="ui grid" style={styles}>
+            <div id="filter-region" style={styles}>
               {
                 rows.map((row,index)=>{
                   return(
-                    <div className="row">
+                    <div>
                       {
                         rows[index].map((key,index)=>{
                           return(
-                            <div className="col-sm-4 filter-title">
+                            <div className="filter-title">
                               <table>
-                                <thead className="table-thead">
+                                <thead className="table-thead" onClick={(e) => this.toggleFilters(key)}>
                                   <tr>
                                     <th className="table-head">
                                       {this.state.filterHeaders[key]}
                                     </th>
+                                    {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down"></th> : <th className="arrow-up"></th>}
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody">{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filteredDat[key].length * 32}}>{optionsObj[key]}</tbody>
                               </table>
                             </div>
                           )
@@ -415,10 +455,7 @@ class App extends React.Component {
                 })
               }
             </div>
-            <div className="tap-area" style={second_tap_area_style} onClick={(e) => this.hideFilters(e)}>
-              <div className="tap-area-div">
-                <span className="arrow-up"></span><div id="tap-me">Tap here to hide filters</div><span className="arrow-up"></span>
-              </div>
+            <div className="reset-area">
               <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>
