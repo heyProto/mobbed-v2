@@ -357,9 +357,9 @@ class App extends React.Component {
       let optionsObj={};
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
-          let tr_display = (i<5) ? 'block' : 'none';
+          // let tr_display = (i<5) ? 'block' : 'none';
           return (
-            <tr className={`${dat}_inactive_item ${dat}`} id={`${dat}-${d.key}`} style={{display: tr_display}}>
+            <tr className={`${dat}_inactive_item ${dat}`} id={`${dat}-${d.key}`}>
               <td id={d.key} key={i} value={d.key} onClick={(e) => this.handleOnChange(e, d.key,dat)}>{d.key}</td>
               <td>{d.value}</td>
             </tr>
@@ -410,7 +410,6 @@ class App extends React.Component {
         }
         rows[count].push(key);
       });
-      console.log(this.state, "===========")
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
@@ -434,11 +433,11 @@ class App extends React.Component {
                                     <th className="table-head">
                                       {this.state.filterHeaders[key]}
                                     </th>
+                                    {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down" onClick={(e) => this.toggleFilters(key)}></th> : <th className="arrow-up" onClick={(e) => this.toggleFilters(key)}></th>}
                                   </tr>
                                 </thead>
                                 <tbody className="table-tbody" style={{display: this.state.filtDatShowMore[key] ? 'none' :'block'}}>{optionsObj[key]}</tbody>
                               </table>
-                              {this.state.filtDatShowMore[key] ? <div id={`show-all-filters-${key}`} className="arrow-down" onClick={(e) => this.toggleFilters(key)}></div> : <div className="arrow-up" onClick={(e) => this.toggleFilters(key)}></div>}
                             </div>
                           )
                         })

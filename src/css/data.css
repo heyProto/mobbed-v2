@@ -136,10 +136,10 @@
 .arrow-up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
-  border: solid #F02E2E;
-  border-width: 0 3px 3px 0;
+  border: solid #b9b0b0;
+  border-width: 0 2px 2px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 4px;
   margin-left:10px;
   margin-right:10px;
 }
@@ -147,10 +147,10 @@
 .arrow-down{
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  border: solid #F02E2E;
-  border-width: 0 3px 3px 0;
+  border: solid #b9b0b0;
+  border-width: 0 2px 2px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 4px;
   margin-left:10px;
   margin-right:10px;
 }
