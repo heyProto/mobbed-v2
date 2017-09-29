@@ -423,7 +423,7 @@ class App extends React.Component {
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
-          <div id="mySidenav" className="filter-area sidenav" style={{left: this.state.sidebar_left}}>
+          <div className="col-sm-6 filter-area sidenav" style={{left: this.state.sidebar_left}}>
             <div className="tap-area">
               <div id="tap-me">FILTERS</div>
               <span className="closebtn" onClick={(e)=> this.closeNav()}>&times;</span>
@@ -484,7 +484,7 @@ class App extends React.Component {
               <Map dataJSON={this.state.filteredJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} circleClicked={this.state.circleClicked} handleCircleClicked={this.handleCircleClicked} circleHover={this.state.circleHover}/>
             </div>
           </div>
-          <div className="col-sm-16">
+          <div className="col-sm-10">
             <div className="protograph-container">
               <List dataJSON={this.state.filteredJSON} mode={this.props.mode} handleCircleClicked={this.handleCircleClicked}/>
             </div>
