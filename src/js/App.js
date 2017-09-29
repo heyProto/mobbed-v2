@@ -69,13 +69,14 @@ class App extends React.Component {
     let dimension = this.getScreenSize();
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20}); 
-    $('.filter-area').sticky({topSpacing:20}); 
+    $('.filter-area').sticky({topSpacing:20});
+    $('.banner-area .sticky-wrapper').css("height", 0)
     $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
-    var that = this; 
-    $('#filters-option').on("click", function(){
-      that.openNav();
-    })
   }
+
+  // componentDidUpdate() {
+    
+  // }
 
   sortObject(obj) {
     var arr = [];
@@ -364,7 +365,8 @@ class App extends React.Component {
         </div>
       )
     } else {
-      $('.social-share-icons').css("display", "block") 
+      $('.social-share-icons').css("display", "block")  
+      $('.banner-area .sticky-wrapper').css("height", 0)
       let optionsObj={};
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
