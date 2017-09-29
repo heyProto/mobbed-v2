@@ -69,6 +69,7 @@ class App extends React.Component {
     let dimension = this.getScreenSize();
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20}); 
+    $('.filter-area').sticky({topSpacing:20}); 
     $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
     var that = this; 
     $('#filters-option').on("click", function(){
@@ -426,7 +427,13 @@ class App extends React.Component {
           <div className="col-sm-6 filter-area sidenav" style={{left: this.state.sidebar_left}}>
             <div className="tap-area">
               <h4 className="column-name">FILTERS</h4>
-              <span className="closebtn" onClick={(e)=> this.closeNav()}>&times;</span>
+              <div className="reset-area">
+                <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
+              </div>
+            </div>
+            <div className="hate-crime-toggle">
+              <a href="data.html"><button type="button" className="btn btn-law">Law & order</button></a>
+              <a href="hate-crime.html"><button type="button" className="btn btn-hate-crime">Hate crime</button></a>
             </div>
             <div id="filter-region" style={styles}>
               {
@@ -456,9 +463,6 @@ class App extends React.Component {
                   )
                 })
               }
-            </div>
-            <div className="reset-area">
-              <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
             </div>
           </div>
           <div className="col-sm-16" style={{position: 'absolute', top:0, left:0}}>

@@ -43,13 +43,14 @@
 
 .reset-area{
   display: inline-block;
-  width: 100%;
+  /*width: 100%;*/
   color: #F02E2E;
   text-align: center;
-  padding: 15px;
+  padding-top: 5px;
   font-weight: bold;
   cursor: pointer;
   background: #fafafa;
+  float: right;
 }
 
 .filter-title{
@@ -68,7 +69,8 @@
   background-color: #fafafa;
   z-index: 200;
   border-radius: 5px;
-  padding: 7px 100px;
+  padding: 3px 5px;
+  font-size: 12px;
 }
 
 .filter-area .reset-area .reset-all:hover {
@@ -633,6 +635,7 @@ tr:last-child{
 
 .tap-area .column-name{
   font-weight: bold;
+  display: inline-block;
 }
 
 .data-page-cards{
