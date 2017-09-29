@@ -132,6 +132,9 @@ ul.scrollspy-child-ul {
   .answer{
     padding: 0px 10px
   }
+  .explainers-sticky-segment {
+    display: none;
+  }
 }
 .dull-out {
   opacity: 0.4;
@@ -141,4 +144,8 @@ ul.scrollspy-child-ul {
 }
 .scrollspy-navbar ul li a.active + ul.scrollspy-child-ul {
   display: block;
+}
+.mobbed-footer-space {
+  width: 100%;
+  height: 300px;
 }
