@@ -2,7 +2,7 @@
   x.init({
   selector: document.querySelector('#card-list-div'),
   dataURL: "http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json",
-  topoURL: './src/data/india-topo.json',
+  topoURL: 'http://protograph.indianexpress.com/ie-mobbed/src/data/india-topo.json',
   chartOptions: {
     chartTitle: 'Mob Justice in India',
     height: 500,
