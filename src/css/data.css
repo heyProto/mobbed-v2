@@ -21,6 +21,7 @@
   display: inline-block;
   /*width: 100%;*/
   background: #fafafa;
+  width: 380px !important;
 }
 
 .project-title-other-pages-black{
@@ -151,7 +152,7 @@
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 4px;
-  margin-left:35px;
+  margin-left:15px;
   margin-right: 0px;
   margin-top: 18px;
 }
@@ -163,7 +164,7 @@
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 4px;
-  margin-left: 35px;
+  margin-left: 15px;
   margin-right: 0px;
   margin-top: 13px;
 }
@@ -207,11 +208,9 @@ table{
   height: 150px;
   overflow: hidden;
   display: none;
-  /* display: inline-block; */
   text-align: left;
   background: white;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
   margin-bottom: 15px;
   position: relative;
   cursor: pointer;
@@ -369,8 +368,9 @@ table{
   transition: 0.2s ease-in;
   -webkit-transition: 0.2s ease-in;
   /*margin-bottom: 15px;*/
-  width: 400px;
+  width: 380px;
   padding: 0px 15px;
+
 }
 
 tr{
@@ -620,17 +620,24 @@ tr:last-child{
 
 .sidenav {
   height: 100vh;
-  /*width: 400px;*/
-  /*position: fixed;*/
   z-index: 999;
-  /*top: 0;*/
-  /*left: -400px;*/
   background-color: #fafafa;
   overflow-x: hidden;
   transition: 0.2s ease-in;
   overflow-y: scroll; 
   padding: 0px;
-  box-shadow: 1px 0px 9px lightgrey;
+  /*box-shadow: 1px 0px 9px lightgrey;*/
+  margin-top: 50px;
+  width: 380px;
+}
+
+.tap-area .column-name{
+  font-weight: bold;
+}
+
+.data-page-cards{
+  width: 720px;
+  padding: 0px;
 }
 
 .closebtn {
