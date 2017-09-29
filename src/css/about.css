@@ -104,7 +104,19 @@ ul.scrollspy-child-ul {
   text-transform: uppercase;
   font-size: 12px;
 }
-
+.dull-out {
+  opacity: 0.4;
+}
+.scrollspy-child-ul {
+  display: none;
+}
+.scrollspy-navbar ul li a.active + ul.scrollspy-child-ul {
+  display: block;
+}
+.mobbed-footer-space {
+  width: 100%;
+  height: 300px;
+}
 @media only screen and (max-width: 450px){
   .container{
     width: 100%;
@@ -132,20 +144,11 @@ ul.scrollspy-child-ul {
   .answer{
     padding: 0px 10px
   }
-  .explainers-sticky-segment {
+  .explainers-sticky-segment, .stickyContainer {
     display: none;
   }
-}
-.dull-out {
-  opacity: 0.4;
-}
-.scrollspy-child-ul {
-  display: none;
-}
-.scrollspy-navbar ul li a.active + ul.scrollspy-child-ul {
-  display: block;
-}
-.mobbed-footer-space {
-  width: 100%;
-  height: 300px;
+  .mobbed-footer-space {
+    width: 100%;
+    height: 100px;
+  }
 }
