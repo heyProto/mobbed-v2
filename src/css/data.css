@@ -804,4 +804,7 @@ tr:last-child{
   .table-tbody{
     width: 300px;
   }
+  .data-page-cards{
+    width: 100% !important;
+  }
 }
