@@ -262,6 +262,10 @@ ul{
   opacity: 1 !important;
 }
 
+.stories-section{
+  padding-left: 0px !important; 
+}
+
 .red-link{
   width: 100%;
   text-align: center;
