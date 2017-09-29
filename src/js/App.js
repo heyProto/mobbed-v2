@@ -502,7 +502,7 @@ class App extends React.Component {
                   <span className="animate-number">{number_of_incidents}</span>
                 </div>
               </div>
-              <div className="display-text">Instances of lynchings and mob vigilantism were reported 
+              <div className="display-text">Instances of lynchings and mob vigilantism were reported in The Indian Express
                {start_date === '' || end_date === '' ? '' : ` from ${start_date} to ${end_date}` }
               </div>
               {this.props.mode === 'laptop' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}

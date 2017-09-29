@@ -26,7 +26,7 @@
   filterHeaders:[
     "What led to the violence?",
     "Was the incident planned?",
-    "State",
+    "States that have the most incidents",
     "Party whose Chief Minister was in power",
     "Area type",
     "Judge to population ratio",
