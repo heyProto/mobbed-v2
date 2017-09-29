@@ -203,7 +203,7 @@ table{
 .protograph-card-area{
   width: 100%;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .protograph-card{
   width: 220px;
@@ -629,7 +629,7 @@ tr:last-child{
   overflow-y: scroll; 
   padding: 0px;
   /*box-shadow: 1px 0px 9px lightgrey;*/
-  margin-top: 50px;
+  margin-top: 20px;
   width: 380px;
 }
 
@@ -674,6 +674,9 @@ tr:last-child{
 .filters-sidebar:hover{
   left: 0px;
 }*/
+#filter-region{
+  margin-bottom: 50px;
+}
 
 
 @media only screen and (max-width: 450px){
