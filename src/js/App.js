@@ -69,14 +69,18 @@ class App extends React.Component {
     let dimension = this.getScreenSize();
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20}); 
-    $('.filter-area').sticky({topSpacing:20});
-    $('.banner-area .sticky-wrapper').css("height", 0)
+    $('.filter-area').sticky({topSpacing:0});
+    $('.banner-area .sticky-wrapper').css("height", 0);
     $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
   }
 
-  // componentDidUpdate() {
-    
-  // }
+  componentDidUpdate() {
+    $('.filter-area').sticky({topSpacing:0});
+    $('.banner-area .sticky-wrapper').css("height", 0);  
+    $(window).on('scroll', function(){
+      $('.banner-area .sticky-wrapper').css("height", 0);  
+    }) 
+  }
 
   sortObject(obj) {
     var arr = [];
@@ -401,8 +405,9 @@ class App extends React.Component {
 
       let styles = {
         // height: this.state.height,
-        overflow: this.state.overflow,
-        transition: 'ease-in 0.3s'
+        // overflow: this.state.overflow,
+        transition: 'ease-in 0.3s',
+        marginBottom: 50
       };
       let first_tap_area_style = {
         display: this.state.showTapArea
