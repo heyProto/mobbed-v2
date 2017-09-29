@@ -595,7 +595,7 @@ tr:last-child{
   margin-top: 10px;
 }
 
-.btn-law{
+.btn-active{
   background-color: #F02E2E;
   color:white;
   font-size: 10px;
@@ -605,7 +605,7 @@ tr:last-child{
   color:white;
 }
 
-.btn-hate-crime{
+.btn-inactive{
   background-color: #efefef;
   color: gray;
   font-size: 10px;

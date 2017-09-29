@@ -329,6 +329,12 @@ class App extends React.Component {
     })
   }
 
+  addButtonClass(button_name) {
+    this.setState({
+      button_toggle: true
+    })
+  }
+
   renderLaptop() {
     if (this.state.dataJSON === undefined || this.state.filtDat === undefined) {
       let color = '#F02E2E';
@@ -428,6 +434,16 @@ class App extends React.Component {
         }
         rows[count].push(key);
       });
+
+      let current_page = $('.btn-toggle')[0].id.replace("-btn", ""),
+        active_class = [];
+      console.log(current_page);
+      if(current_page === 'law'){
+        active_class = ["btn-active", "btn-inactive"];
+      } else {
+        active_class = ["btn-inactive", "btn-active"]
+      }
+
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
@@ -439,8 +455,8 @@ class App extends React.Component {
               </div>
             </div>
             <div className="hate-crime-toggle">
-              <a href="data.html"><button type="button" className="btn btn-law">Law & order</button></a>
-              <a href="hate-crime.html"><button type="button" className="btn btn-hate-crime">Hate crime</button></a>
+              <a href="data.html"><button type="button" id="btn-law" className={`btn ${active_class[0]}`}>Law & order</button></a>
+              <a href="hate-crime.html"><button type="button" id="btn-hate-crime" className={`btn ${active_class[1]}`}>Hate crime</button></a>
             </div>
             <div id="filter-region" style={styles}>
               {
