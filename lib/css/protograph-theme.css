@@ -262,6 +262,10 @@ ul{
   opacity: 1 !important;
 }
 
+.cards-section{
+  padding-right: 0px !important;
+}
+
 .stories-section{
   padding-left: 0px !important; 
 }
