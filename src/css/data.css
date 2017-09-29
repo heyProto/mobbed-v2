@@ -64,13 +64,14 @@
 }
 
 .filter-area .reset-area .reset-all {
-  border: 1px solid #F02E2E;
-  color: #F02E2E;
+  border: 1px solid #adadad;
+  color: #737373;
   background-color: #fafafa;
   z-index: 200;
   border-radius: 5px;
-  padding: 3px 5px;
-  font-size: 12px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: normal;
 }
 
 .filter-area .reset-area .reset-all:hover {
@@ -355,12 +356,12 @@ table{
 }
 
 .table-head{
-  font-size: 11px;
+  font-size: 13px;
   padding: 13px 15px !important;
   width: 330px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  /*text-transform: uppercase;*/
+  letter-spacing: 0.25px;
 }
 
 .table-tbody{
@@ -597,6 +598,7 @@ tr:last-child{
 .btn-law{
   background-color: #F02E2E;
   color:white;
+  font-size: 10px;
 }
 
 .btn-law:hover{
@@ -606,6 +608,7 @@ tr:last-child{
 .btn-hate-crime{
   background-color: #efefef;
   color: gray;
+  font-size: 10px;
 }
 
 .data-title{
@@ -636,6 +639,8 @@ tr:last-child{
 .tap-area .column-name{
   font-weight: bold;
   display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 .data-page-cards{
