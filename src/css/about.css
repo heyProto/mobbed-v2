@@ -136,3 +136,9 @@ ul.scrollspy-child-ul {
 .dull-out {
   opacity: 0.4;
 }
+.scrollspy-child-ul {
+  display: none;
+}
+.scrollspy-navbar ul li a.active + ul.scrollspy-child-ul {
+  display: block;
+}
