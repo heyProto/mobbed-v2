@@ -119,9 +119,9 @@
 .card-image{
   height: 150px;
   filter:grayscale(100%);
-  opacity: 0.8;
+ /* opacity: 0.8;
   filter:sepia(50%);
-  filter:blur(2px);
+  filter:blur(2px);*/
 }
 
 #display-tweets {
@@ -292,7 +292,7 @@
     text-align: center;
   }
   .counter-area{
-    margin-top: 150px;
+    margin-top: 46px !important;
   }
   .project-description{
     margin-top: 240px;
@@ -332,6 +332,9 @@
   #display-tweets{
     padding-left: 10px;
     height: auto;
+  }
+  #display-stories{
+    padding-left:10px !important;
   }
   .number-background{
     transform: translate(-50%,0px);
