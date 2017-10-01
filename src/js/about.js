@@ -3,6 +3,12 @@ $('.explainers-sticky-segment').sticky({topSpacing:20});
 $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
 $('.filter-column').sticky({topSpacing:20});
 $(document).ready(function () {
+  if (window.innerWidth >= 450) {
+    $('body').scrollspy({
+      target: '#myNavbar',
+      offset: 100
+    });
+  }
   $(window).on("activate.bs.scrollspy", function(e){
     $('.answer').addClass('dull-out');
     var current = $('#myNavbar li a.active'),
@@ -31,15 +37,15 @@ $(document).ready(function () {
     }
   });
 });
-
-$(window).scroll(function () {
-  var active_ancors = $('#myNavbar li a.active'),
-    active_ancors_length = active_ancors.length;
-  if (!active_ancors_length) {
-    $('#myNavbar li a:first').addClass('active');
-  }
-
-})
+if (window.innerWidth >= 450) {
+  $(window).scroll(function () {
+    var active_ancors = $('#myNavbar li a.active'),
+      active_ancors_length = active_ancors.length;
+    if (!active_ancors_length) {
+      $('#myNavbar li a:first').addClass('active');
+    }
+  });
+}
 
 $('.question').hover(function(){
   $(this).addClass('qa-highlight-color');

@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 .answer{
   padding: 0px;
   margin-bottom: 5px !important;
