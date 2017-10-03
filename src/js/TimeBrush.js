@@ -69,13 +69,15 @@ class TimeBrush extends React.Component {
     }
     if (this.props.mode === 'mobile') {
       bar_color= "F02E2E"
-      brush_color="black"
+      brush_color='none'
+      // brush_color="black"
       brush_opacity=0.1
       handle_color="#bdb8b8"
       label_color="#252525"
     } else {
       bar_color= "white"
-      brush_color="red"
+      brush_color='none'
+      // brush_color="red"
       brush_opacity=0.3
       handle_color="#fafafa"
       label_color="#fafafa"
@@ -90,7 +92,7 @@ class TimeBrush extends React.Component {
             selectedDomain={{x:[start_domain, end_domain]}}
             dimension="x" 
             responsive={this.props.mode === 'mobile' ? true : false}
-            handleStyle={{fill: handle_color, height: 27, y:25, width: 7}}
+            handleStyle={{fill: 'transparent', height: 27, y:25, width: 7}}
             selectionStyle={{stroke: "transparent", fill: brush_color, fillOpacity: brush_opacity}}
             onDomainChange={(domain) => this.props.handleSelectDateRange(domain)}/>
         }

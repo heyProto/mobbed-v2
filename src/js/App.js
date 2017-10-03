@@ -76,7 +76,7 @@ class App extends React.Component {
 
   componentDidUpdate() {
     $('.filter-area').sticky({topSpacing:0});
-    $('.banner-area .sticky-wrapper').css("height", 0);  
+    $('.banner-area .sticky-wrapper').css("height", 0);
     $(window).on('scroll', function(){
       $('.banner-area .sticky-wrapper').css("height", 0);  
     }) 
@@ -171,20 +171,26 @@ class App extends React.Component {
     })
   }
 
-
   handleReset(e) {
     this.setState({
-      filteredJSON: this.state.dataJSON,
       category: null
     })
     Object.keys(this.state.filtDat).forEach((key,index)=>{
+      if(this.state.filtDatVals[key] === undefined){
+        return;
+      }
       document.getElementById(key+'-'+this.state.filtDatVals[key]).className=key+'_inactive_item';
     });
-    // console.log(this.state.dataJSON, "this.state.dataJSON")
+    Object.keys(this.state.filtDat).forEach((dat,index)=>{
+      this.state.filteredDat[this.state.filters[index]] = dat;
+      this.state.filtDatVals[this.state.filters[index]] = undefined;
+      this.state.filtDatShowMore[this.state.filters[index]] = true;
+    });
     let end_domain = new Date (this.state.dataJSON[0].date),
-      start_domain = new Date (this.state.dataJSON[this.state.dataJSON.length - 1].date)
+      start_domain = new Date (this.state.dataJSON[this.state.dataJSON.length - 1].date),
+      filteredData = this.state.dataJSON;
     this.setState({
-      filtDatVals:{},
+      filteredJSON: filteredData,
       year_value: {
         min: 'undefined',
         max: 'undefined'
@@ -193,6 +199,28 @@ class App extends React.Component {
       end_domain: end_domain
     })
   }
+
+  // handleReset(e) {
+  //   this.setState({
+  //     filteredJSON: this.state.dataJSON,
+  //     category: null
+  //   })
+  //   Object.keys(this.state.filtDat).forEach((key,index)=>{
+  //     document.getElementById(key+'-'+this.state.filtDatVals[key]).className=key+'_inactive_item';
+  //   });
+  //   // console.log(this.state.dataJSON, "this.state.dataJSON")
+  //   let end_domain = new Date (this.state.dataJSON[0].date),
+  //     start_domain = new Date (this.state.dataJSON[this.state.dataJSON.length - 1].date)
+  //   this.setState({
+  //     filtDatVals:{},
+  //     year_value: {
+  //       min: 'undefined',
+  //       max: 'undefined'
+  //     },
+  //     start_domain: start_domain,
+  //     end_domain: end_domain
+  //   })
+  // }
 
   highlightItem(value, inactive, active, identifier) {
     let elm = document.getElementsByClassName(inactive),
@@ -376,7 +404,6 @@ class App extends React.Component {
       )
     } else {
       $('.social-share-icons').css("display", "block")  
-      $('.banner-area .sticky-wrapper').css("height", 0)
       let optionsObj={};
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
@@ -476,7 +503,7 @@ class App extends React.Component {
                                     {this.state.filtDatShowMore[key] ? <th id={`show-all-filters-${key}`} className="arrow-down"></th> : <th className="arrow-up"></th>}
                                   </tr>
                                 </thead>
-                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : this.state.filteredDat[key].length * 32}}>{optionsObj[key]}</tbody>
+                                <tbody className="table-tbody" style={{height:this.state.filtDatShowMore[key] ? 0 : ''}}>{optionsObj[key]}</tbody>
                               </table>
                             </div>
                           )

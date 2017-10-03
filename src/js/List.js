@@ -13,7 +13,6 @@ class ListCards extends React.Component {
 
    componentDidMount(prevProps, prevState) {
     let cards = $("#cards-list .protograph-card").slice(0, this.state.no_of_cards)
-    console.log(cards, cards[0], "cards")
     for (let i=0; i<cards.length; i++) {
       cards[i].style.display = "inline-block" 
     }   
@@ -37,7 +36,8 @@ class ListCards extends React.Component {
   }
 
   loadMoreCard() {
-    let size = $("#cards-list .protograph-card").length;
+    let size = this.props.dataJSON;
+    // let size = $("#cards-list .protograph-card").length;
     let x = (this.state.no_of_cards + 18 <= size) ? this.state.no_of_cards + 18 : size;
     for(let i=0; i<x; i++) {
       $("#cards-list .protograph-card")[i].style.display = "inline-block" 
