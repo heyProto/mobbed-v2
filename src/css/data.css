@@ -624,7 +624,7 @@ tr:last-child{
 
 
 .sidenav {
-  height: 100vh;
+  height: 700px;
   z-index: 999;
   background-color: #fafafa;
   overflow-x: hidden;
@@ -634,6 +634,7 @@ tr:last-child{
   /*box-shadow: 1px 0px 9px lightgrey;*/
   margin-top: 20px;
   width: 380px;
+  display: block;
 }
 
 .tap-area .column-name{
@@ -681,6 +682,10 @@ tr:last-child{
 }*/
 #filter-region{
   margin-bottom: 50px;
+}
+
+.banner-div .sticky-wrapper {
+  display: inline-block;
 }
 
 

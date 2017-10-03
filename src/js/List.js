@@ -11,11 +11,18 @@ class ListCards extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
-   componentDidMount(prevProps, prevState) {
+  componentDidMount(prevProps, prevState) {
     let cards = $("#cards-list .protograph-card").slice(0, this.state.no_of_cards)
     for (let i=0; i<cards.length; i++) {
       cards[i].style.display = "inline-block" 
     }   
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    let cards = $("#cards-list .protograph-card").slice(0, this.state.no_of_cards)
+    for (let i=0; i<cards.length; i++) {
+      cards[i].style.display = "inline-block" 
+    } 
   }
 
   handleOpenModal(e, card){
@@ -38,7 +45,7 @@ class ListCards extends React.Component {
   loadMoreCard() {
     let size = this.props.dataJSON;
     // let size = $("#cards-list .protograph-card").length;
-    let x = (this.state.no_of_cards + 18 <= size) ? this.state.no_of_cards + 18 : size;
+    let x = (this.state.no_of_cards + this.state.no_of_cards <= size) ? this.state.no_of_cards + this.state.no_of_cards : size;
     for(let i=0; i<x; i++) {
       $("#cards-list .protograph-card")[i].style.display = "inline-block" 
     } 

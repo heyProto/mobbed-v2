@@ -70,16 +70,15 @@ class App extends React.Component {
     $('.briefs-column').sticky({topSpacing:20});
     $('.filter-column').sticky({topSpacing:20}); 
     $('.filter-area').sticky({topSpacing:0});
-    $('.banner-area .sticky-wrapper').css("height", 0);
+    // $('.banner-area .sticky-wrapper').css("height", 0);
+    $('.banner-area .sticky-wrapper').css("display", 'inline-block');
     $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
   }
 
   componentDidUpdate() {
     $('.filter-area').sticky({topSpacing:0});
-    $('.banner-area .sticky-wrapper').css("height", 0);
-    $(window).on('scroll', function(){
-      $('.banner-area .sticky-wrapper').css("height", 0);  
-    }) 
+    // $('.banner-area .sticky-wrapper').css("height", 0);
+    $('.banner-area .sticky-wrapper').css("display", 'inline-block');
   }
 
   sortObject(obj) {
