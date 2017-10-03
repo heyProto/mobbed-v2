@@ -120,6 +120,14 @@ ul.scrollspy-child-ul {
   width: 100%;
   height: 300px;
 }
+@media only screen and (max-width: 1200px) {
+  .proto-container{
+    margin-top: 0px !important;
+  }
+  .project-title-area{
+    margin-top: 30px;
+  } 
+}
 @media only screen and (max-width: 450px){
   .container{
     width: 100%;

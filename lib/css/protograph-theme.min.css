@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Roboto:300,400,700");
 @import url('https://fonts.googleapis.com/css?family=Courgette');
-body {
+.proto-container {
   margin-top: 50px;
   font-family: "Roboto", sans-serif;
 }
@@ -459,6 +459,70 @@ ul{
 .small-project-branding .small-project-title{
   font-size: 28px;
   color: #333;
+}
+@media only screen and (max-width: 1200px) {
+  .proto-container {
+    /*margin-top: 0px;*/
+    overflow-x: hidden;
+  }
+  .mobile-branding{
+    display: inline-block;
+    color: black;
+    font-family: "Noto Serif", serif;
+    font-size: 42px;
+    /*text-align: center;*/
+    font-weight: bold;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .mobile-header{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .page-navigation-mobile{
+    padding-left: 10px;
+    border-bottom: 1px solid #5b5b5b;
+    /*border-top: 1px solid #efefef;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*opacity: 0.4;*/
+  }
+  .dropdown-item{
+    display: block;
+    width: 100%;
+    padding: 10px 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #292b2c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border-bottom: 1px solid #efefef;
+  }
+  .dropdown button {
+    background-color: white;
+    padding: 0px 10px;
+  }
+  .mobile-title{
+    float: right;
+    font-size: 18px;
+    font-family: "Noto Serif", serif;
+    margin-top: 3px;
+    margin-right: 10px;
+    color: #333;
+  }
+  .fixed-navbar-container {
+    display: none;
+  }
+  .filter-column{
+    display: none;
+  }
+  .project-title-other-pages-black{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 450px){
