@@ -43,7 +43,7 @@ class ListCards extends React.Component {
   }
 
   loadMoreCard() {
-    let size = this.props.dataJSON;
+    let size = this.props.dataJSON.length;
     // let size = $("#cards-list .protograph-card").length;
     let x = (this.state.no_of_cards + this.state.no_of_cards <= size) ? this.state.no_of_cards + this.state.no_of_cards : size;
     for(let i=0; i<x; i++) {

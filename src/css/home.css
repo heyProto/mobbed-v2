@@ -299,6 +299,8 @@
   }
   .display-summary{
     color: #333;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
   .display-summary br{
     display: none;
@@ -371,10 +373,6 @@
     margin-top: -30px;
     color: white;
     font-size: 20px;
-  }
-
-  .hero-cover p{
-    padding: 0px 10px;
   }
 
   #display-cards .card-image{
