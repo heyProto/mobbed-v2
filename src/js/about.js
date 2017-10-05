@@ -6,10 +6,18 @@ $(document).ready(function () {
   if(!($('#myNavbar .list-group-item.active').hasClass('scrollspy-parent-li'))) {
     $('#myNavbar .list-group-item').addClass('scrollspy-aboutpage-li');
   }
+  $('.list-group-item').on('click', function() {
+    var hash = $(this).closest('a').get(0).hash;
+    console.log(hash);
+    console.log($(hash).offset().top)
+    setTimeout(function () {
+      $(window).scrollTop($(hash).offset().top - 70);
+    }, 10);
+  });
   if (window.innerWidth >= 450) {
     $('body').scrollspy({
       target: '#myNavbar',
-      offset: 62
+      offset: 70
     });
   }
   $(window).on("activate.bs.scrollspy", function(e){
