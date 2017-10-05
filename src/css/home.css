@@ -40,7 +40,11 @@
 .modal-dialog{
   width: 675px;
   height:100%;
-  margin-top: 200px;
+  margin-top: 75px;
+  -webkit-transform: translate(0,0) !important;
+  -ms-transform: translate(0,0) !important;
+  -o-transform: translate(0,0) !important;
+  transform: translate(0,0) !important;
 }
 .modal-close{
   position: absolute;
