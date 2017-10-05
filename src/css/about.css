@@ -91,7 +91,7 @@ body {
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
   /*z-index: 2;*/
-  background: #efefef;
+  background: #efefef !important;
   color: #333;
   border-radius: 0px;
   border-color: red;
@@ -120,13 +120,37 @@ ul.scrollspy-child-ul {
   width: 100%;
   height: 300px;
 }
+.list-group-item {
+  height: auto !important;
+  line-height: initial !important;
+  text-align: left !important;
+}
+.scrollspy-child-ul li {
+  height: inherit !important;
+}
+.scrollspy-child-ul {
+  border-bottom: 0px !important;
+}
+.scrollspy-child-ul li a {
+  font-size: 12px !important;
+}
+.scrollspy-navbar ul {
+  border-bottom: 0px !important;
+}
+.scrollspy-navbar ul li {
+  height: auto !important;
+}
+.scrollspy-navbar ul li:hover a {
+  background-color: #fff;
+  color: #555;
+}
 @media only screen and (max-width: 1200px) {
   .proto-container{
     margin-top: 0px !important;
   }
   .project-title-area{
     margin-top: 30px;
-  } 
+  }
 }
 @media only screen and (max-width: 450px){
   .container{

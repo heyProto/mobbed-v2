@@ -1,12 +1,12 @@
 let dimension = getScreenSize();
-$('.explainers-sticky-segment').sticky({topSpacing:20});
-$('.social-share-icons').sticky({topSpacing: dimension.height - 100})
-$('.filter-column').sticky({topSpacing:20});
+$('.explainers-sticky-segment').sticky({topSpacing:62});
+$('.filter-column').sticky({topSpacing:62});
 $(document).ready(function () {
+  $('#myNavbar li p').remove();
   if (window.innerWidth >= 450) {
     $('body').scrollspy({
       target: '#myNavbar',
-      offset: 100
+      offset: 160
     });
   }
   $(window).on("activate.bs.scrollspy", function(e){
