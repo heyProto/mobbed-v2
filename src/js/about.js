@@ -1,8 +1,11 @@
 let dimension = getScreenSize();
-$('.explainers-sticky-segment').sticky({topSpacing:62});
+$('.explainers-sticky-segment').sticky({topSpacing:62, bottomSpacing: 225});
 $('.filter-column').sticky({topSpacing:62});
 $(document).ready(function () {
   $('#myNavbar li p').remove();
+  if(!($('#myNavbar .list-group-item.active').hasClass('scrollspy-parent-li'))) {
+    $('#myNavbar .list-group-item').addClass('scrollspy-parent-li')
+  }
   if (window.innerWidth >= 450) {
     $('body').scrollspy({
       target: '#myNavbar',
