@@ -67,23 +67,22 @@ class App extends React.Component {
     }));
     this.showCounter();
     let dimension = this.getScreenSize();
-    $('.briefs-column').sticky({topSpacing:20});
-    $('.filter-column').sticky({topSpacing:20}); 
+    // $('.briefs-column').sticky({topSpacing:20});
+    $('.filter-column').sticky({topSpacing:62}); 
     // $('.banner-area .sticky-wrapper').css("height", 0);
-    if(this.props.mode === 'laptop') {
-      $('.filter-area').sticky({topSpacing:0});
-      $('.banner-area .sticky-wrapper').css("display", 'inline-block');
-    }   
-    $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
+    // if(this.props.mode === 'laptop') {
+      // $('.filter-area').sticky({topSpacing:0});
+      // $('.banner-area .sticky-wrapper').css("display", 'inline-block');
+    // }   
+    // $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
   }
 
-  componentDidUpdate() {
-    // $('.banner-area .sticky-wrapper').css("height", 0);
-    if(this.props.mode === 'laptop') {
-      $('.filter-area').sticky({topSpacing:0});
-      $('.banner-area .sticky-wrapper').css("display", 'inline-block');
-    }
-  }
+  // componentDidUpdate() {
+  //   if(this.props.mode === 'laptop') {
+  //     $('.filter-area').sticky({topSpacing:0});
+  //     $('.banner-area .sticky-wrapper').css("display", 'inline-block');
+  //   }
+  // }
 
   sortObject(obj) {
     var arr = [];
