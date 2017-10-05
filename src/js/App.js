@@ -68,21 +68,21 @@ class App extends React.Component {
     this.showCounter();
     let dimension = this.getScreenSize();
     // $('.briefs-column').sticky({topSpacing:20});
-    $('.filter-column').sticky({topSpacing:62}); 
+    $('.filter-column').sticky({topSpacing:62});
     // $('.banner-area .sticky-wrapper').css("height", 0);
-    // if(this.props.mode === 'laptop') {
-      // $('.filter-area').sticky({topSpacing:0});
-      // $('.banner-area .sticky-wrapper').css("display", 'inline-block');
-    // }   
-    // $('.social-share-icons').sticky({topSpacing: dimension.height - 100}) 
+    if(this.props.mode === 'laptop') {
+      $('.filter-area').sticky({topSpacing:62, bottomSpacing: 225});
+      $('.banner-area .sticky-wrapper').css("display", 'inline-block');
+    }
+    // $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
   }
 
-  // componentDidUpdate() {
-  //   if(this.props.mode === 'laptop') {
-  //     $('.filter-area').sticky({topSpacing:0});
-  //     $('.banner-area .sticky-wrapper').css("display", 'inline-block');
-  //   }
-  // }
+  componentDidUpdate() {
+    if(this.props.mode === 'laptop') {
+      $('.filter-area').sticky({topSpacing:62, bottomSpacing: 225});
+      $('.banner-area .sticky-wrapper').css("display", 'inline-block');
+    }
+  }
 
   sortObject(obj) {
     var arr = [];
@@ -137,7 +137,7 @@ class App extends React.Component {
   handleOnChangeMenu(e, value) {
     this.setState((prevState, props) => {
       if (prevState.menu_value !== value || prevState.menu_value === 'undefined' ) {
-        prevState.menu_value = value; 
+        prevState.menu_value = value;
         this.highlightItem(value, 'menu_inactive_item', 'menu_active_item', 'menu');
       } else {
         prevState.menu_value = 'undefined';
@@ -153,13 +153,13 @@ class App extends React.Component {
   handleOnChange(e,value,key){
     this.setState((prevState, props) => {
       if (prevState.filtDatVals[key] !== value || prevState.filtDatVals[key] === undefined ) {
-        prevState.filtDatVals[key] = value; 
+        prevState.filtDatVals[key] = value;
         this.highlightItem(value, key+'_inactive_item', key+'_active_item active_item',key);
       } else {
-        prevState.filtDatVals[key] = undefined; 
+        prevState.filtDatVals[key] = undefined;
         this.highlightItem(value, key+'_inactive_item', key+'_inactive_item', key);
       }
-      let filteredData = this.getFilteredData(prevState)      
+      let filteredData = this.getFilteredData(prevState)
       let filtDat=this.state.filters.map((dat)=> this.sortObject(Utils.groupBy(filteredData,dat)));
       let filtDatObj={};
       filtDat.forEach((dat,index)=>{
@@ -319,7 +319,7 @@ class App extends React.Component {
               $(this).text(Math.ceil(now));
             }
         });
-      }); 
+      });
     },1000)
   }
 
@@ -344,7 +344,7 @@ class App extends React.Component {
       startDate = new_arr[new_arr.length - 1].date;
       endDate = new_arr[0].date;
     }
-    
+
     return {
       startDate: startDate,
       endDate: endDate
@@ -405,7 +405,7 @@ class App extends React.Component {
         </div>
       )
     } else {
-      $('.social-share-icons').css("display", "block")  
+      $('.social-share-icons').css("display", "block")
       let optionsObj={};
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
@@ -456,7 +456,7 @@ class App extends React.Component {
         rows.push([]);
       }
       let count = -1;
-      
+
       Object.keys(optionsObj).forEach((key,index)=>{
         if(index % 4 === 0){
           count++;
