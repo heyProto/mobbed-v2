@@ -109,6 +109,9 @@ ul.scrollspy-child-ul {
   text-transform: uppercase;
   font-size: 12px;
 }
+.scrollspy-aboutpage-li {
+  font-size: 12px;
+}
 .dull-out {
   opacity: 0.4;
 }

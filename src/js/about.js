@@ -4,12 +4,12 @@ $('.filter-column').sticky({topSpacing:62});
 $(document).ready(function () {
   $('#myNavbar li p').remove();
   if(!($('#myNavbar .list-group-item.active').hasClass('scrollspy-parent-li'))) {
-    $('#myNavbar .list-group-item').addClass('scrollspy-parent-li')
+    $('#myNavbar .list-group-item').addClass('scrollspy-aboutpage-li');
   }
   if (window.innerWidth >= 450) {
     $('body').scrollspy({
       target: '#myNavbar',
-      offset: 160
+      offset: 62
     });
   }
   $(window).on("activate.bs.scrollspy", function(e){
