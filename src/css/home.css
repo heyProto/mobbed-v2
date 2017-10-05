@@ -239,6 +239,11 @@
   display: none;
 }
 
+.hero-cover{
+  height: 380px;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 450px){
   .about-advertisement > p{
     text-align: left;
