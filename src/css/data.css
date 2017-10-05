@@ -628,12 +628,12 @@ tr:last-child{
 
 
 .sidenav {
-  height: 700px;
+  height: 612px;
   z-index: 999;
   background-color: #fafafa;
   overflow-x: hidden;
   transition: 0.2s ease-in;
-  overflow-y: scroll; 
+  overflow-y: scroll;
   padding: 0px;
   /*box-shadow: 1px 0px 9px lightgrey;*/
   margin-top: 20px;
