@@ -267,7 +267,7 @@ ul{
 }
 
 .stories-section{
-  padding-left: 0px !important; 
+  padding-left: 0px !important;
 }
 
 .red-link{
@@ -462,7 +462,7 @@ ul{
 }
 @media only screen and (max-width: 1200px) {
   .proto-container {
-    /*margin-top: 0px;*/
+    margin-top: 0px !important;
     overflow-x: hidden;
   }
   .mobile-branding{
@@ -480,13 +480,13 @@ ul{
     display: inline-block;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 50px;
   }
   .page-navigation-mobile{
     padding-left: 10px;
     border-bottom: 1px solid #5b5b5b;
     /*border-top: 1px solid #efefef;*/
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 10px;
     /*opacity: 0.4;*/
   }
