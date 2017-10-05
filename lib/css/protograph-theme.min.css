@@ -584,5 +584,10 @@ ul{
   .page-title{
     padding: 0px 10px;
   }
+  .project-tag-line{
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }
