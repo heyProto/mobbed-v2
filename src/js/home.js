@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   let dimension = getScreenSize(), mode;
   var showChar;
-  if (dimension.width <= 450){
+  if (dimension.width <= 500){
     mode = 'mobile';
     showChar = 200
   } else {
@@ -68,10 +68,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return false;
   });
   if (mode === 'laptop'){
-    $('.briefs-column').sticky({topSpacing:20});
-    $('.filter-column').sticky({topSpacing:20});
-    $('.about-advertisement').sticky({topSpacing:20});
-    $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
+    $('.briefs-column').sticky({topSpacing:62});
+    $('.filter-column').sticky({topSpacing:62});
+    $('.about-advertisement').sticky({topSpacing:62});
   } else {
     $('.mobile-tab-area').sticky({topSpacing:0});
   }

@@ -409,7 +409,7 @@ ul{
 
 .page-bottom{
   position: absolute;
-  bottom: 70px;
+  /*bottom: 70px;*/
   font-size: 28px;
   color: black;
 }
