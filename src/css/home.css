@@ -240,6 +240,9 @@
 }
 
 @media only screen and (max-width: 450px){
+  .about-advertisement > p{
+    text-align: left;
+  }
   .stories-section, .chatter-section, .cards-section{
     width: 100%;
   }
@@ -273,9 +276,6 @@
   .container{
     width: 100%;
   }
-  .hero-cover{
-    padding: 0px;
-  }
   .hero-cover img{
     padding: 0px;
     height: 250px;
@@ -285,6 +285,8 @@
   .hero-cover{
     overflow: hidden;
     border-bottom: 0px;
+    padding: 0px;
+    height: 390px;
   }
   .mobile-tab-area{
     border-top: 1px solid #efefef;
@@ -307,6 +309,9 @@
     color: #333;
     margin-top: 10px;
     margin-bottom: 15px;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .display-summary br{
     display: none;
