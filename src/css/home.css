@@ -240,6 +240,9 @@
 }
 
 @media only screen and (max-width: 450px){
+  .about-advertisement > p{
+    text-align: left;
+  }
   .stories-section, .chatter-section, .cards-section{
     width: 100%;
   }

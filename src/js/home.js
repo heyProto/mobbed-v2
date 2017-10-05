@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $('briefs-column').position().top + 650
     })
   } else {
-    $('.mobile-tab-area').sticky({topSpacing:0, bottomSpacing: 275});
+    $('.mobile-tab-area').sticky({topSpacing:62});
     $(".banner-div a:empty").parent("p").css("display", "none");
   }
 
