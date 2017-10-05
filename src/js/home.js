@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return false;
   });
   if (mode === 'laptop'){
-    $('.briefs-column').sticky({topSpacing:62, bottomSpacing: 225});
-    $('.filter-column').sticky({topSpacing:62, bottomSpacing: 225});
-    $('.about-advertisement').sticky({topSpacing:62, bottomSpacing: 225});
+    $('.briefs-column').sticky({topSpacing:62, bottomSpacing: 275});
+    $('.filter-column').sticky({topSpacing:62, bottomSpacing: 275});
+    $('.about-advertisement').sticky({topSpacing:62, bottomSpacing: 275});
     $(window).on('scroll', function(){
       $('briefs-column').position().top + 650
     })
   } else {
-    $('.mobile-tab-area').sticky({topSpacing:0, bottomSpacing: 225});
+    $('.mobile-tab-area').sticky({topSpacing:0, bottomSpacing: 275});
   }
 
   //counter

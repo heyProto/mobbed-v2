@@ -71,7 +71,7 @@ class App extends React.Component {
     $('.filter-column').sticky({topSpacing:62});
     // $('.banner-area .sticky-wrapper').css("height", 0);
     if(this.props.mode === 'laptop') {
-      $('.filter-area').sticky({topSpacing:62, bottomSpacing: 240});
+      $('.filter-area').sticky({topSpacing:62, bottomSpacing: 275});
       $('.banner-area .sticky-wrapper').css("display", 'inline-block');
     }
     // $('.social-share-icons').sticky({topSpacing: dimension.height - 100})
@@ -79,7 +79,7 @@ class App extends React.Component {
 
   componentDidUpdate() {
     if(this.props.mode === 'laptop') {
-      $('.filter-area').sticky({topSpacing:62, bottomSpacing: 240});
+      $('.filter-area').sticky({topSpacing:62, bottomSpacing: 275});
       $('.banner-area .sticky-wrapper').css("display", 'inline-block');
     }
   }
