@@ -71,9 +71,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('.briefs-column').sticky({topSpacing:62});
     $('.filter-column').sticky({topSpacing:62});
     $('.about-advertisement').sticky({topSpacing:62});
-    $(window).on('scroll', function(){
-      $('briefs-column').position().top + 650
-    })
   } else {
     $('.mobile-tab-area').sticky({topSpacing:0});
   }
