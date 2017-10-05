@@ -71,6 +71,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('.briefs-column').sticky({topSpacing:62});
     $('.filter-column').sticky({topSpacing:62});
     $('.about-advertisement').sticky({topSpacing:62});
+    $('.briefs-column').on('sticky-bottom-reached', function(){
+      $(".briefs-column").css('position', 'absolute');
+    })
+    $('.briefs-column').on('sticky-start', function() { 
+      $('.briefs-column').sticky({topSpacing:62});
+    });
   } else {
     $('.mobile-tab-area').sticky({topSpacing:0});
   }
