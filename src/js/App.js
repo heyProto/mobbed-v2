@@ -484,8 +484,8 @@ class App extends React.Component {
               </div>
             </div>
             <div className="hate-crime-toggle">
-              <a href="data.html"><button type="button" id="btn-law" className={`btn ${active_class[0]}`}>Law & order</button></a>
-              <a href="hate-crime.html"><button type="button" id="btn-hate-crime" className={`btn ${active_class[1]}`}>Hate crime</button></a>
+              <a href="http://cmsdev.indianexpress.com/coverage/data/"><button type="button" id="btn-law" className={`btn ${active_class[0]}`}>Law & order</button></a>
+              <a href="http://cmsdev.indianexpress.com/coverage/hate-crime/"><button type="button" id="btn-hate-crime" className={`btn ${active_class[1]}`}>Hate crime</button></a>
             </div>
             <div id="filter-region" style={styles}>
               {
