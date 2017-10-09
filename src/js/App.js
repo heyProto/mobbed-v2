@@ -28,6 +28,7 @@ class App extends React.Component {
       },
       start_domain: 'undefined',
       end_domain: 'undefined',
+      shouldRender: true,
       parseMonth: timeFormat("%Y-%m")
     }
     this.handleCircleClicked = this.handleCircleClicked.bind(this);
@@ -174,32 +175,34 @@ class App extends React.Component {
   }
 
   handleReset(e) {
-    this.setState({
-      category: null
-    })
-    Object.keys(this.state.filtDat).forEach((key,index)=>{
-      if(this.state.filtDatVals[key] === undefined){
-        return;
-      }
-      document.getElementById(key+'-'+this.state.filtDatVals[key]).className=key+'_inactive_item';
-    });
-    Object.keys(this.state.filtDat).forEach((dat,index)=>{
-      this.state.filteredDat[this.state.filters[index]] = dat;
-      this.state.filtDatVals[this.state.filters[index]] = undefined;
-      this.state.filtDatShowMore[this.state.filters[index]] = true;
-    });
-    let end_domain = new Date (this.state.dataJSON[0].date),
-      start_domain = new Date (this.state.dataJSON[this.state.dataJSON.length - 1].date),
+    // Object.keys(this.state.filtDat).forEach((key,index)=>{
+    //   if(this.state.filtDatVals[key] === undefined){
+    //     return;
+    //   }
+    //   document.getElementById(key+'-'+this.state.filtDatVals[key]).className=key+'_inactive_item';
+    // });
+    // Object.keys(this.state.filtDat).forEach((dat,index)=>{
+    //   this.state.filteredDat[this.state.filters[index]] = dat;
+    //   this.state.filtDatVals[this.state.filters[index]] = undefined;
+    //   this.state.filtDatShowMore[this.state.filters[index]] = true;
+    // });
+    let end_domain = new Date("10/03/2017"),
+        start_domain = new Date("11/12/2010"),
       filteredData = this.state.dataJSON;
+      
     this.setState({
+      shouldRender: false,
       filteredJSON: filteredData,
+      category: undefined, 
       year_value: {
         min: 'undefined',
         max: 'undefined'
-      },
+      },     
       start_domain: start_domain,
       end_domain: end_domain
-    })
+    });
+
+    setTimeout(() => {this.setState({shouldRender: true}, ()=> {console.log("HOGAYA")})}, 0);
   }
 
   // handleReset(e) {
@@ -265,10 +268,10 @@ class App extends React.Component {
       state.start_domain = new Date(filteredData[0].date),
       state.end_domain = new Date(filteredData[filteredData.length - 1].date)
     } else {
-      state.start_domain = NaN;
-      state.end_domain = NaN;
+      state.start_domain = "undefined";
+      state.end_domain = "undefined";
     }
-    console.log(filteredData);
+    console.log(filteredData,'.......');
     return filteredData;
   }
 
@@ -472,7 +475,7 @@ class App extends React.Component {
       } else {
         active_class = ["btn-inactive", "btn-active"]
       }
-
+      console.log(this.state.filteredJSON,this.state.start_domain,this.state.end_domain,".'.'.'.'");
       return (
         <div className="banner-area">
           {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
@@ -534,7 +537,7 @@ class App extends React.Component {
               <div className="display-text">Instances of lynchings and mob vigilantism were reported in The Indian Express
                {start_date === '' || end_date === '' ? '' : ` from ${start_date} to ${end_date}` }
               </div>
-              {this.props.mode === 'laptop' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
+              {this.props.mode === 'laptop' ? <TimeBrush dataJSON={this.state.filteredJSON ? this.state.filteredJSON : this.state.dataJSON} shouldRender={this.state.shouldRender} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : <div />}
             </div>
             <div className="col-sm-10 filter-title">
               <Map dataJSON={this.state.filteredJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} circleClicked={this.state.circleClicked} handleCircleClicked={this.handleCircleClicked} circleHover={this.state.circleHover}/>

@@ -33,7 +33,7 @@ class TimeBrush extends React.Component {
       j++
     }
     let sorted_arr = this.sortArray(arr);
-
+    console.log("SORTED DATA: ", sorted_arr)
     this.setState({
       sorted_arr: sorted_arr
     })
@@ -76,45 +76,72 @@ class TimeBrush extends React.Component {
       label_color="#252525"
     } else {
       bar_color= "white"
-      brush_color='none'
-      // brush_color="red"
+      brush_color="red"
       brush_opacity=0.3
       handle_color="#fafafa"
       label_color="#fafafa"
     }
-    return (
-      <VictoryChart 
-        domainPadding={10}
-        width={300} height={120} padding={{left:20, right: 20, top:10, bottom:50}}
-        scale={{x: "time"}}
-        containerComponent={
-          <VictoryBrushContainer
-            selectedDomain={{x:[start_domain, end_domain]}}
-            dimension="x" 
-            responsive={this.props.mode === 'mobile' ? true : false}
-            handleStyle={{fill: 'transparent', height: 27, y:25, width: 7}}
-            selectionStyle={{stroke: "transparent", fill: brush_color, fillOpacity: brush_opacity}}
-            onDomainChange={(domain) => this.props.handleSelectDateRange(domain)}/>
-        }
-      > 
-        <VictoryAxis
-          fixLabelOverlap={true}
-          style={{
-            axis: {stroke: handle_color, strokeWidth: 1},
-            axisLabel: {fontSize: 10},
-            ticks: {stroke: handle_color, size: 5},
-            tickLabels: {fontSize: 10, fill:label_color}
-          }}/>
+    if(this.props.shouldRender){
+       return (
+      <div width={300} height={120}>
+        <VictoryChart 
+          domainPadding={10}
+          width={300} height={120} padding={{left:20, right: 20, top:10, bottom:50}}
+          scale={{x: "time"}}
+          containerComponent={
+            <VictoryBrushContainer
+              selectedDomain={{x:[start_domain, end_domain]}}
+              dimension="x" 
+              responsive={this.props.mode === 'mobile' ? true : false}
+              handleStyle={{fill: 'transparent', height: 27, y:25, width: 7}}
+              selectionStyle={{stroke: "transparent", fill: brush_color, fillOpacity: brush_opacity}}
+              onDomainChange={(domain) => this.props.handleSelectDateRange(domain)}/>
+          }
+        > 
+          <VictoryAxis
+            fixLabelOverlap={true}
+            style={{
+              axis: {stroke: handle_color, strokeWidth: 1},
+              axisLabel: {fontSize: 10},
+              ticks: {stroke: handle_color, size: 5},
+              tickLabels: {fontSize: 10, fill:label_color}
+            }}/>
 
-        <VictoryBar
-          style={{ data: { fill: bar_color } }}
-          padding={{left: 20, right: 20, bottom:50}}
-          data={this.state.sorted_arr}
-          x="date_obj"
-          y="count"/>
+          <VictoryBar
+            style={{ data: { fill: bar_color } }}
+            padding={{left: 20, right: 20, bottom:50}}
+            data={this.state.sorted_arr}
+            x="date_obj"
+            y="count"/>
 
-      </VictoryChart>
-    )
+        </VictoryChart>
+      </div>
+    )}else{
+      return(
+        <div style={{width:300, height:120}}>
+          <VictoryChart 
+          domainPadding={10}
+          width={300} height={120} padding={{left:20, right: 20, top:10, bottom:50}}
+          scale={{x: "time"}}> 
+          <VictoryAxis
+            fixLabelOverlap={true}
+            style={{
+              axis: {stroke: handle_color, strokeWidth: 1},
+              axisLabel: {fontSize: 10},
+              ticks: {stroke: handle_color, size: 5},
+              tickLabels: {fontSize: 10, fill:label_color}
+            }}/>
+
+          <VictoryBar
+            style={{ data: { fill: bar_color } }}
+            padding={{left: 20, right: 20, bottom:50}}
+            data={this.state.sorted_arr}
+            x="date_obj"
+            y="count"/>
+        </VictoryChart>
+      </div>
+      )
+    }
   }
 }
 
