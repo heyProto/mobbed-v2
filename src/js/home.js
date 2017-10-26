@@ -71,44 +71,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('.briefs-column').sticky({topSpacing:62, bottomSpacing: 275});
     $('.filter-column').sticky({topSpacing:62, bottomSpacing: 275});
     $('.about-advertisement').sticky({topSpacing:62, bottomSpacing: 275});
-    $(window).on('scroll', function(){
-      $('briefs-column').position().top + 650
-    })
   } else {
     $('.mobile-tab-area').sticky({topSpacing:50});
   }
   $(".banner-div a:empty").parent("p").css("display", "none");
-
-  //counter
-  getJSON('http://protograph.indianexpress.com/49a045aea2b71456f5d04f4a/index.json', function (err, data){
-    if (err != null) {
-      alert('Something went wrong: ' + err);
-    } else {
-      let start_date_split = data[data.length - 1].date.split("-"),
-        start_month = new Date(data[data.length - 1].date).toLocaleDateString('en-US', {month: 'short'}),
-        end_date_split = data[0].date.split("-"),
-        end_month = new Date(data[0].date).toLocaleDateString('en-US', {month: 'short'}),
-        start_date = start_month + " " + start_date_split[2] + ", " + start_date_split[0],
-        end_date = end_month + " " + end_date_split[2] + ", " + end_date_split[0];
-
-      let number_of_digits = data.length.toString().length;
-      if (number_of_digits !== 3) {
-        document.getElementById('first-number').innerHTML = 0
-      } else {
-        let element = document.getElementById("first-number");
-        element.parentNode.removeChild(element);
-      }
-      if (number_of_digits === 1) {
-        document.getElementById('second-number').innerHTML = 0
-      } else {
-        let element = document.getElementById("second-number");
-        element.parentNode.removeChild(element);
-      }
-      document.getElementById('animate-number').innerHTML = data.length;
-      document.getElementById('start-date').innerHTML = start_date;
-      document.getElementById('end-date').innerHTML = end_date;
-    }
-  })
 
   //cards column
   getJSON('http://protograph.indianexpress.com/be0b3c8854f0b1e774b96580/index.json', function (err, data){
@@ -118,16 +84,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let mob_cards = '';
       data.map((d,i) => {
         // let img = "http://images.indianexpress.com/2017/07/suicide-759111.jpg",
-        let img = d.screen_shot_url,
-          new_date = d.date.split("-"),
-          month = new Date(d.date).toLocaleDateString('en-US', {month: 'short'});
+        let img = d.screen_shot_url;
         mob_cards += '<div id="ProtoCard-'+ i +'" class="mob-justice-incidents">' +
           '<img class="card-image" src="'+img+ '" width="100%;"/>'+
           '<div class="protograph-gradient">'+
             '<div class="data-card-content">'+
               '<div class="data-card-title">' + d.title + '</div>'+
-              '<div class="data-card-date">' + month + " "+ new_date[2] + ", "+ new_date[0]+ " | "+d.state.substring(0, 13) +'</div>' +
-              '</div>'+
             '</div>'+
           '</div>'
         document.getElementById('display-cards').innerHTML = mob_cards

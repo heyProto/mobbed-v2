@@ -22,7 +22,6 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="index.html">COVERAGE</a>
                 <a class="dropdown-item" href="data.html">DATA</a>
-                <a class="dropdown-item" href="findings.html">FINDINGS</a>
                 <a class="dropdown-item" href="about.html">ABOUT</a>
               </div>
             </div>
@@ -35,12 +34,6 @@
             <div class="single-option category-dash-active">
               <div class="category-dash news-dash"></div>
               <div class="category-name">COVERAGE</div>
-            </div>
-          </a>
-          <a class="sidebar-url" href="findings.html">
-            <div class="single-option">
-              <div class="category-dash news-dash"></div>
-              <div class="category-name">FINDINGS</div>
             </div>
           </a>
           <a class="sidebar-url" href="data.html">
@@ -68,32 +61,22 @@
       <div class="col-sm-14 hero-cover no-padding-col">
         <img class="cover-image" src="./src/img/cover-image.png" width="100%">
         <div class="banner-div">
-          <a href="index.html" class="back-to-home"><h1 class="project-title">#mobbed</h1></a>
-          <div class= "project-tag-line">What emboldens lynchings and mob vigilantism in India?</div>
-          <div class="counter-area">
-            <div class="number-background">
-              <div class="single-background"></div>
-              <div class="single-background"></div>
-              <div class="single-background"></div>
-            </div>
-            <div class="display-counter">
-              <span id="first-number" class="light-text"></span><!--
-            --><span id="second-number" class="light-text"></span><!--
-            --><span id="animate-number" class="animate-number">0</span>
-            </div>
-          </div>
-          <p class="display-summary">Instances of lynchings and mob vigilantism were reported in <br> The Indian Express from <span id="start-date"></span> to <span id="end-date"></span>
+          <a href="index.html" class="back-to-home"><h1 class="project-title"></h1></a>
+          <div class= "project-tag-line"></div>
           </p>
           <button id="explore-button"><a class="button-url" href="data.html">EXPLORE</a></button>
         </div>
       </div>
       <div class="mobile-tab-area">
-        <div id="articles-tab" class="col-sm-4 section-tabs tabs-active-class">Stories</div>
-        <div id="cards-tab" class="col-sm-4 section-tabs">Why</div>
-        <div id="chatter-tab" class="col-sm-4 section-tabs">Latest</div>
+        <div id="articles-tab" class="col-sm-4 section-tabs tabs-active-class"></div>
+        <div id="cards-tab" class="col-sm-4 section-tabs"></div>
+        <div id="chatter-tab" class="col-sm-4 section-tabs"></div>
       </div>
       <div class="col-sm-7 stories-section">
-        <div id="display-stories"></div>
+        <div id="display-stories">
+            <iframe name="http://protograph.indianexpress.com/171fda4fca046ddf4490/index.html?view_cast_id=246dbf85e51d8c5e808bd8c5%26schema_id=2e86f6d67d84af232c65?uuid=dc3dc9a5-7f36-4ce6-9e62-5c77d860e8b5" sandbox="allow-popups allow-scripts allow-same-origin allow-presentation" src="http://protograph.indianexpress.com/171fda4fca046ddf4490/index.html?view_cast_id=246dbf85e51d8c5e808bd8c5%26schema_id=2e86f6d67d84af232c65" style="width: 100%; height: 537px; border-width: 0px; visibility: visible;"></iframe>
+            <iframe name="http://protograph.indianexpress.com/171fda4fca046ddf4490/index.html?view_cast_id=26ff130820148a91b8435f91%26schema_id=2e86f6d67d84af232c65?uuid=4559ecce-e545-4a72-b649-0f76c94f11fc" sandbox="allow-popups allow-scripts allow-same-origin allow-presentation" src="http://protograph.indianexpress.com/171fda4fca046ddf4490/index.html?view_cast_id=26ff130820148a91b8435f91%26schema_id=2e86f6d67d84af232c65" style="width: 100%; height: 155px; border-width: 0px; visibility: visible;"></iframe>
+        </div>
       </div>
       <div class="col-sm-3 chatter-section">
         <div id="display-cards"></div>
@@ -104,10 +87,7 @@
       </div>
       <div class="col-sm-4 cards-section">
         <div class="about-advertisement">
-          <h4 class="column-name">Why</h4>
-          <p>Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. But what are the root causes of these incidents? Did mob violence emerge suddenly? Are there common patterns to lynchings across regions in India?</p>
-          <p>This project stemmed out of curiosity about these basic, and even more complex questions such as: Does this kind of violence happen for specific reasons? Does the law and order capacity of the state have any bearing on the frequency of these incidents? And most importantly, is there anything can be done about it? </p>
-          <p>We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our ‘about’ section that contains answers on our approach, data collection, design and interpretation.</p>
+          <h4 class="column-name"></h4>
         </div>
       </div>
       <div id="proto-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -122,9 +102,16 @@
       </div>
     </div>
     <div class="five-br-space"></div>
+
     <script type="text/javascript" src='./lib/js/jquery.min.js'></script>
     <script src="./mobbed-lib.min.js"></script>
+    <script>
+        $('.briefs-column').sticky({topSpacing:62, bottomSpacing: 275});
+        $('.filter-column').sticky({topSpacing:62, bottomSpacing: 275});
+        $('.about-advertisement').sticky({topSpacing:62, bottomSpacing: 275});
+        $(".banner-div a:empty").parent("p").css("display", "none");
+      </script>
     <script src="http://protograph.indianexpress.com/lib/protoGraph.min.js"></script>
-    <script src="./mobbed-home.min.js"></script>
+    <!-- <script src="./mobbed-home.min.js"></script> -->
   </body>
 </html>

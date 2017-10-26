@@ -175,21 +175,7 @@ class App extends React.Component {
   }
 
   handleReset(e) {
-    // Object.keys(this.state.filtDat).forEach((key,index)=>{
-    //   if(this.state.filtDatVals[key] === undefined){
-    //     return;
-    //   }
-    //   document.getElementById(key+'-'+this.state.filtDatVals[key]).className=key+'_inactive_item';
-    // });
-    // Object.keys(this.state.filtDat).forEach((dat,index)=>{
-    //   this.state.filteredDat[this.state.filters[index]] = dat;
-    //   this.state.filtDatVals[this.state.filters[index]] = undefined;
-    //   this.state.filtDatShowMore[this.state.filters[index]] = true;
-    // });
-    let end_domain = new Date("10/03/2017"),
-        start_domain = new Date("11/12/2010"),
-      filteredData = this.state.dataJSON;
-      
+    let filteredData = this.state.dataJSON;  
     this.setState({
       shouldRender: false,
       filteredJSON: filteredData,
@@ -197,35 +183,12 @@ class App extends React.Component {
       year_value: {
         min: 'undefined',
         max: 'undefined'
-      },     
-      start_domain: start_domain,
-      end_domain: end_domain
+      }
     });
 
     setTimeout(() => {this.setState({shouldRender: true}, ()=> {console.log("HOGAYA")})}, 0);
   }
 
-  // handleReset(e) {
-  //   this.setState({
-  //     filteredJSON: this.state.dataJSON,
-  //     category: null
-  //   })
-  //   Object.keys(this.state.filtDat).forEach((key,index)=>{
-  //     document.getElementById(key+'-'+this.state.filtDatVals[key]).className=key+'_inactive_item';
-  //   });
-  //   // console.log(this.state.dataJSON, "this.state.dataJSON")
-  //   let end_domain = new Date (this.state.dataJSON[0].date),
-  //     start_domain = new Date (this.state.dataJSON[this.state.dataJSON.length - 1].date)
-  //   this.setState({
-  //     filtDatVals:{},
-  //     year_value: {
-  //       min: 'undefined',
-  //       max: 'undefined'
-  //     },
-  //     start_domain: start_domain,
-  //     end_domain: end_domain
-  //   })
-  // }
 
   highlightItem(value, inactive, active, identifier) {
     let elm = document.getElementsByClassName(inactive),
@@ -429,18 +392,6 @@ class App extends React.Component {
         length = range.length - 1,
         start_date, end_date;
 
-      if (range.length === 0) {
-        start_date = '';
-        end_date = '';
-      } else {
-        let formated_start_date = range[length].date.split("-"),
-          start_month = new Date(range[length].date).toLocaleDateString('en-US', {month: 'short'});
-        start_date = start_month + " " +formated_start_date[2] + ", "+formated_start_date[0]
-        let formated_end_date = range[0].date.split("-"),
-          end_month = new Date(range[0].date).toLocaleDateString('en-US', {month: 'short'});
-        end_date = end_month + " " +formated_end_date[2] + ", "+formated_end_date[0]
-      }
-
       let styles = {
         // height: this.state.height,
         // overflow: this.state.overflow,
@@ -478,17 +429,12 @@ class App extends React.Component {
       console.log(this.state.filteredJSON,this.state.start_domain,this.state.end_domain,".'.'.'.'");
       return (
         <div className="banner-area">
-          {this.props.mode === 'mobile' ? <TimeBrush dataJSON={this.state.filteredJSON} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : ''}
           <div className="col-sm-6 filter-area sidenav" style={{left: this.state.sidebar_left}}>
             <div className="tap-area">
               <h4 className="column-name">FILTERS</h4>
               <div className="reset-area">
                 <button className="reset-all" onClick={(e) => this.handleReset(e)}>Reset</button>
               </div>
-            </div>
-            <div className="hate-crime-toggle">
-              <a href="http://cmsdev.indianexpress.com/coverage/data/"><button type="button" id="btn-law" className={`btn ${active_class[0]}`}>Law & order</button></a>
-              <a href="http://cmsdev.indianexpress.com/coverage/hate-crime/"><button type="button" id="btn-hate-crime" className={`btn ${active_class[1]}`}>Hate crime</button></a>
             </div>
             <div id="filter-region" style={styles}>
               {
@@ -521,26 +467,8 @@ class App extends React.Component {
             </div>
           </div>
           <div className="col-sm-16" style={{position: 'absolute', top:0, left:0}}>
-            <div className="col-sm-6 filter-title">
-              <div className="count-area">
-                <div className="number-background">
-                  <div className="single-background"></div>
-                  <div className="single-background"></div>
-                  <div className="single-background"></div>
-                </div>
-                <div className="display-number">
-                  {number_of_digits !== 3 ? <span className="light-text">0</span>:'' }
-                  {number_of_digits === 1 ? <span className="light-text">0</span>:'' }
-                  <span className="animate-number">{number_of_incidents}</span>
-                </div>
-              </div>
-              <div className="display-text">Instances of lynchings and mob vigilantism were reported in The Indian Express
-               {start_date === '' || end_date === '' ? '' : ` from ${start_date} to ${end_date}` }
-              </div>
-              {this.props.mode === 'laptop' ? <TimeBrush dataJSON={this.state.filteredJSON ? this.state.filteredJSON : this.state.dataJSON} shouldRender={this.state.shouldRender} dimensionWidth={this.props.dimensionWidth} start_domain={this.state.start_domain} end_domain={this.state.end_domain} mode={this.props.mode} handleSelectDateRange={this.handleSelectDateRange}/> : <div />}
-            </div>
             <div className="col-sm-10 filter-title">
-              <Map dataJSON={this.state.filteredJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} circleClicked={this.state.circleClicked} handleCircleClicked={this.handleCircleClicked} circleHover={this.state.circleHover}/>
+            <Map dataJSON={this.state.filteredJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} circleClicked={this.state.circleClicked} handleCircleClicked={this.handleCircleClicked} circleHover={this.state.circleHover}/>
             </div>
           </div>
           <div className="col-sm-10 data-page-cards">
